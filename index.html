@@ -30,33 +30,22 @@
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-
-  /* Layout */
   .page { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
-
-  /* Header */
   .header { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2rem; }
   .header-top { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
   .discord-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .discord-icon svg { width: 22px; height: 22px; fill: white; }
   h1 { font-size: 24px; font-weight: 700; color: var(--text); }
   .meta { font-size: 13px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
-  .meta span { display: flex; align-items: center; gap: 4px; }
-
-  /* TOC */
   .toc { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
   .toc h2 { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 10px; }
   .toc ol { padding-left: 1.25rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 2rem; }
   .toc li { font-size: 14px; }
-
-  /* Sections */
   .section { margin-bottom: 3rem; }
   h2.section-title { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 2px solid var(--accent); display: flex; align-items: center; gap: 8px; }
   h2.section-title .num { background: var(--accent); color: white; font-size: 13px; font-weight: 700; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   h3 { font-size: 16px; font-weight: 600; color: var(--text); margin: 1.5rem 0 .75rem; }
   p { color: var(--muted); margin-bottom: .75rem; }
-
-  /* Category cards */
   .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-bottom: 1.5rem; }
   .cat-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
   .cat-head { padding: 9px 14px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 7px; }
@@ -70,16 +59,12 @@
   .b-sta { background: var(--amber-light); color: var(--amber); }
   .b-adm { background: var(--red-light); color: var(--red); }
   .b-alu { background: var(--purple-light); color: var(--purple); }
-
-  /* Color themes for category cards */
   .theme-teal .cat-head { background: var(--teal-light); color: var(--teal); }
   .theme-blue .cat-head { background: var(--blue-light); color: var(--blue); }
   .theme-green .cat-head { background: var(--green-light); color: var(--green); }
   .theme-amber .cat-head { background: var(--amber-light); color: var(--amber); }
   .theme-purple .cat-head { background: var(--purple-light); color: var(--purple); }
   .theme-red .cat-head { background: var(--red-light); color: var(--red); }
-
-  /* Tables */
   .table-wrap { overflow-x: auto; margin-bottom: 1.5rem; border-radius: 10px; border: 1px solid var(--border); }
   table { width: 100%; border-collapse: collapse; font-size: 14px; }
   thead tr { background: var(--bg); }
@@ -87,10 +72,8 @@
   td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
   tr:last-child td { border-bottom: none; }
   tbody tr:hover { background: #fafaf9; }
-  td:first-child { font-weight: 500; white-space: nowrap; color: var(--text); }
+  td:first-child { font-weight: 500; color: var(--text); }
   code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 12px; background: var(--bg); padding: 1px 5px; border-radius: 4px; border: 1px solid var(--border); }
-
-  /* Role cards */
   .role-list { display: flex; flex-direction: column; gap: 10px; }
   .role-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
   .role-head { padding: 10px 14px; display: flex; align-items: center; gap: 10px; }
@@ -106,9 +89,7 @@
   .yes { color: #3B6D11; }
   .no { color: #A32D2D; }
   .par { color: #BA7517; }
-
-  /* Workflow steps */
-  .steps { display: flex; flex-direction: column; gap: 0; }
+  .steps { display: flex; flex-direction: column; }
   .step { display: flex; gap: 14px; }
   .step-left { display: flex; flex-direction: column; align-items: center; width: 28px; flex-shrink: 0; }
   .step-num { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
@@ -117,9 +98,7 @@
   .step-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
   .step-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
   .step-tag { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 10px; margin-top: 5px; }
-
-  /* Timeline */
-  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .timeline { display: flex; flex-direction: column; }
   .tl-item { display: flex; gap: 14px; }
   .tl-left { display: flex; flex-direction: column; align-items: center; width: 14px; flex-shrink: 0; }
   .tl-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
@@ -128,37 +107,41 @@
   .tl-phase { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
   .tl-title { font-size: 15px; font-weight: 600; color: var(--text); margin: 2px 0 4px; }
   .tl-items { font-size: 13px; color: var(--muted); line-height: 1.7; }
-
-  /* Rules boxes */
   .rule-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 1rem; }
   .rule-box { border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; }
   .rule-box-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
   .rule-box-body { font-size: 13px; color: var(--muted); line-height: 1.6; }
-
-  /* Open questions */
   .questions { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; }
   .q-item { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--muted); }
   .q-item:last-child { border-bottom: none; }
   .q-num { font-weight: 700; color: var(--accent); flex-shrink: 0; }
-
-  /* Footer */
+  .callout { border-radius: 10px; padding: 12px 16px; margin-bottom: 1rem; font-size: 14px; line-height: 1.6; }
+  .callout-title { font-weight: 600; margin-bottom: 4px; font-size: 14px; }
+  .callout.rec { background: var(--green-light); border-left: 3px solid var(--green); color: var(--green); }
+  .callout.info { background: var(--blue-light); border-left: 3px solid var(--blue); color: var(--blue); }
+  .callout.warn { background: var(--amber-light); border-left: 3px solid var(--amber); color: var(--amber); }
+  .callout p { color: inherit; margin: 0; }
+  .option-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin: 1rem 0 1.5rem; }
+  .option-card { border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+  .option-card.recommended { border: 2px solid var(--green); }
+  .option-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+  .option-body { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .pro-con { margin-top: 8px; display: flex; flex-direction: column; gap: 3px; }
+  .pro { font-size: 12px; color: var(--green); }
+  .con { font-size: 12px; color: var(--red); }
+  .flow-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin: 1rem 0; font-size: 14px; color: var(--muted); line-height: 2; }
+  .flow-box strong { color: var(--text); }
+  .flow-arrow { color: var(--accent); font-weight: 700; margin: 0 6px; }
   .footer { border-top: 1px solid var(--border); padding-top: 1.5rem; margin-top: 2rem; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-
-  /* Print */
-  @media print { body { background: white; } .toc ol { grid-template-columns: 1fr; } }
   @media (max-width: 600px) {
-    .toc ol { grid-template-columns: 1fr; }
-    .role-body { grid-template-columns: 1fr; }
+    .toc ol, .role-body, .rule-grid, .cat-grid, .option-grid { grid-template-columns: 1fr; }
     .role-col:first-child { border-right: none; border-bottom: 1px solid var(--border); }
-    .rule-grid { grid-template-columns: 1fr; }
-    .cat-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 <div class="page">
 
-<!-- Header -->
 <div class="header">
   <div class="header-top">
     <div class="discord-icon">
@@ -169,22 +152,22 @@
   <div class="meta">
     <span>📄 Internal Planning Document · Draft</span>
     <span>🔖 Version 1.0</span>
-    <span>📅 Last updated: [5/12/2026]</span>
-    <span>👤 Owner: [Kevin Zhu]</span>
+    <span>📅 Last updated: May 12, 2026</span>
+    <span>👤 Owner: Kevin Zhu</span>
   </div>
 </div>
 
-<!-- TOC -->
 <div class="toc">
   <h2>Contents</h2>
   <ol>
     <li><a href="#positioning">Positioning</a></li>
     <li><a href="#architecture">Server architecture</a></li>
-    <li><a href="#roles">Role hierarchy & permissions</a></li>
+    <li><a href="#roles">Role hierarchy &amp; permissions</a></li>
+    <li><a href="#rolemanagement">Student role management</a></li>
     <li><a href="#hwnight">Homework night workflow</a></li>
     <li><a href="#officehours">Office hours workflow</a></li>
-    <li><a href="#moderation">Moderation & safety</a></li>
-    <li><a href="#engagement">Engagement & gamification</a></li>
+    <li><a href="#moderation">Moderation &amp; safety</a></li>
+    <li><a href="#engagement">Engagement &amp; gamification</a></li>
     <li><a href="#bots">Recommended bots</a></li>
     <li><a href="#timeline">Launch timeline</a></li>
     <li><a href="#questions">Open questions</a></li>
@@ -200,7 +183,7 @@
     <table>
       <thead><tr><th>Goal</th><th>How the server serves it</th></tr></thead>
       <tbody>
-        <tr><td>Academic Q&A</td><td>Class Q&A channels, HW Night queue, solved answers archive</td></tr>
+        <tr><td>Academic Q&amp;A</td><td>Class Q&amp;A channels, HW Night queue, solved answers archive</td></tr>
         <tr><td>Real-time support</td><td>HW Night voice rooms (5–8 PM PT daily), office hours 1-on-1</td></tr>
         <tr><td>Student bonding</td><td>Community channels, voice study halls, contests, leaderboards</td></tr>
         <tr><td>Staff coordination</td><td>Private staff channels, TA scheduling, mod log</td></tr>
@@ -214,8 +197,6 @@
 <div class="section" id="architecture">
   <h2 class="section-title"><span class="num">2</span> Server architecture</h2>
   <p>The server is organized into eight category groups. Each category controls visibility and access by role.</p>
-
-  <!-- Access legend -->
   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.25rem;font-size:12px;align-items:center;">
     <span style="color:var(--muted);font-weight:600">Access:</span>
     <span class="badge b-all">everyone</span>
@@ -224,9 +205,7 @@
     <span class="badge b-adm">admin only</span>
     <span class="badge b-alu">alumni</span>
   </div>
-
   <div class="cat-grid">
-    <!-- Welcome -->
     <div class="cat-card theme-teal">
       <div class="cat-head">👋 Welcome</div>
       <div class="cat-body">
@@ -237,7 +216,6 @@
         <div class="ch-row"><span class="ch-name"># events</span><span class="badge b-all">everyone</span></div>
       </div>
     </div>
-    <!-- Community -->
     <div class="cat-card theme-blue">
       <div class="cat-head">💬 Community</div>
       <div class="cat-body">
@@ -250,7 +228,6 @@
         <div class="ch-row"><span class="ch-name"># feedback</span><span class="badge b-all">everyone</span></div>
       </div>
     </div>
-    <!-- Contests -->
     <div class="cat-card theme-green">
       <div class="cat-head">🏆 Contests</div>
       <div class="cat-body">
@@ -261,7 +238,6 @@
         <div class="ch-row"><span class="ch-name">🔊 Study Hall</span><span class="badge b-cls">enrolled</span></div>
       </div>
     </div>
-    <!-- HW Support -->
     <div class="cat-card theme-amber">
       <div class="cat-head">📚 Homework support</div>
       <div class="cat-body">
@@ -274,7 +250,6 @@
         <div class="ch-row"><span class="ch-name">🔊 1-on-1 TA Room</span><span class="badge b-sta">staff</span></div>
       </div>
     </div>
-    <!-- Staff -->
     <div class="cat-card theme-red">
       <div class="cat-head">🛡️ Staff</div>
       <div class="cat-body">
@@ -285,7 +260,6 @@
         <div class="ch-row"><span class="ch-name">🔊 Staff Voice</span><span class="badge b-sta">staff</span></div>
       </div>
     </div>
-    <!-- Admin -->
     <div class="cat-card theme-red">
       <div class="cat-head">🔒 Admin</div>
       <div class="cat-body">
@@ -296,7 +270,6 @@
         <div class="ch-row"><span class="ch-name"># audit-log</span><span class="badge b-adm">admin</span></div>
       </div>
     </div>
-    <!-- Alumni -->
     <div class="cat-card theme-purple">
       <div class="cat-head">🎓 Alumni</div>
       <div class="cat-body">
@@ -344,7 +317,6 @@
   <h2 class="section-title"><span class="num">3</span> Role hierarchy &amp; permissions</h2>
   <p>Roles are assigned from highest to lowest privilege. Students receive one <code>Student-CS[level]</code> role corresponding to their enrolled level band.</p>
   <div class="role-list">
-
     <div class="role-card">
       <div class="role-head" style="background:var(--red-light)">
         <span class="role-dot" style="background:#A32D2D"></span>
@@ -361,11 +333,10 @@
           <div class="perm-item"><span class="icon yes">✓</span>View all channels incl. audit log</div>
         </div>
         <div class="role-col"><div class="role-col-title">Restrictions</div>
-          <div class="perm-item" style="color:var(--muted);font-style:italic">No restrictions</div>
+          <div class="perm-item" style="font-style:italic">No restrictions</div>
         </div>
       </div>
     </div>
-
     <div class="role-card">
       <div class="role-head" style="background:var(--amber-light)">
         <span class="role-dot" style="background:#BA7517"></span>
@@ -385,7 +356,6 @@
         </div>
       </div>
     </div>
-
     <div class="role-card">
       <div class="role-head" style="background:var(--blue-light)">
         <span class="role-dot" style="background:#185FA5"></span>
@@ -406,7 +376,6 @@
         </div>
       </div>
     </div>
-
     <div class="role-card">
       <div class="role-head" style="background:var(--green-light)">
         <span class="role-dot" style="background:#3B6D11"></span>
@@ -427,7 +396,6 @@
         </div>
       </div>
     </div>
-
     <div class="role-card">
       <div class="role-head" style="background:var(--purple-light)">
         <span class="role-dot" style="background:#534AB7"></span>
@@ -448,7 +416,6 @@
         </div>
       </div>
     </div>
-
     <div class="role-card">
       <div class="role-head" style="background:var(--bg)">
         <span class="role-dot" style="background:#888780"></span>
@@ -459,7 +426,7 @@
         <div class="role-col"><div class="role-col-title">Permissions</div>
           <div class="perm-item"><span class="icon yes">✓</span>Read #welcome and #rules only</div>
           <div class="perm-item"><span class="icon yes">✓</span>Post in #verify-here only</div>
-          <div class="perm-item"><span class="icon par">–</span>Auto-promoted after admin verification</div>
+          <div class="perm-item"><span class="icon par">–</span>Auto-promoted after verification</div>
         </div>
         <div class="role-col"><div class="role-col-title">Restrictions</div>
           <div class="perm-item"><span class="icon no">✗</span>Cannot see any other channel</div>
@@ -468,7 +435,6 @@
         </div>
       </div>
     </div>
-
     <div class="role-card">
       <div class="role-head" style="background:var(--teal-light)">
         <span class="role-dot" style="background:#1D9E75"></span>
@@ -487,79 +453,273 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
-<!-- 4. HW Night -->
-<div class="section" id="hwnight">
-  <h2 class="section-title"><span class="num">4</span> Homework night workflow</h2>
-  <p>Runs daily during the quarter, <strong>5–8 PM PT</strong>. A bot-assisted queue ensures fair TA assignment and builds a searchable resolved-answers archive over time.</p>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:1rem">
+<!-- 4. Student role management -->
+<div class="section" id="rolemanagement">
+  <h2 class="section-title"><span class="num">4</span> Student role management</h2>
+
+  <p>Student roles need to be granted at enrollment and revoked at quarter end — across potentially hundreds of students and 17 course levels. Getting this right is critical: students who keep roles after their quarter ends can still access class channels they are no longer enrolled in, and manual management at scale is error-prone.</p>
+
+  <div class="callout info">
+    <div class="callout-title">Core challenge</div>
+    <p>X-Camp runs multiple classes per level, with different teachers and class times. A student enrolled in CS300 (Section A, Mon/Wed) should only see the CS300 category — not CS400, not other sections. At quarter end, their access must be cleanly revoked so the server stays accurate and secure without coordinator manually updating hundreds of roles.</p>
+  </div>
+
+  <h3>Option comparison</h3>
+
+  <div class="option-grid">
+    <div class="option-card">
+      <div class="option-title">Option A — Manual by coordinator</div>
+      <div class="option-body">Coordinator manually assigns and removes roles in Discord at the start and end of each quarter based on the enrollment list.</div>
+      <div class="pro-con">
+        <div class="pro">✓ No technical setup required</div>
+        <div class="pro">✓ Full coordinator control</div>
+        <div class="con">✗ Time-consuming at scale</div>
+        <div class="con">✗ Prone to human error</div>
+        <div class="con">✗ Doesn't scale as enrollment grows</div>
+      </div>
+    </div>
+    <div class="option-card">
+      <div class="option-title">Option B — Self-serve enrollment codes</div>
+      <div class="option-body">Enrollment system generates a unique code per student per quarter. Student enters the code on joining Discord. Bot assigns the correct role automatically. Quarter-end bulk removal via a single admin command.</div>
+      <div class="pro-con">
+        <div class="pro">✓ Students onboard themselves</div>
+        <div class="pro">✓ No coordinator bottleneck</div>
+        <div class="pro">✓ Bulk removal is one command</div>
+        <div class="pro">✓ Scales to any enrollment size</div>
+        <div class="con">✗ Requires enrollment system integration</div>
+        <div class="con">✗ Codes can be shared (mitigated by one-time use)</div>
+      </div>
+    </div>
+    <div class="option-card recommended">
+      <div class="option-title">⭐ Option C — API sync with enrollment system <span class="badge" style="background:var(--green-light);color:var(--green)">Recommended</span></div>
+      <div class="option-body">A script (Google Apps Script, Zapier, or custom) reads your enrollment database and calls Discord's API to assign and remove roles automatically on a schedule or triggered by enrollment changes.</div>
+      <div class="pro-con">
+        <div class="pro">✓ Fully automated — zero manual work</div>
+        <div class="pro">✓ Roles update in real time when enrollment changes</div>
+        <div class="pro">✓ Quarter-end removal happens automatically</div>
+        <div class="pro">✓ Single source of truth (your enrollment system)</div>
+        <div class="con">✗ Requires developer setup (one-time)</div>
+        <div class="con">✗ Needs Discord API token and enrollment system access</div>
+      </div>
+    </div>
+    <div class="option-card">
+      <div class="option-title">Option D — Carl-bot reaction roles (simplest)</div>
+      <div class="option-body">Coordinator posts a message listing all class levels. Students react with the corresponding emoji to self-assign. Quarter-end bulk removal via Carl-bot's mass-role remove command.</div>
+      <div class="pro-con">
+        <div class="pro">✓ Easiest to set up — no coding</div>
+        <div class="pro">✓ Students self-serve</div>
+        <div class="con">✗ Students can assign any level (no validation)</div>
+        <div class="con">✗ Requires coordinator spot-check against enrollment list</div>
+        <div class="con">✗ Quarter-end removal is still a manual command</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Recommended approach: enrollment code verification (Option B)</h3>
+
+  <p>For X-Camp's current scale, Option B strikes the best balance between automation and simplicity. It requires no custom development — just a bot (Carl-bot or MEE6) configured to validate codes — and it ties role assignment directly to your enrollment process.</p>
+
+  <div class="callout rec">
+    <div class="callout-title">Long-term goal</div>
+    <p>As X-Camp grows, Option C (API sync) becomes the right investment. A one-time developer setup means roles are always in sync with your enrollment database with zero ongoing manual work. This is worth prioritizing in Year 2.</p>
+  </div>
+
+  <h3>Enrollment code workflow</h3>
+
   <div class="steps">
     <div class="step">
       <div class="step-left"><div class="step-num" style="background:var(--blue-light);color:var(--blue)">1</div><div class="step-line"></div></div>
-      <div class="step-body"><div class="step-title">Bot opens HW Night</div><div class="step-desc">At 4:55 PM, bot auto-posts in #hw-night-lobby: "HW Night starts in 5 minutes — TAs are online!" Voice rooms unlock.</div><span class="step-tag" style="background:var(--blue-light);color:var(--blue)">automated</span></div>
+      <div class="step-body">
+        <div class="step-title">Code generated at enrollment</div>
+        <div class="step-desc">When a student registers for a class (e.g. CS300), your enrollment system generates a unique one-time code tied to that student and level. Example: <code>XC-CS300-A7K2M</code>. Code is included in the enrollment confirmation email.</div>
+        <span class="step-tag" style="background:var(--blue-light);color:var(--blue)">enrollment system</span>
+      </div>
     </div>
     <div class="step">
       <div class="step-left"><div class="step-num" style="background:var(--bg);color:var(--muted);border:1px solid var(--border)">2</div><div class="step-line"></div></div>
-      <div class="step-body"><div class="step-title">Student posts question</div><div class="step-desc">Student uses <code>!question</code> or posts in #ask-a-question with level tag e.g. <code>[CS200]</code>. Bot timestamps, queues, and adds a ticket emoji.</div><span class="step-tag" style="background:var(--purple-light);color:var(--purple)">student</span></div>
+      <div class="step-body">
+        <div class="step-title">Student joins Discord</div>
+        <div class="step-desc">Student joins the server using X-Camp's invite link. They land in the New Member state — only #welcome, #rules, and #verify-here are visible.</div>
+        <span class="step-tag" style="background:var(--purple-light);color:var(--purple)">student</span>
+      </div>
     </div>
     <div class="step">
-      <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">3</div><div class="step-line"></div></div>
-      <div class="step-body"><div class="step-title">TA claims question</div><div class="step-desc">TA reacts with hand emoji or uses <code>!claim</code>. Bot notifies student. If voice is needed, student is moved to an available HW Night Room.</div><span class="step-tag" style="background:var(--green-light);color:var(--green)">TA action</span></div>
+      <div class="step-left"><div class="step-num" style="background:var(--bg);color:var(--muted);border:1px solid var(--border)">3</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Student enters enrollment code</div>
+        <div class="step-desc">Student types their code in #verify-here e.g. <code>!verify XC-CS300-A7K2M</code>. Bot validates the code against the enrollment list.</div>
+        <span class="step-tag" style="background:var(--purple-light);color:var(--purple)">student</span>
+      </div>
     </div>
     <div class="step">
       <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">4</div><div class="step-line"></div></div>
-      <div class="step-body"><div class="step-title">Question resolved</div><div class="step-desc">TA uses <code>!solved</code>. Bot archives thread to #solved-answers. Student rates helpfulness 1–5 stars. Answer stays permanently searchable.</div><span class="step-tag" style="background:var(--green-light);color:var(--green)">TA closes</span></div>
+      <div class="step-body">
+        <div class="step-title">Bot assigns role automatically</div>
+        <div class="step-desc">If valid, bot assigns <code>Student-CS300</code> role, marks the code as used (preventing reuse), and sends the student a welcome DM with a quick-start guide. The CS300 category immediately becomes visible to them.</div>
+        <span class="step-tag" style="background:var(--green-light);color:var(--green)">automated</span>
+      </div>
     </div>
     <div class="step">
-      <div class="step-left"><div class="step-num" style="background:var(--amber-light);color:var(--amber)">5</div></div>
-      <div class="step-body"><div class="step-title">Bot closes HW Night</div><div class="step-desc">At 8:00 PM, bot posts nightly summary: questions answered, avg response time, students helped. Voice rooms lock. Unanswered questions flagged for teacher review.</div><span class="step-tag" style="background:var(--amber-light);color:var(--amber)">auto-summary</span></div>
+      <div class="step-left"><div class="step-num" style="background:var(--amber-light);color:var(--amber)">5</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Quarter ends — bulk role removal</div>
+        <div class="step-desc">Admin runs a single command: <code>!endquarter Q3-2026</code>. Bot removes all <code>Student-CS[level]</code> roles issued for that quarter. Students retain their Discord account and community channel access but lose class channel visibility until they re-verify for the next quarter.</div>
+        <span class="step-tag" style="background:var(--amber-light);color:var(--amber)">admin command</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-left"><div class="step-num" style="background:var(--teal-light);color:var(--teal)">6</div></div>
+      <div class="step-body">
+        <div class="step-title">Re-enrollment for next quarter</div>
+        <div class="step-desc">Returning students receive a new code for their next quarter enrollment. They re-verify with the new code. This keeps roles accurate every quarter and ensures former students don't retain access indefinitely.</div>
+        <span class="step-tag" style="background:var(--teal-light);color:var(--teal)">quarterly cycle</span>
+      </div>
     </div>
   </div>
-  <div style="display:flex;flex-direction:column;gap:10px;">
-    <div class="rule-box">
-      <div class="rule-box-title">📋 Queue rules</div>
-      <div class="rule-box-body">One active question per student at a time. Questions must include the problem name and what the student already tried. Duplicate questions are linked to existing resolved threads.</div>
-    </div>
-    <div class="rule-box">
-      <div class="rule-box-title">👥 TA coverage model</div>
-      <div class="rule-box-body">Each level group (100s, 200s, 300s, 400s, 500s+) has at least one TA on duty per HW Night. Coordinator monitors queue depth and can assign additional TAs if wait time exceeds 10 minutes.</div>
-    </div>
+
+  <h3>Edge cases to plan for</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Situation</th><th>Recommended handling</th></tr></thead>
+      <tbody>
+        <tr><td>Student enrolls mid-quarter</td><td>New code generated immediately on enrollment; student can verify and join anytime</td></tr>
+        <tr><td>Student drops a class</td><td>Coordinator manually removes role, or enrollment system triggers API call to revoke (Option C)</td></tr>
+        <tr><td>Student advances levels mid-quarter</td><td>New code issued for new level; coordinator removes old level role; policy decision — recommend doing this at quarter boundary to minimize disruption</td></tr>
+        <tr><td>Student loses or doesn't receive their code</td><td>Coordinator can re-issue via bot command <code>!reissuecode [student] [level]</code>; old code invalidated</td></tr>
+        <tr><td>Student already has a Discord account</td><td>They join the server with their existing account and verify normally — no new account needed</td></tr>
+        <tr><td>Student under 13</td><td>Parent creates and manages the Discord account; code verification process is the same; parental consent form collected separately at enrollment</td></tr>
+      </tbody>
+    </table>
   </div>
+
+  <h3>Quarter-end checklist</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Task</th><th>Who</th><th>When</th></tr></thead>
+      <tbody>
+        <tr><td>Generate new enrollment codes for upcoming quarter</td><td>Enrollment system / coordinator</td><td>2 weeks before quarter starts</td></tr>
+        <tr><td>Include Discord codes in enrollment confirmation emails</td><td>Teaching service</td><td>At enrollment confirmation</td></tr>
+        <tr><td>Run <code>!endquarter</code> command to remove expired roles</td><td>Admin</td><td>Last day of quarter</td></tr>
+        <tr><td>Verify all class channels are empty of non-enrolled students</td><td>Coordinator</td><td>First day of new quarter</td></tr>
+        <tr><td>Post reminder in #announcements for returning students to re-verify</td><td>Coordinator</td><td>First day of new quarter</td></tr>
+        <tr><td>Confirm new TAs have been assigned correct level roles</td><td>Admin</td><td>Before quarter starts</td></tr>
+      </tbody>
+    </table>
   </div>
 </div>
 
-<!-- 5. Office Hours -->
+<!-- 5. HW Night -->
+<div class="section" id="hwnight">
+  <h2 class="section-title"><span class="num">5</span> Homework night workflow</h2>
+  <p>Runs daily during the quarter, <strong>5–8 PM PT</strong>. A bot-assisted queue ensures fair TA assignment and builds a searchable resolved-answers archive over time.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:1rem">
+    <div class="steps">
+      <div class="step">
+        <div class="step-left"><div class="step-num" style="background:var(--blue-light);color:var(--blue)">1</div><div class="step-line"></div></div>
+        <div class="step-body"><div class="step-title">Bot opens HW Night</div><div class="step-desc">At 4:55 PM, bot auto-posts in #hw-night-lobby: "HW Night starts in 5 minutes — TAs are online!" Voice rooms unlock.</div><span class="step-tag" style="background:var(--blue-light);color:var(--blue)">automated</span></div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-num" style="background:var(--bg);color:var(--muted);border:1px solid var(--border)">2</div><div class="step-line"></div></div>
+        <div class="step-body"><div class="step-title">Student posts question</div><div class="step-desc">Student uses <code>!question</code> or posts in #ask-a-question with level tag e.g. <code>[CS200]</code>. Bot timestamps, queues, and adds a ticket emoji.</div><span class="step-tag" style="background:var(--purple-light);color:var(--purple)">student</span></div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">3</div><div class="step-line"></div></div>
+        <div class="step-body"><div class="step-title">TA claims question</div><div class="step-desc">TA reacts with hand emoji or uses <code>!claim</code>. Bot notifies student. If voice is needed, student is moved to an available HW Night Room.</div><span class="step-tag" style="background:var(--green-light);color:var(--green)">TA action</span></div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">4</div><div class="step-line"></div></div>
+        <div class="step-body"><div class="step-title">Question resolved</div><div class="step-desc">TA uses <code>!solved</code>. Bot archives thread to #solved-answers. Student rates helpfulness 1–5 stars.</div><span class="step-tag" style="background:var(--green-light);color:var(--green)">TA closes</span></div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-num" style="background:var(--amber-light);color:var(--amber)">5</div></div>
+        <div class="step-body"><div class="step-title">Bot closes HW Night</div><div class="step-desc">At 8:00 PM, bot posts nightly summary: questions answered, avg response time, students helped. Voice rooms lock. Unanswered questions flagged for teacher review.</div><span class="step-tag" style="background:var(--amber-light);color:var(--amber)">auto-summary</span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div class="rule-box">
+        <div class="rule-box-title">📋 Queue rules</div>
+        <div class="rule-box-body">One active question per student at a time. Questions must include the problem name and what the student already tried. Duplicate questions are linked to existing resolved threads.</div>
+      </div>
+      <div class="rule-box">
+        <div class="rule-box-title">👥 TA coverage model</div>
+        <div class="rule-box-body">Each level group (100s, 200s, 300s, 400s, 500s+) has at least one TA on duty per HW Night. Coordinator monitors queue depth and can assign additional TAs if wait time exceeds 10 minutes.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. Office Hours -->
 <div class="section" id="officehours">
-  <h2 class="section-title"><span class="num">5</span> Office hours workflow</h2>
-  <p>Scheduled 1-on-1 TA support sessions, bookable by students within their level band.</p>
+  <h2 class="section-title"><span class="num">6</span> Office hours workflow</h2>
+  <p>Scheduled 1-on-1 TA support sessions. Students book a private session with a TA from their level band. Office hours use <strong>Discord's Forum channel + Ticket Tool bot</strong> in combination: the Forum channel provides a structured, searchable record of each session request, while Ticket Tool manages the private thread and TA assignment.</p>
+
+  <div class="callout info">
+    <div class="callout-title">Why Forum + Ticket Tool, not just one or the other</div>
+    <p>A plain Forum channel is visible to all students in the class, which suits open Q&amp;A but not private 1-on-1 sessions. Ticket Tool creates a private thread between the student and their assigned TA — keeping session details confidential — while still logging the interaction for coordinator oversight. The combination gives you privacy, structure, and searchability.</p>
+  </div>
+
   <div class="steps">
     <div class="step">
       <div class="step-left"><div class="step-num" style="background:var(--bg);color:var(--muted);border:1px solid var(--border)">1</div><div class="step-line"></div></div>
-      <div class="step-body"><div class="step-title">Student books a slot</div><div class="step-desc">Student uses <code>!officehours</code> or checks the pinned schedule in their class channel. Bot shows available TA slots for that level.</div></div>
+      <div class="step-body">
+        <div class="step-title">Student opens a ticket</div>
+        <div class="step-desc">Student clicks the "Book Office Hours" button pinned in their class channel. Ticket Tool prompts them to select their level and briefly describe their question. A private thread is created visible only to the student, TAs for that level, and coordinators.</div>
+        <span class="step-tag" style="background:var(--purple-light);color:var(--purple)">student</span>
+      </div>
     </div>
     <div class="step">
-      <div class="step-left"><div class="step-num" style="background:var(--blue-light);color:var(--blue)">2</div><div class="step-line"></div></div>
-      <div class="step-body"><div class="step-title">Bot sends reminder</div><div class="step-desc">10 minutes before the slot, bot DMs both student and TA. Student is prompted to describe their question in advance so the TA can prepare.</div><span class="step-tag" style="background:var(--blue-light);color:var(--blue)">automated</span></div>
+      <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">2</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">TA claims the session</div>
+        <div class="step-desc">An available TA for that level claims the ticket. Bot notifies the student and both parties agree on a voice time within the private thread. TA posts their available slots or uses Sesh bot to show a bookable calendar.</div>
+        <span class="step-tag" style="background:var(--green-light);color:var(--green)">TA action</span>
+      </div>
     </div>
     <div class="step">
-      <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">3</div><div class="step-line"></div></div>
-      <div class="step-body"><div class="step-title">Session in voice</div><div class="step-desc">Student joins the 1-on-1 TA Room. TA can screen share, walk through code, and use the whiteboard. Default session cap is 20 minutes.</div><span class="step-tag" style="background:var(--green-light);color:var(--green)">TA + student</span></div>
+      <div class="step-left"><div class="step-num" style="background:var(--blue-light);color:var(--blue)">3</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Bot sends reminder</div>
+        <div class="step-desc">10 minutes before the agreed time, bot DMs both student and TA. Student is reminded to have their question and code ready.</div>
+        <span class="step-tag" style="background:var(--blue-light);color:var(--blue)">automated</span>
+      </div>
     </div>
     <div class="step">
-      <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">4</div></div>
-      <div class="step-body"><div class="step-title">TA posts summary (optional)</div><div class="step-desc">After the session, TA may post a brief summary to #solved-answers with the student's permission, contributing to the class knowledge base.</div><span class="step-tag" style="background:var(--amber-light);color:var(--amber)">optional log</span></div>
+      <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">4</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Session in voice</div>
+        <div class="step-desc">Student joins the Office Hours voice room. TA can screen share, walk through code, and use the whiteboard. Default session cap is 20 minutes. TA can extend if needed.</div>
+        <span class="step-tag" style="background:var(--green-light);color:var(--green)">TA + student</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">5</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">TA closes ticket with summary</div>
+        <div class="step-desc">TA types a brief session summary in the private thread and closes the ticket with <code>!close</code>. Summary is logged for coordinator review. With the student's permission, key insight can be posted to #solved-answers to benefit classmates.</div>
+        <span class="step-tag" style="background:var(--green-light);color:var(--green)">TA closes</span><span class="step-tag" style="background:var(--amber-light);color:var(--amber);margin-left:6px">optional public post</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule-grid">
+    <div class="rule-box">
+      <div class="rule-box-title">📋 Session rules</div>
+      <div class="rule-box-body">One active office hours ticket per student at a time. Sessions capped at 20 minutes by default. Students must describe their question when opening the ticket — vague requests will be asked to clarify before a TA claims.</div>
+    </div>
+    <div class="rule-box">
+      <div class="rule-box-title">👥 TA availability</div>
+      <div class="rule-box-body">TAs post their weekly available slots in #ta-schedule at the start of each week. Coordinator ensures each level band has at least 3 available office hours slots per week. Demand is tracked via Ticket Tool analytics.</div>
     </div>
   </div>
 </div>
 
-<!-- 6. Moderation -->
+<!-- 7. Moderation -->
 <div class="section" id="moderation">
-  <h2 class="section-title"><span class="num">6</span> Moderation &amp; safety</h2>
-
-  <h3>6.1 Automated moderation</h3>
+  <h2 class="section-title"><span class="num">7</span> Moderation &amp; safety</h2>
+  <h3>7.1 Automated moderation</h3>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Rule</th><th>Trigger</th><th>Action</th></tr></thead>
@@ -571,8 +731,7 @@
       </tbody>
     </table>
   </div>
-
-  <h3>6.2 Manual moderation</h3>
+  <h3>7.2 Manual moderation</h3>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Action</th><th>Who</th><th>How</th></tr></thead>
@@ -584,8 +743,7 @@
       </tbody>
     </table>
   </div>
-
-  <h3>6.3 Server-wide safety settings</h3>
+  <h3>7.3 Server-wide safety settings</h3>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Setting</th><th>Configuration</th></tr></thead>
@@ -600,9 +758,9 @@
   </div>
 </div>
 
-<!-- 7. Engagement -->
+<!-- 8. Engagement -->
 <div class="section" id="engagement">
-  <h2 class="section-title"><span class="num">7</span> Engagement &amp; gamification</h2>
+  <h2 class="section-title"><span class="num">8</span> Engagement &amp; gamification</h2>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Feature</th><th>Description</th></tr></thead>
@@ -617,66 +775,66 @@
   </div>
 </div>
 
-<!-- 8. Bots -->
+<!-- 9. Bots -->
 <div class="section" id="bots">
-  <h2 class="section-title"><span class="num">8</span> Recommended bots</h2>
+  <h2 class="section-title"><span class="num">9</span> Recommended bots</h2>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Bot</th><th>Primary use</th></tr></thead>
       <tbody>
-        <tr><td>MEE6 or Atlas</td><td>XP, leveling, welcome messages, reaction roles, custom commands</td></tr>
-        <tr><td>Carl-bot</td><td>AutoMod, logging, reaction roles for self-assign class level</td></tr>
-        <tr><td>Ticket Tool</td><td>HW Night question queue, office hours booking, TA assignment</td></tr>
-        <tr><td>Statbot</td><td>Server analytics — engagement, active members, peak hours</td></tr>
-        <tr><td>Sesh</td><td>Event scheduling with RSVP and timezone-aware reminders</td></tr>
+        <tr><td>MEE6 or Atlas</td><td>XP, leveling, welcome messages, reaction roles, custom commands including <code>!verify</code> and <code>!endquarter</code></td></tr>
+        <tr><td>Carl-bot</td><td>AutoMod, logging, reaction roles, enrollment code validation</td></tr>
+        <tr><td>Ticket Tool</td><td>HW Night question queue, office hours private thread booking, TA assignment</td></tr>
+        <tr><td>Statbot</td><td>Server analytics — engagement, active members, peak hours, office hours demand</td></tr>
+        <tr><td>Sesh</td><td>TA availability calendars, event scheduling with RSVP, timezone-aware reminders</td></tr>
       </tbody>
     </table>
   </div>
 </div>
 
-<!-- 9. Timeline -->
+<!-- 10. Timeline -->
 <div class="section" id="timeline">
-  <h2 class="section-title"><span class="num">9</span> Launch timeline</h2>
+  <h2 class="section-title"><span class="num">10</span> Launch timeline</h2>
   <div class="timeline">
     <div class="tl-item">
       <div class="tl-left"><div class="tl-dot" style="background:var(--blue)"></div><div class="tl-line"></div></div>
-      <div class="tl-body"><div class="tl-phase">Weeks 1–2</div><div class="tl-title">Foundation</div><div class="tl-items">Build server structure, all categories, channels, and roles · Configure permission matrix · Install and configure bots · Write rules and welcome message · Internal staff dry run and feedback session</div></div>
+      <div class="tl-body"><div class="tl-phase">Weeks 1–2</div><div class="tl-title">Foundation</div><div class="tl-items">Build server structure, all categories, channels, and roles · Configure permission matrix · Install and configure all bots · Set up enrollment code system · Write rules and welcome message · Internal staff dry run</div></div>
     </div>
     <div class="tl-item">
       <div class="tl-left"><div class="tl-dot" style="background:var(--green)"></div><div class="tl-line"></div></div>
-      <div class="tl-body"><div class="tl-phase">Week 3</div><div class="tl-title">Staff onboarding</div><div class="tl-items">Onboard all teachers, TAs, and coordinators · Assign roles and class category ownership · Run mock HW Night with staff only · Finalize moderation and escalation procedures</div></div>
+      <div class="tl-body"><div class="tl-phase">Week 3</div><div class="tl-title">Staff onboarding</div><div class="tl-items">Onboard all teachers, TAs, and coordinators · Assign roles and class category ownership · Run mock HW Night and office hours with staff only · Test enrollment code verification flow end-to-end · Finalize moderation and escalation procedures</div></div>
     </div>
     <div class="tl-item">
       <div class="tl-left"><div class="tl-dot" style="background:var(--amber)"></div><div class="tl-line"></div></div>
-      <div class="tl-body"><div class="tl-phase">Week 4</div><div class="tl-title">Soft launch — pilot class</div><div class="tl-items">Invite one pilot class (recommended: CS300) · Send parent communication letter and consent form · Gather student and parent feedback · Iterate before full rollout</div></div>
+      <div class="tl-body"><div class="tl-phase">Week 4</div><div class="tl-title">Soft launch — pilot class</div><div class="tl-items">Invite one pilot class (recommended: CS300) · Send parent communication letter and consent form · Test enrollment code flow with real students · Gather feedback on channel structure, HW Night, and office hours · Iterate before full rollout</div></div>
     </div>
     <div class="tl-item">
       <div class="tl-left"><div class="tl-dot" style="background:var(--red)"></div><div class="tl-line"></div></div>
-      <div class="tl-body"><div class="tl-phase">Weeks 5–6</div><div class="tl-title">Full rollout</div><div class="tl-items">Invite all students by level band · Each teacher hosts first voice session · Launch first Problem of the Week contest · Activate XP system and leaderboard</div></div>
+      <div class="tl-body"><div class="tl-phase">Weeks 5–6</div><div class="tl-title">Full rollout</div><div class="tl-items">Distribute enrollment codes to all students via confirmation emails · Each teacher hosts first voice session · Launch first Problem of the Week contest · Activate XP system and leaderboard</div></div>
     </div>
     <div class="tl-item">
       <div class="tl-left"><div class="tl-dot" style="background:var(--teal)"></div></div>
-      <div class="tl-body"><div class="tl-phase">Month 2+</div><div class="tl-title">Community growth</div><div class="tl-items">Activate alumni channel · Consider public server discovery for CS500+ · Monthly server health review via Statbot · Iterate channel structure based on usage data</div></div>
+      <div class="tl-body"><div class="tl-phase">Month 2+</div><div class="tl-title">Community growth &amp; automation</div><div class="tl-items">Activate alumni channel · Run first quarter-end role removal cycle and refine process · Begin planning API sync (Option C) for automated role management · Consider public server discovery for CS500+ · Monthly server health review via Statbot</div></div>
     </div>
   </div>
 </div>
 
-<!-- 10. Open questions -->
+<!-- 11. Open questions -->
 <div class="section" id="questions">
-  <h2 class="section-title"><span class="num">10</span> Open questions</h2>
+  <h2 class="section-title"><span class="num">11</span> Open questions</h2>
   <div class="questions">
-    <div class="q-item"><span class="q-num">1</span>Will a dedicated Discord coordinator role be assigned, or distributed across existing teaching service staff?</div>
-    <div class="q-item"><span class="q-num">2</span>What is the student verification workflow — bot-automated via enrollment ID, or manual role assignment by coordinator?</div>
+    <div class="q-item"><span class="q-num">1</span>Which enrollment code approach will be used — Option B (codes) or Option C (API sync)? Who owns the technical implementation?</div>
+    <div class="q-item"><span class="q-num">2</span>Will a dedicated Discord coordinator role be assigned, or distributed across existing teaching service staff?</div>
     <div class="q-item"><span class="q-num">3</span>Should younger students (CS100–200 levels) require a separate parental consent step before joining?</div>
     <div class="q-item"><span class="q-num">4</span>What is the policy for students who advance levels mid-quarter — immediate role update, or at quarter boundary?</div>
-    <div class="q-item"><span class="q-num">5</span>Should the alumni channel launch simultaneously with the student server, or in a later phase?</div>
+    <div class="q-item"><span class="q-num">5</span>How many office hours slots per level band per week should be guaranteed at launch?</div>
+    <div class="q-item"><span class="q-num">6</span>Should the alumni channel launch simultaneously with the student server, or in a later phase?</div>
   </div>
 </div>
 
-<!-- Footer -->
 <div class="footer">
-  <span>Document owner: [Kevin Zhu] · Status: Draft for internal review</span>
-  <span>Last updated: [5/12/2026] · Version 1.0</span>
+  <span>Document owner: Kevin Zhu · Status: Draft for internal review</span>
+  <span>Last updated: May 12, 2026 · Version 1.0</span>
 </div>
 
 </div>
