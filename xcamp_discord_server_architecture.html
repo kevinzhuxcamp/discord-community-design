@@ -1,0 +1,197 @@
+
+<h2 class="sr-only">X-Camp Discord server architecture showing all category groups, channels, and access levels organized from top-level welcome through class channels to staff areas.</h2>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.wrap{padding:1rem 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.col{display:flex;flex-direction:column;gap:6px}
+.cat{border-radius:var(--border-radius-md);overflow:hidden;border:0.5px solid var(--color-border-tertiary)}
+.cat-head{padding:7px 10px;font-size:11px;font-weight:500;letter-spacing:.04em;display:flex;align-items:center;gap:6px}
+.cat-body{padding:4px 6px 6px}
+.ch{display:flex;align-items:center;gap:5px;padding:3px 6px;border-radius:6px;font-size:12px;color:var(--color-text-secondary);cursor:pointer;transition:background .1s}
+.ch:hover{background:var(--color-background-secondary)}
+.ch i{font-size:13px;flex-shrink:0}
+.badge{font-size:10px;padding:1px 5px;border-radius:10px;margin-left:auto;flex-shrink:0}
+.b-all{background:var(--color-background-success);color:var(--color-text-success)}
+.b-cls{background:var(--color-background-info);color:var(--color-text-info)}
+.b-sta{background:var(--color-background-warning);color:var(--color-text-warning)}
+.b-adm{background:var(--color-background-danger);color:var(--color-text-danger)}
+.c-welcome .cat-head{background:#E1F5EE;color:#085041}
+.c-community .cat-head{background:#E6F1FB;color:#0C447C}
+.c-support .cat-head{background:#FAEEDA;color:#633806}
+.c-class .cat-head{background:#EEEDFE;color:#3C3489}
+.c-staff .cat-head{background:#FCEBEB;color:#791F1F}
+.c-events .cat-head{background:#EAF3DE;color:#27500A}
+@media (prefers-color-scheme: dark){
+.c-welcome .cat-head{background:#085041;color:#9FE1CB}
+.c-community .cat-head{background:#0C447C;color:#B5D4F4}
+.c-support .cat-head{background:#633806;color:#FAC775}
+.c-class .cat-head{background:#3C3489;color:#CECBF6}
+.c-staff .cat-head{background:#791F1F;color:#F7C1C1}
+.c-events .cat-head{background:#27500A;color:#C0DD97}
+}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;font-size:11px}
+.leg-item{display:flex;align-items:center;gap:4px;color:var(--color-text-secondary)}
+</style>
+<div class="legend">
+  <span class="leg-item"><span class="badge b-all" style="margin:0">all</span> Everyone</span>
+  <span class="leg-item"><span class="badge b-cls" style="margin:0">class</span> Enrolled students</span>
+  <span class="leg-item"><span class="badge b-sta" style="margin:0">staff</span> Teachers + TAs</span>
+  <span class="leg-item"><span class="badge b-adm" style="margin:0">admin</span> Admins only</span>
+</div>
+<div class="wrap">
+
+<div class="col">
+<div class="cat c-welcome">
+  <div class="cat-head"><i class="ti ti-door-enter" aria-hidden="true" style="font-size:14px"></i> Welcome</div>
+  <div class="cat-body">
+    <div class="ch" onclick="sendPrompt('Tell me more about the welcome channels in X-Camp Discord')"><i class="ti ti-info-circle"></i> #welcome<span class="badge b-all">all</span></div>
+    <div class="ch"><i class="ti ti-file-text"></i> #rules<span class="badge b-all">all</span></div>
+    <div class="ch"><i class="ti ti-user-check"></i> #verify-here<span class="badge b-all">all</span></div>
+    <div class="ch"><i class="ti ti-Bell"></i> #announcements<span class="badge b-all">all</span></div>
+    <div class="ch"><i class="ti ti-calendar-event"></i> #events<span class="badge b-all">all</span></div>
+  </div>
+</div>
+
+<div class="cat c-community">
+  <div class="cat-head"><i class="ti ti-users" aria-hidden="true" style="font-size:14px"></i> Community</div>
+  <div class="cat-body">
+    <div class="ch" onclick="sendPrompt('What happens in the community channels of X-Camp Discord?')"><i class="ti ti-message-circle"></i> #general<span class="badge b-all">all</span></div>
+    <div class="ch"><i class="ti ti-confetti"></i> #introductions<span class="badge b-all">all</span></div>
+    <div class="ch"><i class="ti ti-trophy"></i> #wins-and-progress<span class="badge b-all">all</span></div>
+    <div class="ch"><i class="ti ti-bulb"></i> #coding-tips<span class="badge b-all">all</span></div>
+    <div class="ch"><i class="ti ti-link"></i> #resources<span class="badge b-all">all</span></div>
+    <div class="ch"><i class="ti ti-mood-smile"></i> #off-topic<span class="badge b-all">all</span></div>
+    <div class="ch"><i class="ti ti-speakerphone"></i> #feedback<span class="badge b-all">all</span></div>
+  </div>
+</div>
+
+<div class="cat c-events">
+  <div class="cat-head"><i class="ti ti-tournament" aria-hidden="true" style="font-size:14px"></i> Contests</div>
+  <div class="cat-body">
+    <div class="ch" onclick="sendPrompt('How should X-Camp use Discord for contests and competitions?')"><i class="ti ti-award"></i> #contest-news<span class="badge b-all">all</span></div>
+    <div class="ch"><i class="ti ti-code"></i> #problem-of-the-week<span class="badge b-all">all</span></div>
+    <div class="ch"><i class="ti ti-chart-bar"></i> #leaderboard<span class="badge b-all">all</span></div>
+    <div class="ch"><i class="ti ti-messages"></i> #contest-discussion<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-microphone"></i> Study Hall (voice)<span class="badge b-cls">class</span></div>
+  </div>
+</div>
+</div>
+
+<div class="col">
+<div class="cat c-support">
+  <div class="cat-head"><i class="ti ti-headset" aria-hidden="true" style="font-size:14px"></i> Homework support</div>
+  <div class="cat-body">
+    <div class="ch" onclick="sendPrompt('How does homework night work on X-Camp Discord?')"><i class="ti ti-clock"></i> #hw-night-lobby<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-help"></i> #ask-a-question<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-check"></i> #solved-answers<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-microphone"></i> HW Night Room 1 (voice)<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-microphone"></i> HW Night Room 2 (voice)<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-microphone"></i> Office Hours (voice)<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-microphone"></i> 1-on-1 TA Room (voice)<span class="badge b-sta">staff</span></div>
+  </div>
+</div>
+
+<div class="cat c-support" style="border-color:var(--color-border-secondary)">
+  <div class="cat-head"><i class="ti ti-bolt" aria-hidden="true" style="font-size:14px"></i> CS100–102 · Beginner</div>
+  <div class="cat-body">
+    <div class="ch" onclick="sendPrompt('How are class channels organized in X-Camp Discord?')"><i class="ti ti-speakerphone"></i> #announcements<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-message"></i> #class-chat<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-help-circle"></i> #q-and-a<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-file-code"></i> #homework-help<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-microphone"></i> Class Voice<span class="badge b-cls">class</span></div>
+  </div>
+</div>
+
+<div class="cat c-support" style="border-color:var(--color-border-secondary)">
+  <div class="cat-head"><i class="ti ti-bolt" aria-hidden="true" style="font-size:14px"></i> CS200–202 · Intermediate</div>
+  <div class="cat-body">
+    <div class="ch"><i class="ti ti-speakerphone"></i> #announcements<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-message"></i> #class-chat<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-help-circle"></i> #q-and-a<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-file-code"></i> #homework-help<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-microphone"></i> Class Voice<span class="badge b-cls">class</span></div>
+  </div>
+</div>
+</div>
+
+<div class="col">
+<div class="cat c-class">
+  <div class="cat-head"><i class="ti ti-bolt" aria-hidden="true" style="font-size:14px"></i> CS300–302 · Advanced</div>
+  <div class="cat-body">
+    <div class="ch"><i class="ti ti-speakerphone"></i> #announcements<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-message"></i> #class-chat<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-help-circle"></i> #q-and-a<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-file-code"></i> #homework-help<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-microphone"></i> Class Voice<span class="badge b-cls">class</span></div>
+  </div>
+</div>
+
+<div class="cat c-class">
+  <div class="cat-head"><i class="ti ti-flame" aria-hidden="true" style="font-size:14px"></i> CS400–402 · USACO Silver</div>
+  <div class="cat-body">
+    <div class="ch"><i class="ti ti-speakerphone"></i> #announcements<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-message"></i> #class-chat<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-help-circle"></i> #q-and-a<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-file-code"></i> #homework-help<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-microphone"></i> Class Voice<span class="badge b-cls">class</span></div>
+  </div>
+</div>
+
+<div class="cat c-class">
+  <div class="cat-head"><i class="ti ti-flame" aria-hidden="true" style="font-size:14px"></i> CS500–502 · USACO Gold</div>
+  <div class="cat-body">
+    <div class="ch"><i class="ti ti-speakerphone"></i> #announcements<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-message"></i> #class-chat<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-help-circle"></i> #q-and-a<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-file-code"></i> #homework-help<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-microphone"></i> Class Voice<span class="badge b-cls">class</span></div>
+  </div>
+</div>
+
+<div class="cat c-class">
+  <div class="cat-head"><i class="ti ti-star" aria-hidden="true" style="font-size:14px"></i> CS602–603 · Platinum</div>
+  <div class="cat-body">
+    <div class="ch"><i class="ti ti-speakerphone"></i> #announcements<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-message"></i> #class-chat<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-help-circle"></i> #q-and-a<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-file-code"></i> #homework-help<span class="badge b-cls">class</span></div>
+    <div class="ch"><i class="ti ti-microphone"></i> Class Voice<span class="badge b-cls">class</span></div>
+  </div>
+</div>
+</div>
+
+<div class="col">
+<div class="cat c-staff">
+  <div class="cat-head"><i class="ti ti-shield" aria-hidden="true" style="font-size:14px"></i> Staff only</div>
+  <div class="cat-body">
+    <div class="ch" onclick="sendPrompt('How should X-Camp staff use their Discord channels?')"><i class="ti ti-message-2"></i> #staff-general<span class="badge b-sta">staff</span></div>
+    <div class="ch"><i class="ti ti-clock"></i> #ta-schedule<span class="badge b-sta">staff</span></div>
+    <div class="ch"><i class="ti ti-alert-triangle"></i> #mod-log<span class="badge b-sta">staff</span></div>
+    <div class="ch"><i class="ti ti-flag"></i> #flagged-content<span class="badge b-sta">staff</span></div>
+    <div class="ch"><i class="ti ti-microphone"></i> Staff Voice<span class="badge b-sta">staff</span></div>
+  </div>
+</div>
+
+<div class="cat c-staff">
+  <div class="cat-head"><i class="ti ti-lock" aria-hidden="true" style="font-size:14px"></i> Admin</div>
+  <div class="cat-body">
+    <div class="ch"><i class="ti ti-settings"></i> #admin-general<span class="badge b-adm">admin</span></div>
+    <div class="ch"><i class="ti ti-users"></i> #enrollment-ops<span class="badge b-adm">admin</span></div>
+    <div class="ch"><i class="ti ti-robot"></i> #bot-commands<span class="badge b-adm">admin</span></div>
+    <div class="ch"><i class="ti ti-chart-line"></i> #analytics<span class="badge b-adm">admin</span></div>
+    <div class="ch"><i class="ti ti-archive"></i> #audit-log<span class="badge b-adm">admin</span></div>
+  </div>
+</div>
+
+<div class="cat c-community">
+  <div class="cat-head"><i class="ti ti-user-star" aria-hidden="true" style="font-size:14px"></i> Alumni</div>
+  <div class="cat-body">
+    <div class="ch" onclick="sendPrompt('How should X-Camp use the alumni community on Discord?')"><i class="ti ti-message"></i> #alumni-lounge<span class="badge b-cls">alumni</span></div>
+    <div class="ch"><i class="ti ti-briefcase"></i> #internships-jobs<span class="badge b-cls">alumni</span></div>
+    <div class="ch"><i class="ti ti-school"></i> #college-advice<span class="badge b-cls">alumni</span></div>
+    <div class="ch"><i class="ti ti-microphone"></i> Alumni Voice<span class="badge b-cls">alumni</span></div>
+  </div>
+</div>
+</div>
+
+</div>
