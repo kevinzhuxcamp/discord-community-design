@@ -163,15 +163,13 @@
     <li><a href="#roles">Role hierarchy &amp; permissions</a></li>
     <li><a href="#identity">Student identity &amp; nicknames</a></li>
     <li><a href="#rolemanagement">Student role management</a></li>
-    <li><a href="#hwnight">Homework night workflow</a></li>
-    <li><a href="#officehours">Office hours workflow</a></li>
+    <li><a href="#support">Homework night &amp; office hours</a></li>
     <li><a href="#moderation">Moderation &amp; safety</a></li>
     <li><a href="#engagement">Engagement &amp; gamification</a></li>
-    <li><a href="#userjourney">Student user journey</a></li>
-    <li><a href="#teacherjourney">Teacher's weekly journey</a></li>
-    <li><a href="#tajourney">TA's weekly journey</a></li>
-    <li><a href="#coordinatorjourney">Teaching service &amp; coordinator</a></li>
+    <li><a href="#committee">Student committee</a></li>
+    <li><a href="#userjourney">User journeys</a></li>
     <li><a href="#bots">Recommended bots</a></li>
+    <li><a href="#cost">Cost</a></li>
     <li><a href="#timeline">Launch timeline</a></li>
     <li><a href="#questions">Open questions</a></li>
   </ol>
@@ -190,24 +188,18 @@
   <p>Some parents associate Discord with gaming. This is a perception issue, not a platform issue — and it is entirely within X-Camp's control to address. Discord is a communication tool used by millions of students, developers, researchers, and professional communities worldwide. The X-Camp server is a private, invite-only, fully moderated environment. Parents who see the server — its named class channels, visible TA presence, structured categories, and clear rules — understand immediately that this is an academic space. X-Camp's responsibility is to show parents what the server actually looks like through orientation materials, a parent walkthrough, and clear communication. The platform does not define the community; X-Camp does.</p>
 
   <h3>Relationship with Discourse</h3>
-  <p>X-Camp currently uses Discourse for homework Q&A, and it does that job well. Discourse is a forum — it is designed for structured, searchable, long-form discussion where answers persist and accumulate value over time. Discord is a community platform — it is designed for real-time interaction, voice, and the kind of fluid back-and-forth that makes students feel connected.</p>
-  <p>These two tools are complementary, not competing. The recommended approach is to run both in parallel with a clear division of purpose:</p>
-
+  <p>The two platforms are complementary, not competing — each owns a distinct purpose:</p>
   <div class="table-wrap">
     <table>
-      <thead><tr><th>Need</th><th>Platform</th><th>Why</th></tr></thead>
+      <thead><tr><th>Discourse</th><th>Discord</th></tr></thead>
       <tbody>
-        <tr><td>Live chat and instant messaging</td><td>Discord</td><td>Real-time, threaded, with reactions and voice — built for conversation</td></tr>
-        <tr><td>Voice calls and screen sharing</td><td>Discord</td><td>Native voice channels and video — no third-party tool needed</td></tr>
-        <tr><td>Homework Q&amp;A knowledge base</td><td>Discourse</td><td>Searchable, permanent, solved-answer format — compounds in value over time</td></tr>
-        <tr><td>Student and community bonding</td><td>Discord</td><td>Community channels, voice study halls, contests, leaderboards</td></tr>
-        <tr><td>Contest and coding community</td><td>Discord</td><td>Where USACO, coding clubs, and competitive programming communities already live</td></tr>
-        <tr><td>Office hours / HW Night scheduling</td><td>Discord</td><td>Ticket Tool bot manages 1-on-1 booking and HW Night queue; Sesh bot handles TA availability calendars and session reminders — all within Discord without external scheduling tools</td></tr>
-        <tr><td>Alumni and outreach community</td><td>Discord</td><td>Public server discovery, alumni voice, connection to outside coding world</td></tr>
+        <tr><td>Homework Q&amp;A — forum-style, searchable, permanent knowledge base</td><td>Live chat and instant messaging</td></tr>
+        <tr><td>Structured solved-answer threads that compound in value over time</td><td>Voice calls, screen sharing, and office hours</td></tr>
+        <tr><td></td><td>Student bonding, community sharing, and track lounges</td></tr>
+        <tr><td></td><td>Public-facing community open to outside coding enthusiasts</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Over time, as Discord's forum channels and thread features mature, some Discourse Q&amp;A workflows may migrate to Discord entirely. For now, maintaining both platforms with clear ownership keeps disruption low and leverages what each does best.</p>
 </div>
 
 <!-- 2. Server architecture -->
@@ -1036,332 +1028,342 @@
   </div>
 </div>
 
-<!-- 11. Student User Journey -->
+<!-- 11. User Journeys (combined interactive) -->
 <div class="section" id="userjourney">
-  <h2 class="section-title"><span class="num">11</span> Student user journey</h2>
+  <h2 class="section-title"><span class="num">11</span> User journeys</h2>
+  <p>Select a role to view their weekly experience and how they interact with the X-Camp Discord community.</p>
 
-  <h3>Day 1 — First join</h3>
-  <div style="overflow-x:auto;margin-bottom:1.5rem">
-  <div style="display:flex;align-items:flex-start;gap:0;min-width:560px">
-    <div style="display:flex;flex-direction:column;align-items:center;flex:1">
-      <div style="width:44px;height:44px;border-radius:50%;background:var(--blue-light);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">1</div>
-      <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
-    </div>
-    <div style="flex:5;padding:0 0 24px 12px">
-      <div style="font-size:13px;font-weight:600;color:var(--text)">Enrollment email arrives</div>
-      <div style="font-size:12px;color:var(--muted);margin-top:2px">X-Camp ID + Discord invite link included with class confirmation</div>
-      <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--blue-light);color:var(--blue)">before joining</span>
-    </div>
-    <div style="display:flex;flex-direction:column;align-items:center;flex:1">
-      <div style="width:44px;height:44px;border-radius:50%;background:var(--purple-light);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">2</div>
-      <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
-    </div>
-    <div style="flex:5;padding:0 0 24px 12px">
-      <div style="font-size:13px;font-weight:600;color:var(--text)">Joins server</div>
-      <div style="font-size:12px;color:var(--muted);margin-top:2px">Sees only #welcome and #rules — clean, not overwhelming</div>
-      <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--purple-light);color:var(--purple)">student</span>
-    </div>
-    <div style="display:flex;flex-direction:column;align-items:center;flex:1">
-      <div style="width:44px;height:44px;border-radius:50%;background:var(--green-light);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">3</div>
-      <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
-    </div>
-    <div style="flex:5;padding:0 0 24px 12px">
-      <div style="font-size:13px;font-weight:600;color:var(--text)">Verifies with X-Camp ID</div>
-      <div style="font-size:12px;color:var(--muted);margin-top:2px">Bot assigns class role + sets nickname to <code>FirstName [XC-ID]</code>. Class channels unlock instantly</div>
-      <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--green-light);color:var(--green)">automated</span>
-    </div>
-    <div style="display:flex;flex-direction:column;align-items:center;flex:1">
-      <div style="width:44px;height:44px;border-radius:50%;background:var(--purple-light);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">4</div>
-      <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
-    </div>
-    <div style="flex:5;padding:0 0 24px 12px">
-      <div style="font-size:13px;font-weight:600;color:var(--text)">Chooses track</div>
-      <div style="font-size:12px;color:var(--muted);margin-top:2px">Bot shows 4 buttons — Competitor, Builder, Explorer, Founder. Track lounge unlocks. +15 XP</div>
-      <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--purple-light);color:var(--purple)">student choice</span>
-    </div>
-    <div style="display:flex;flex-direction:column;align-items:center;flex:1">
-      <div style="width:44px;height:44px;border-radius:50%;background:var(--teal-light);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">5</div>
-    </div>
-    <div style="flex:5;padding:0 0 24px 12px">
-      <div style="font-size:13px;font-weight:600;color:var(--text)">Says hello</div>
-      <div style="font-size:12px;color:var(--muted);margin-top:2px">Posts in #introductions. Now a Seedling with 30 XP and a place in the community</div>
-      <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--teal-light);color:var(--teal)">first impression</span>
-    </div>
-  </div>
+  <div id="journey-tabs" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.5rem">
+    <button onclick="showJourney('student')" id="tab-student" style="padding:7px 16px;border-radius:20px;border:1px solid var(--accent);background:var(--accent);color:#fff;font-size:13px;font-weight:500;cursor:pointer">Student</button>
+    <button onclick="showJourney('teacher')" id="tab-teacher" style="padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:13px;font-weight:500;cursor:pointer">Teacher</button>
+    <button onclick="showJourney('ta')" id="tab-ta" style="padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:13px;font-weight:500;cursor:pointer">TA</button>
+    <button onclick="showJourney('coordinator')" id="tab-coordinator" style="padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:13px;font-weight:500;cursor:pointer">Teaching Service &amp; Coordinator</button>
   </div>
 
-  <h3>A typical week</h3>
-  <div style="overflow-x:auto;margin-bottom:1.5rem">
-  <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
-    <thead>
-      <tr style="background:var(--bg)">
+  <!-- Student journey -->
+  <div id="journey-student">
+    <h3 style="margin-top:0">Day 1 — First join</h3>
+    <div style="overflow-x:auto;margin-bottom:1.5rem">
+    <div style="display:flex;align-items:flex-start;gap:0;min-width:560px">
+      <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--blue-light);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">1</div>
+        <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
+      </div>
+      <div style="flex:5;padding:0 0 24px 12px">
+        <div style="font-size:13px;font-weight:600;color:var(--text)">Enrollment email arrives</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">X-Camp ID + Discord invite link included with class confirmation</div>
+        <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--blue-light);color:var(--blue)">before joining</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--purple-light);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">2</div>
+        <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
+      </div>
+      <div style="flex:5;padding:0 0 24px 12px">
+        <div style="font-size:13px;font-weight:600;color:var(--text)">Joins server</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">Sees only #welcome and #rules — clean, not overwhelming</div>
+        <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--purple-light);color:var(--purple)">student</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--green-light);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">3</div>
+        <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
+      </div>
+      <div style="flex:5;padding:0 0 24px 12px">
+        <div style="font-size:13px;font-weight:600;color:var(--text)">Verifies with X-Camp ID</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">Bot assigns class role + sets nickname to <code>FirstName [XC-ID]</code>. Class channels unlock instantly</div>
+        <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--green-light);color:var(--green)">automated</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--purple-light);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">4</div>
+        <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
+      </div>
+      <div style="flex:5;padding:0 0 24px 12px">
+        <div style="font-size:13px;font-weight:600;color:var(--text)">Chooses track</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">Bot shows 4 buttons — Competitor, Builder, Explorer, Founder. Track lounge unlocks. +15 XP</div>
+        <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--purple-light);color:var(--purple)">student choice</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--teal-light);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">5</div>
+      </div>
+      <div style="flex:5;padding:0 0 24px 12px">
+        <div style="font-size:13px;font-weight:600;color:var(--text)">Says hello</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">Posts in #introductions. Now a Seedling with 30 XP and a place in the community</div>
+        <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--teal-light);color:var(--teal)">first impression</span>
+      </div>
+    </div>
+    </div>
+
+    <h3>A typical week</h3>
+    <div style="overflow-x:auto;margin-bottom:1.5rem">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
+      <thead><tr style="background:var(--bg)">
         <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);width:22%">When</th>
         <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border)">Activity</th>
         <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);width:18%">Where</th>
         <th style="padding:8px 12px;text-align:right;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);width:10%">XP</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="background:var(--blue-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--blue);font-weight:600;font-size:12px">Sat / Sun<br><span style="font-weight:400;font-size:11px">class day</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Weekend class runs — all teaching materials on the X-Camp learning site. After class, teacher posts a fun engagement question in #class-chat to spark discussion</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#class-chat</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;text-align:right;font-size:12px">+10</td>
-      </tr>
-      <tr>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-weight:600;font-size:12px">Sun eve / Mon</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Problem of the Week drops → students attempt and post solution or approach. Drives early-week activity and friendly competition</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#potw</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;text-align:right;font-size:12px">+40 / +80</td>
-      </tr>
-      <tr style="background:var(--green-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;font-size:12px">Tue &amp; Thu<br><span style="font-weight:400;font-size:11px">required check-in</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Teachers log in and actively reply to students — responding to the after-class question, answering Q&amp;A threads, and giving feedback. Minimum one check-in per required day</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#class-chat · #q-and-a</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px;text-align:right">—</td>
-      </tr>
-      <tr style="background:var(--amber-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--amber);font-weight:600;font-size:12px">Daily<br><span style="font-weight:400;font-size:11px">5–8 PM PT</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Homework Night — submit ticket when stuck, TA responds within minutes in voice or chat</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">HW Night + voice</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;text-align:right;font-size:12px">+20</td>
-      </tr>
-      <tr>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-weight:600;font-size:12px">Weekday<br><span style="font-weight:400;font-size:11px">afternoons/eve</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Book 1-on-1 office hours via Ticket Tool for deeper concept help — screen share with TA in voice</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">Office hours voice</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px;text-align:right">—</td>
-      </tr>
-      <tr style="background:var(--purple-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--purple);font-weight:600;font-size:12px">Any weekday</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Drop into track lounge — discuss USACO strategies, share project ideas, or just read</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">Track lounge</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;text-align:right;font-size:12px">+10</td>
-      </tr>
-      <tr>
-        <td style="padding:9px 12px;color:var(--muted);font-weight:600;font-size:12px">Any time</td>
-        <td style="padding:9px 12px;color:var(--text)">Answer a classmate's question in #q-and-a — if TA marks it solved, highest single-action reward</td>
-        <td style="padding:9px 12px;color:var(--muted);font-size:12px">Class Q&amp;A</td>
-        <td style="padding:9px 12px;color:var(--green);font-weight:600;text-align:right;font-size:12px">+50</td>
-      </tr>
-    </tbody>
-  </table>
+      </tr></thead>
+      <tbody>
+        <tr style="background:var(--blue-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--blue);font-weight:600;font-size:12px">Sat / Sun<br><span style="font-weight:400;font-size:11px">class day</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Weekend class runs — all teaching materials on the X-Camp learning site. After class, teacher posts a fun engagement question in #class-chat to spark discussion</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#class-chat</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;text-align:right;font-size:12px">+10</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-weight:600;font-size:12px">Sun eve / Mon</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Problem of the Week drops → students attempt and post solution or approach. Drives early-week activity and friendly competition</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#potw</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;text-align:right;font-size:12px">+40 / +80</td>
+        </tr>
+        <tr style="background:var(--amber-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--amber);font-weight:600;font-size:12px">Daily<br><span style="font-weight:400;font-size:11px">5–8 PM PT</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Homework Night — submit ticket when stuck, TA responds within minutes in voice or chat</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">HW Night + voice</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;text-align:right;font-size:12px">+20</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-weight:600;font-size:12px">Weekday<br><span style="font-weight:400;font-size:11px">afternoons/eve</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Book 1-on-1 office hours via Ticket Tool for deeper concept help — screen share with TA in voice</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">Office hours voice</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px;text-align:right">—</td>
+        </tr>
+        <tr style="background:var(--purple-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--purple);font-weight:600;font-size:12px">Any weekday</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Drop into track lounge — discuss USACO strategies, share project ideas, or just read</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">Track lounge</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;text-align:right;font-size:12px">+10</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 12px;color:var(--muted);font-weight:600;font-size:12px">Any time</td>
+          <td style="padding:9px 12px;color:var(--text)">Answer a classmate's question in #q-and-a — if TA marks it solved, highest single-action reward</td>
+          <td style="padding:9px 12px;color:var(--muted);font-size:12px">Class Q&amp;A</td>
+          <td style="padding:9px 12px;color:var(--green);font-weight:600;text-align:right;font-size:12px">+50</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Full student lifespan — first class to alumni</h3>
+    <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px">
+      <div style="background:var(--bg);padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--border);color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0">1</div>
+        <div><div style="font-size:15px;font-weight:600;color:var(--text)">Quarter 1 — The new student</div><div style="font-size:12px;color:var(--muted);margin-top:1px">Rank: 🌱 Seedling → ⚡ Coder &nbsp;·&nbsp; XP: 0 → ~200</div></div>
+        <div style="margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end"><span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--blue-light);color:var(--blue)">First Solve</span><span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--green-light);color:var(--green)">7-Day Streak</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--border)">
+        <div style="padding:12px 16px;border-right:1px solid var(--border)"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">Role in community</div><div style="font-size:13px;color:var(--text);line-height:1.6">Observer and learner. Still finding their footing — mostly consuming content, watching how others interact, and asking questions when stuck.</div></div>
+        <div style="padding:12px 16px;border-right:1px solid var(--border)"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">How they act</div><div style="font-size:13px;color:var(--text);line-height:1.6">Posts their intro in #introductions. Submits HW Night tickets when stuck. Lurks in their track lounge. Attempts the first Problem of the Week. Reacts to others' posts but rarely starts threads.</div></div>
+        <div style="padding:12px 16px"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">What they gain</div><div style="font-size:13px;color:var(--text);line-height:1.6">Unblocked on homework thanks to TAs. A sense of belonging from their track. First recognition when their answer gets marked solved. The community starts to feel like theirs.</div></div>
+      </div>
+      <div style="padding:10px 16px;font-size:12px;color:var(--muted);font-style:italic">By quarter end: has introduced themselves, attended several HW Nights, hit their first streak, and maybe answered one or two questions for a classmate.</div>
+    </div>
+    <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px">
+      <div style="background:var(--green-light);padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--green-light);color:var(--green);border:1.5px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0">2</div>
+        <div><div style="font-size:15px;font-weight:600;color:var(--green)">Quarters 2–3 — The regular</div><div style="font-size:12px;color:var(--green);margin-top:1px;opacity:.8">Rank: 🔥 Hacker → 💡 Innovator &nbsp;·&nbsp; XP: ~200 → ~1,500</div></div>
+        <div style="margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end"><span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--green-light);color:var(--green);border:1px solid #3B6D11">Night Owl</span><span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--amber-light);color:var(--amber)">Launcher</span><span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--blue-light);color:var(--blue)">Big Brain</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--border)">
+        <div style="padding:12px 16px;border-right:1px solid var(--border)"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">Role in community</div><div style="font-size:13px;color:var(--text);line-height:1.6">Active participant. They know the rhythm, have a few Discord friendships, and are starting to shift from asking to answering. Their track identity feels real and personal.</div></div>
+        <div style="padding:12px 16px;border-right:1px solid var(--border)"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">How they act</div><div style="font-size:13px;color:var(--text);line-height:1.6">Regularly answers #q-and-a questions. Participates in inter-track events. Competes in the 100-Problem Challenge. Shares progress in #wins-and-progress. Joins study hall voice sessions with friends.</div></div>
+        <div style="padding:12px 16px"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">What they gain</div><div style="font-size:13px;color:var(--text);line-height:1.6">Visible rank progression that reflects real growth. A reputation in their track lounge. Cross-level friendships. Confidence from being recognized as someone who helps others.</div></div>
+      </div>
+      <div style="padding:10px 16px;font-size:12px;color:var(--muted);font-style:italic">By quarter end: a consistent presence, known by name in their track, answering questions almost as often as asking them.</div>
+    </div>
+    <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px">
+      <div style="background:var(--blue-light);padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--blue-light);color:var(--blue);border:1.5px solid var(--blue);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0">3</div>
+        <div><div style="font-size:15px;font-weight:600;color:var(--blue)">Quarters 4–6 — The contributor</div><div style="font-size:12px;color:var(--blue);margin-top:1px;opacity:.8">Rank: 🏅 Champion &nbsp;·&nbsp; XP: ~1,500 → ~3,500</div></div>
+        <div style="margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end"><span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--blue-light);color:var(--blue);border:1px solid #185FA5">Mentor</span><span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--purple-light);color:var(--purple)">Speaker</span><span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--amber-light);color:var(--amber)">Track Champion</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--border)">
+        <div style="padding:12px 16px;border-right:1px solid var(--border)"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">Role in community</div><div style="font-size:13px;color:var(--text);line-height:1.6">Community pillar. Newer students seek them out by name. They carry the credibility of someone who has been through it — and can prove it with their badge history.</div></div>
+        <div style="padding:12px 16px;border-right:1px solid var(--border)"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">How they act</div><div style="font-size:13px;color:var(--text);line-height:1.6">Co-hosts track AMAs. Nominates weekly problems. Actively mentors Seedlings. Suggests server improvements to admin. Tops the Most Helpful leaderboard.</div></div>
+        <div style="padding:12px 16px"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">What they gain</div><div style="font-size:13px;color:var(--text);line-height:1.6">Champion badge visible to everyone. Ability to shape the server. Deep friendships across levels and tracks. A sense of ownership over the X-Camp community.</div></div>
+      </div>
+      <div style="padding:10px 16px;font-size:12px;color:var(--muted);font-style:italic">By quarter end: one of the most recognizable names on the server. Their profile badge collection tells the full story of their X-Camp journey.</div>
+    </div>
+    <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px">
+      <div style="background:var(--purple-light);padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--purple-light);color:var(--purple);border:1.5px solid var(--purple);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0">4</div>
+        <div><div style="font-size:15px;font-weight:600;color:var(--purple)">Final quarter — The veteran</div><div style="font-size:12px;color:var(--purple);margin-top:1px;opacity:.8">Rank: 🌟 Legend (7,000 XP) &nbsp;·&nbsp; Completing the X-Camp curriculum</div></div>
+        <div style="margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end"><span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--purple-light);color:var(--purple);border:1px solid #3C3489">Contest Crusher</span><span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--red-light);color:var(--red)">OG</span><span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--purple-light);color:var(--purple)">🌟 Legend</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--border)">
+        <div style="padding:12px 16px;border-right:1px solid var(--border)"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">Role in community</div><div style="font-size:13px;color:var(--text);line-height:1.6">Living proof that X-Camp works. Their presence carries weight across the entire server. Newer students look up to them the way they once looked up to others.</div></div>
+        <div style="padding:12px 16px;border-right:1px solid var(--border)"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">How they act</div><div style="font-size:13px;color:var(--text);line-height:1.6">Participates in the end-of-quarter showcase. Answers questions across level channels. May host a final community AMA. Helps coordinators plan next quarter's events.</div></div>
+        <div style="padding:12px 16px"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">What they gain</div><div style="font-size:13px;color:var(--text);line-height:1.6">Permanent 🌟 Legend rank — visible forever after graduation. Invitation to the alumni mentor program. Class role removed at quarter end; everything else stays.</div></div>
+      </div>
+      <div style="padding:10px 16px;font-size:12px;color:var(--muted);font-style:italic">At quarter end: class role removed by <code>!endquarter</code>. XP, badges, Legend rank, and track role remain permanently.</div>
+    </div>
+    <div style="border:2px solid var(--teal);border-radius:10px;overflow:hidden;margin-bottom:12px">
+      <div style="background:var(--teal-light);padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--teal-light);color:var(--teal);border:1.5px solid var(--teal);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0">5</div>
+        <div><div style="font-size:15px;font-weight:600;color:var(--teal)">Post-graduation — Alumni</div><div style="font-size:12px;color:var(--teal);margin-top:1px;opacity:.8">Role: 🎓 Alumni &nbsp;·&nbsp; Legend rank preserved &nbsp;·&nbsp; Track lounge access continues</div></div>
+        <div style="margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end"><span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--teal-light);color:var(--teal);border:1px solid var(--teal)">Community Builder</span><span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--teal-light);color:var(--teal);border:1px solid var(--teal)">Mentor program</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--border)">
+        <div style="padding:12px 16px;border-right:1px solid var(--border)"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">Role in community</div><div style="font-size:13px;color:var(--text);line-height:1.6">Bridge between generations. Alumni are the community's memory — they remember what it was like to be a Seedling and represent what X-Camp students can become.</div></div>
+        <div style="padding:12px 16px;border-right:1px solid var(--border)"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">How they act</div><div style="font-size:13px;color:var(--text);line-height:1.6">Drops into #alumni-lounge to connect with graduates. Shares internship and college advice. Hosts occasional AMAs in their track. Legends can request read-only access to class channels to stay connected.</div></div>
+        <div style="padding:12px 16px"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">What they gain</div><div style="font-size:13px;color:var(--text);line-height:1.6">A peer network of graduates heading into college, internships, and careers. Early access to job postings. The satisfaction of giving back to a community they helped build.</div></div>
+      </div>
+      <div style="padding:10px 16px;font-size:12px;color:var(--muted);font-style:italic">Access: #alumni-lounge, #internships-jobs, #college-advice, Alumni Voice, community channels, and track lounge. Active class channels no longer visible.</div>
+    </div>
+    <div class="callout rec">
+      <div class="callout-title">The thread that connects it all</div>
+      <p>A student who joins X-Camp as a nervous CS100 Seedling and leaves as a Legend alumni has spent years in this community. Their XP, badges, track identity, friendships, and memories all live here. The Discord server is not just a support tool — it is the X-Camp experience itself.</p>
+    </div>
   </div>
 
-  <h3>Full student lifespan — first class to alumni</h3>
-  <div style="overflow-x:auto;margin-bottom:1.5rem">
-  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;min-width:560px">
-    <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
-      <div style="background:var(--bg);padding:10px 12px;border-bottom:1px solid var(--border)">
-        <div style="font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Quarter 1</div>
-        <div style="font-size:14px;font-weight:600;color:var(--text);margin-top:2px">New student</div>
-        <div style="font-size:11px;color:var(--muted);margin-top:2px">Rank: Seedling → Coder</div>
-      </div>
-      <div style="padding:10px 12px;font-size:12px;color:var(--muted);line-height:1.6">Mostly asks questions. Attends HW Nights. Lurks in track lounge. Introduces themselves. Hits first streak badge.</div>
-      <div style="padding:6px 12px 10px;display:flex;flex-wrap:wrap;gap:4px">
-        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--blue-light);color:var(--blue)">First Solve</span>
-        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--green-light);color:var(--green)">7-Day Streak</span>
-      </div>
-    </div>
-    <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
-      <div style="background:var(--green-light);padding:10px 12px;border-bottom:1px solid var(--border)">
-        <div style="font-size:10px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:.05em">Quarters 2–3</div>
-        <div style="font-size:14px;font-weight:600;color:var(--green);margin-top:2px">The regular</div>
-        <div style="font-size:11px;color:var(--green);margin-top:2px">Rank: Hacker → Innovator</div>
-      </div>
-      <div style="padding:10px 12px;font-size:12px;color:var(--muted);line-height:1.6">Knows the rhythm. Has Discord friends. Answers as often as asks. Track identity feels real. Joins inter-track events for fun.</div>
-      <div style="padding:6px 12px 10px;display:flex;flex-wrap:wrap;gap:4px">
-        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--green-light);color:var(--green)">Night Owl</span>
-        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--amber-light);color:var(--amber)">Launcher</span>
-        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--blue-light);color:var(--blue)">Big Brain</span>
-      </div>
-    </div>
-    <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
-      <div style="background:var(--blue-light);padding:10px 12px;border-bottom:1px solid var(--border)">
-        <div style="font-size:10px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.05em">Quarters 4–6</div>
-        <div style="font-size:14px;font-weight:600;color:var(--blue);margin-top:2px">The contributor</div>
-        <div style="font-size:11px;color:var(--blue);margin-top:2px">Rank: Champion</div>
-      </div>
-      <div style="padding:10px 12px;font-size:12px;color:var(--muted);line-height:1.6">Advanced levels. Newer students ask them for help. Co-hosts AMAs. Recognized by name. Mentors Seedlings.</div>
-      <div style="padding:6px 12px 10px;display:flex;flex-wrap:wrap;gap:4px">
-        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--blue-light);color:var(--blue)">Mentor</span>
-        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--purple-light);color:var(--purple)">Speaker</span>
-        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--amber-light);color:var(--amber)">Track Champion</span>
-      </div>
-    </div>
-    <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
-      <div style="background:var(--purple-light);padding:10px 12px;border-bottom:1px solid var(--border)">
-        <div style="font-size:10px;font-weight:600;color:var(--purple);text-transform:uppercase;letter-spacing:.05em">Final quarter</div>
-        <div style="font-size:14px;font-weight:600;color:var(--purple);margin-top:2px">The veteran</div>
-        <div style="font-size:11px;color:var(--purple);margin-top:2px">Rank: Legend (7,000 XP)</div>
-      </div>
-      <div style="padding:10px 12px;font-size:12px;color:var(--muted);line-height:1.6">CS600s level. Discord presence carries weight. Final showcase. Class role removed — XP and badges stay forever.</div>
-      <div style="padding:6px 12px 10px;display:flex;flex-wrap:wrap;gap:4px">
-        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--purple-light);color:var(--purple)">Contest Crusher</span>
-        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--red-light);color:var(--red)">OG</span>
-      </div>
-    </div>
-    <div style="border:2px solid var(--teal);border-radius:10px;overflow:hidden">
-      <div style="background:var(--teal-light);padding:10px 12px;border-bottom:1px solid var(--border)">
-        <div style="font-size:10px;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:.05em">Post-graduation</div>
-        <div style="font-size:14px;font-weight:600;color:var(--teal);margin-top:2px">Alumni</div>
-        <div style="font-size:11px;color:var(--teal);margin-top:2px">Role: Alumni + Legend</div>
-      </div>
-      <div style="padding:10px 12px;font-size:12px;color:var(--muted);line-height:1.6">Accesses alumni lounge, jobs, college advice. Track lounge stays open. Legends host AMAs and mentor current students.</div>
-      <div style="padding:6px 12px 10px;display:flex;flex-wrap:wrap;gap:4px">
-        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--teal-light);color:var(--teal)">Community Builder</span>
-        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--teal-light);color:var(--teal)">Mentor program</span>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <div class="callout rec">
-    <div class="callout-title">The thread that connects it all</div>
-    <p>A student who joins X-Camp as a nervous CS100 Seedling and leaves as a Legend alumni has spent years in this community. Their XP, badges, track identity, friendships, and memories all live here. The Discord server is not just a support tool — it is the X-Camp experience itself.</p>
-  </div>
-</div>
-
-<!-- 12. Teacher Journey -->
-<div class="section" id="teacherjourney">
-  <h2 class="section-title"><span class="num">12</span> Teacher's weekly journey</h2>
-  <p>Teachers own their class category on Discord. Their weekly presence is structured around two required check-in days and a weekend class, with Discord serving as the bridge between sessions — not a replacement for the learning site.</p>
-  <div style="overflow-x:auto;margin-bottom:1.5rem">
-  <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
-    <thead>
-      <tr style="background:var(--bg)">
+  <!-- Teacher journey -->
+  <div id="journey-teacher" style="display:none">
+    <p style="color:var(--muted);margin-bottom:1.25rem">Teachers own their class category on Discord. Their weekly presence is structured around two required check-in days and a weekend class, with Discord serving as the bridge between sessions — not a replacement for the learning site.</p>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
+      <thead><tr style="background:var(--bg)">
         <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);width:22%">When</th>
         <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border)">Activity</th>
         <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);width:22%">Where</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="background:var(--blue-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--blue);font-weight:600;font-size:12px">Sat / Sun<br><span style="font-weight:400;font-size:11px">class day</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Teach class on X-Camp learning site. After class, post a fun engagement question or after-class challenge in #class-chat to spark discussion and keep students thinking until next class</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#class-chat</td>
-      </tr>
-      <tr style="background:var(--green-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;font-size:12px">Tue &amp; Thu<br><span style="font-weight:400;font-size:11px">required check-in</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Log in and actively reply to students — respond to after-class question discussion, answer threads in #q-and-a, give feedback and encouragement. Minimum one substantive check-in per day</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#class-chat · #q-and-a</td>
-      </tr>
-      <tr>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-weight:600;font-size:12px">Mon / Wed / Fri<br><span style="font-weight:400;font-size:11px">optional</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Drop in if time permits — react to good student answers, pin quality responses, or add a follow-up thought to an ongoing thread. Not required but encouraged</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#class-chat · #q-and-a</td>
-      </tr>
-      <tr style="background:var(--amber-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--amber);font-weight:600;font-size:12px">Weekly<br><span style="font-weight:400;font-size:11px">ongoing</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Pin the best student answer of the week in #q-and-a to build the class knowledge base</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#q-and-a</td>
-      </tr>
-      <tr>
-        <td style="padding:9px 12px;color:var(--muted);font-weight:600;font-size:12px">Any time</td>
-        <td style="padding:9px 12px;color:var(--text)">Post class-level announcements (schedule changes, contest reminders, encouragement). Coordinate with TAs via #staff-general for anything requiring follow-up</td>
-        <td style="padding:9px 12px;color:var(--muted);font-size:12px">#announcements · #staff-general</td>
-      </tr>
-    </tbody>
-  </table>
+      </tr></thead>
+      <tbody>
+        <tr style="background:var(--blue-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--blue);font-weight:600;font-size:12px">Sat / Sun<br><span style="font-weight:400;font-size:11px">class day</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Teach class on X-Camp learning site. After class, post a fun engagement question or after-class challenge in #class-chat to spark discussion and keep students thinking until next class</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#class-chat</td>
+        </tr>
+        <tr style="background:var(--green-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;font-size:12px">Tue &amp; Thu<br><span style="font-weight:400;font-size:11px">required check-in</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Log in and actively reply to students — respond to after-class question discussion, answer threads in #q-and-a, give feedback and encouragement. Minimum one substantive check-in per day</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#class-chat · #q-and-a</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-weight:600;font-size:12px">Mon / Wed / Fri<br><span style="font-weight:400;font-size:11px">optional</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Drop in if time permits — react to good student answers, pin quality responses, or add a follow-up thought to an ongoing thread. Not required but encouraged</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#class-chat · #q-and-a</td>
+        </tr>
+        <tr style="background:var(--amber-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--amber);font-weight:600;font-size:12px">Weekly<br><span style="font-weight:400;font-size:11px">ongoing</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Pin the best student answer of the week in #q-and-a to build the class knowledge base</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#q-and-a</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 12px;color:var(--muted);font-weight:600;font-size:12px">Any time</td>
+          <td style="padding:9px 12px;color:var(--text)">Post class-level announcements (schedule changes, contest reminders, encouragement). Coordinate with TAs via #staff-general for anything requiring follow-up</td>
+          <td style="padding:9px 12px;color:var(--muted);font-size:12px">#announcements · #staff-general</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
   </div>
-</div>
 
-<!-- 13. TA Journey -->
-<div class="section" id="tajourney">
-  <h2 class="section-title"><span class="num">13</span> TA's weekly journey</h2>
-  <p>TAs are the frontline of daily student support. Their week is anchored by Homework Night duty and office hours slots, with light ongoing presence in class channels to keep Q&A moving between sessions.</p>
-  <div style="overflow-x:auto;margin-bottom:1.5rem">
-  <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
-    <thead>
-      <tr style="background:var(--bg)">
+  <!-- TA journey -->
+  <div id="journey-ta" style="display:none">
+    <p style="color:var(--muted);margin-bottom:1.25rem">TAs are the frontline of daily student support. Their week is anchored by Homework Night duty and office hours slots, with light ongoing presence in class channels to keep Q&A moving between sessions.</p>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
+      <thead><tr style="background:var(--bg)">
         <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);width:22%">When</th>
         <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border)">Activity</th>
         <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);width:22%">Where</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="background:var(--amber-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--amber);font-weight:600;font-size:12px">Daily<br><span style="font-weight:400;font-size:11px">5–8 PM PT · on-duty nights</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">On-duty for Homework Night (Mon–Sun). Monitor #hw-night-lobby, claim student tickets with <code>!claim</code>, resolve questions via chat thread or voice room. Use <code>!solved</code> to close and archive. Flag unanswered questions at 8 PM for teacher review</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">HW Night channels + voice</td>
-      </tr>
-      <tr style="background:var(--blue-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--blue);font-weight:600;font-size:12px">Weekday afternoons<br><span style="font-weight:400;font-size:11px">scheduled slots</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Host 1-on-1 office hours sessions booked via Ticket Tool. Review student's question before the session starts. Screen share and walk through concepts in voice. Post a brief summary to #solved-answers after each session</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">Office hours voice · #solved-answers</td>
-      </tr>
-      <tr style="background:var(--green-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;font-size:12px">Weekdays<br><span style="font-weight:400;font-size:11px">light presence</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Check assigned level's #q-and-a once or twice — reply to unanswered questions, mark good student answers as solved, pin particularly helpful responses. Keep the channel from going quiet between HW Nights</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#q-and-a · #class-chat</td>
-      </tr>
-      <tr>
-        <td style="padding:9px 12px;color:var(--muted);font-weight:600;font-size:12px">Any time</td>
-        <td style="padding:9px 12px;color:var(--text)">Flag rule-breaking or concerning content to #flagged-content. Escalate anything requiring mute or ban to coordinator. Never act unilaterally on moderation beyond deleting clearly off-topic posts</td>
-        <td style="padding:9px 12px;color:var(--muted);font-size:12px">#flagged-content · #staff-general</td>
-      </tr>
-    </tbody>
-  </table>
+      </tr></thead>
+      <tbody>
+        <tr style="background:var(--amber-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--amber);font-weight:600;font-size:12px">Daily<br><span style="font-weight:400;font-size:11px">5–8 PM PT · on-duty nights</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">On-duty for Homework Night (Mon–Sun). Monitor #hw-night-lobby, claim student tickets with <code>!claim</code>, resolve questions via chat thread or voice room. Use <code>!solved</code> to close and archive. Flag unanswered questions at 8 PM for teacher review</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">HW Night channels + voice</td>
+        </tr>
+        <tr style="background:var(--blue-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--blue);font-weight:600;font-size:12px">Weekday afternoons<br><span style="font-weight:400;font-size:11px">scheduled slots</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Host 1-on-1 office hours sessions booked via Ticket Tool. Review student's question before the session starts. Screen share and walk through concepts in voice. Post a brief summary to #solved-answers after each session</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">Office hours voice · #solved-answers</td>
+        </tr>
+        <tr style="background:var(--green-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;font-size:12px">Weekdays<br><span style="font-weight:400;font-size:11px">light presence</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Check assigned level's #q-and-a once or twice — reply to unanswered questions, mark good student answers as solved, pin particularly helpful responses. Keep the channel from going quiet between HW Nights</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#q-and-a · #class-chat</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 12px;color:var(--muted);font-weight:600;font-size:12px">Any time</td>
+          <td style="padding:9px 12px;color:var(--text)">Flag rule-breaking or concerning content to #flagged-content. Escalate anything requiring mute or ban to coordinator. Never act unilaterally on moderation beyond deleting clearly off-topic posts</td>
+          <td style="padding:9px 12px;color:var(--muted);font-size:12px">#flagged-content · #staff-general</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
   </div>
-</div>
 
-<!-- 14. Teaching Service & Coordinator Journey -->
-<div class="section" id="coordinatorjourney">
-  <h2 class="section-title"><span class="num">14</span> Teaching service &amp; coordinator's weekly journey</h2>
-  <p>The teaching service team and class coordinators are the operational backbone of the Discord community. They oversee the entire server, handle everything outside the classroom, and are the first line of response for flagged content, student issues, and platform health.</p>
-  <div style="overflow-x:auto;margin-bottom:1.5rem">
-  <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
-    <thead>
-      <tr style="background:var(--bg)">
+  <!-- Coordinator journey -->
+  <div id="journey-coordinator" style="display:none">
+    <p style="color:var(--muted);margin-bottom:1.25rem">The teaching service team and class coordinators are the operational backbone of the Discord community. They oversee the entire server, handle everything outside the classroom, and are the first line of response for flagged content, student issues, and platform health.</p>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
+      <thead><tr style="background:var(--bg)">
         <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);width:22%">When</th>
         <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border)">Activity</th>
         <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);width:22%">Where</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="background:var(--red-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--red);font-weight:600;font-size:12px">Daily<br><span style="font-weight:400;font-size:11px">required</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Review #mod-log and #flagged-content — assess every flagged item, take action (remove content, warn student, escalate to admin), and log the outcome. No flagged item should go unreviewed for more than 24 hours</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#mod-log · #flagged-content</td>
-      </tr>
-      <tr style="background:var(--amber-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--amber);font-weight:600;font-size:12px">Daily<br><span style="font-weight:400;font-size:11px">required</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Monitor community channels for unanswered non-class questions — #general, #feedback, #introductions, and inter-track channels. Answer or route any question outside a teacher's or TA's scope. No student question in public channels should go unanswered for more than 24 hours</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#general · #feedback · community channels</td>
-      </tr>
-      <tr>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-weight:600;font-size:12px">Daily<br><span style="font-weight:400;font-size:11px">during HW Night</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Monitor HW Night queue depth across all level bands during 5–8 PM PT. If any level's wait time exceeds 10 minutes, reassign available TAs or step in directly. Review nightly bot summary for patterns</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#hw-night-lobby · #staff-general</td>
-      </tr>
-      <tr style="background:var(--blue-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--blue);font-weight:600;font-size:12px">Weekly</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Review Statbot analytics — active members, peak hours, channel engagement, XP activity. Flag any class channels quiet for 5+ days. Confirm all teachers completed Tue/Thu check-ins. Review TA office hours coverage for the coming week</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#analytics · #ta-schedule · #staff-general</td>
-      </tr>
-      <tr style="background:var(--green-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;font-size:12px">Weekly</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Process new student verifications — validate X-Camp IDs in #verify-here, confirm roles and nicknames were set correctly, send onboarding DMs to new joiners who haven't received one</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#verify-here · #enrollment-ops</td>
-      </tr>
-      <tr style="background:var(--purple-light)">
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--purple);font-weight:600;font-size:12px">Quarter boundaries</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Confirm X-Camp IDs are active for all enrolling students. Run <code>!endquarter</code> on the last day. Onboard new teachers and TAs. Post quarter kickoff announcement in #announcements</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#enrollment-ops · #announcements · #admin-general</td>
-      </tr>
-      <tr>
-        <td style="padding:9px 12px;color:var(--muted);font-weight:600;font-size:12px">Any time</td>
-        <td style="padding:9px 12px;color:var(--text)">Handle student account issues (lost X-Camp ID, wrong role, nickname reset, account change). Act as escalation point for TAs. Coordinate with admin on ban decisions or serious policy violations</td>
-        <td style="padding:9px 12px;color:var(--muted);font-size:12px">#enrollment-ops · #staff-general · #admin-general</td>
-      </tr>
-    </tbody>
-  </table>
+      </tr></thead>
+      <tbody>
+        <tr style="background:var(--red-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--red);font-weight:600;font-size:12px">Daily<br><span style="font-weight:400;font-size:11px">required</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Review #mod-log and #flagged-content — assess every flagged item, take action (remove content, warn student, escalate to admin), and log the outcome. No flagged item should go unreviewed for more than 24 hours</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#mod-log · #flagged-content</td>
+        </tr>
+        <tr style="background:var(--amber-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--amber);font-weight:600;font-size:12px">Daily<br><span style="font-weight:400;font-size:11px">required</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Monitor community channels for unanswered non-class questions — #general, #feedback, #introductions, and inter-track channels. Answer or route any question outside a teacher's or TA's scope. No student question in public channels should go unanswered for more than 24 hours</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#general · #feedback · community channels</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-weight:600;font-size:12px">Daily<br><span style="font-weight:400;font-size:11px">during HW Night</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Monitor HW Night queue depth across all level bands during 5–8 PM PT. If any level's wait time exceeds 10 minutes, reassign available TAs or step in directly. Review nightly bot summary for patterns</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#hw-night-lobby · #staff-general</td>
+        </tr>
+        <tr style="background:var(--blue-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--blue);font-weight:600;font-size:12px">Weekly</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Review Statbot analytics — active members, peak hours, channel engagement, XP activity. Flag any class channels quiet for 5+ days. Confirm all teachers completed Tue/Thu check-ins. Review TA office hours coverage for the coming week</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#analytics · #ta-schedule · #staff-general</td>
+        </tr>
+        <tr style="background:var(--green-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;font-size:12px">Weekly</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Process new student verifications — validate X-Camp IDs in #verify-here, confirm roles and nicknames were set correctly, send onboarding DMs to new joiners who haven't received one</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#verify-here · #enrollment-ops</td>
+        </tr>
+        <tr style="background:var(--purple-light)">
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--purple);font-weight:600;font-size:12px">Quarter boundaries</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Confirm X-Camp IDs are active for all enrolling students. Run <code>!endquarter</code> on the last day. Onboard new teachers and TAs. Post quarter kickoff announcement in #announcements</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#enrollment-ops · #announcements · #admin-general</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 12px;color:var(--muted);font-weight:600;font-size:12px">Any time</td>
+          <td style="padding:9px 12px;color:var(--text)">Handle student account issues (lost X-Camp ID, wrong role, nickname reset, account change). Act as escalation point for TAs. Coordinate with admin on ban decisions or serious policy violations</td>
+          <td style="padding:9px 12px;color:var(--muted);font-size:12px">#enrollment-ops · #staff-general · #admin-general</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
   </div>
 </div>
 
-<!-- 15. Bots -->
+<script>
+function showJourney(role) {
+  ['student','teacher','ta','coordinator'].forEach(r => {
+    document.getElementById('journey-' + r).style.display = r === role ? 'block' : 'none';
+    var tab = document.getElementById('tab-' + r);
+    if (r === role) {
+      tab.style.background = 'var(--accent)';
+      tab.style.color = '#fff';
+      tab.style.borderColor = 'var(--accent)';
+    } else {
+      tab.style.background = 'transparent';
+      tab.style.color = 'var(--muted)';
+      tab.style.borderColor = 'var(--border)';
+    }
+  });
+}
+</script>
+
+<!-- 12. Bots -->
 <div class="section" id="bots">
-  <h2 class="section-title"><span class="num">15</span> Recommended bots</h2>
+  <h2 class="section-title"><span class="num">12</span> Recommended bots</h2>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Bot</th><th>Primary use</th></tr></thead>
@@ -1376,9 +1378,48 @@
   </div>
 </div>
 
-<!-- 16. Timeline -->
+<!-- 13. Cost -->
+<div class="section" id="cost">
+  <h2 class="section-title"><span class="num">13</span> Cost</h2>
+  <p>Running a Discord community at X-Camp's scale is significantly more affordable than any comparable platform. Discord itself is free regardless of server size — all core features including voice, chat, threads, roles, and moderation tools are available at no cost.</p>
+
+  <h3>Bot costs</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Bot</th><th>Free tier</th><th>Paid tier</th><th>Recommendation</th></tr></thead>
+      <tbody>
+        <tr><td>MEE6 or Atlas</td><td>Basic XP, leveling, welcome messages</td><td>~$4–11/mo</td><td>Start free; upgrade if advanced XP customization is needed</td></tr>
+        <tr><td>Carl-bot</td><td>Full moderation, logging, reaction roles</td><td>Free (with limits)</td><td>Free tier is sufficient for X-Camp's scale</td></tr>
+        <tr><td>Ticket Tool</td><td>Basic queue and ticket system</td><td>~$5–10/mo</td><td>Free tier workable at launch; paid unlocks analytics</td></tr>
+        <tr><td>Statbot</td><td>Basic server analytics</td><td>~$5/mo</td><td>Free tier covers essential engagement tracking</td></tr>
+        <tr><td>Sesh</td><td>Full scheduling and RSVP</td><td>Free</td><td>No paid tier needed</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Cost summary</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Scenario</th><th>Monthly cost</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Launch (free tiers only)</td><td>$0</td><td>All bots on free tier — sufficient for pilot and early quarters</td></tr>
+        <tr><td>Standard operations</td><td>~$15–30/mo</td><td>MEE6 and Ticket Tool upgraded for better XP and queue analytics</td></tr>
+        <tr><td>Full premium bots</td><td>~$30–50/mo</td><td>All bots on paid tier — ceiling for ongoing operations</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout rec">
+    <div class="callout-title">For comparison</div>
+    <p>Slack at X-Camp's student scale would cost $2,000+/month. Circle starts at $89/month. Discord's platform cost is effectively zero — the only real cost is bot tooling at $0–50/month, and staff time.</p>
+  </div>
+
+  <p>The most significant cost of running this community is <strong>staff time</strong> — coordinator daily monitoring, teacher Tue/Thu check-ins, and TA coverage for HW Night every evening. These are operational commitments, not platform fees.</p>
+</div>
+
+<!-- 14. Timeline -->
 <div class="section" id="timeline">
-  <h2 class="section-title"><span class="num">16</span> Launch timeline</h2>
+  <h2 class="section-title"><span class="num">13</span> Launch timeline</h2>
   <div class="timeline">
     <div class="tl-item">
       <div class="tl-left"><div class="tl-dot" style="background:var(--blue)"></div><div class="tl-line"></div></div>
@@ -1403,17 +1444,15 @@
   </div>
 </div>
 
-<!-- 17. Open questions -->
+<!-- 15. Open questions -->
 <div class="section" id="questions">
-  <h2 class="section-title"><span class="num">17</span> Open questions</h2>
+  <h2 class="section-title"><span class="num">15</span> Open questions</h2>
   <div class="questions">
     <div class="q-item"><span class="q-num">1</span>Which role management approach will be used at launch — Option B (X-Camp ID verification) or Option C (API sync)? Who owns the technical implementation?</div>
-    <div class="q-item"><span class="q-num">2</span>Will a dedicated Discord coordinator role be assigned, or distributed across existing teaching service staff?</div>
-    <div class="q-item"><span class="q-num">3</span>Should younger students (CS100–200 levels) require a separate parental consent step before joining?</div>
-    <div class="q-item"><span class="q-num">4</span>What is the policy for students who advance levels mid-quarter — immediate role update, or at quarter boundary?</div>
-    <div class="q-item"><span class="q-num">5</span>How many office hours slots per level band per week should be guaranteed at launch?</div>
-    <div class="q-item"><span class="q-num">6</span>Should the alumni channel launch simultaneously with the student server, or in a later phase?</div>
-    <div class="q-item"><span class="q-num">7</span>What is the process for students who prefer not to display their real first name — is a preferred name policy needed?</div>
+    <div class="q-item"><span class="q-num">2</span>What is the policy for students who advance levels mid-quarter — immediate role update, or at quarter boundary?</div>
+    <div class="q-item"><span class="q-num">3</span>Should younger students (CS100–200 levels) require a separate parental consent step before joining? Who drafts and distributes the parent communication?</div>
+    <div class="q-item"><span class="q-num">4</span>Teacher check-in requirement: Tue &amp; Thu is the current proposal. Does the teaching team agree this is reasonable? Is there a preferred enforcement or accountability mechanism?</div>
+
   </div>
 </div>
 
