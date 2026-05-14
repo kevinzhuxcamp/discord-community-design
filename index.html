@@ -162,12 +162,14 @@
   <ol>
     <li><a href="#positioning">Positioning</a></li>
     <li><a href="#architecture">Server architecture</a></li>
+    <li><a href="#tracks">Student tracks</a></li>
     <li><a href="#roles">Role hierarchy &amp; permissions</a></li>
     <li><a href="#rolemanagement">Student role management</a></li>
     <li><a href="#hwnight">Homework night workflow</a></li>
     <li><a href="#officehours">Office hours workflow</a></li>
     <li><a href="#moderation">Moderation &amp; safety</a></li>
     <li><a href="#engagement">Engagement &amp; gamification</a></li>
+    <li><a href="#userjourney">Student user journey</a></li>
     <li><a href="#bots">Recommended bots</a></li>
     <li><a href="#timeline">Launch timeline</a></li>
     <li><a href="#questions">Open questions</a></li>
@@ -199,8 +201,7 @@
         <tr><td>Homework Q&amp;A knowledge base</td><td>Discourse</td><td>Searchable, permanent, solved-answer format — compounds in value over time</td></tr>
         <tr><td>Student and community bonding</td><td>Discord</td><td>Community channels, voice study halls, contests, leaderboards</td></tr>
         <tr><td>Contest and coding community</td><td>Discord</td><td>Where USACO, coding clubs, and competitive programming communities already live</td></tr>
-        <tr><td>Staff coordination</td><td>Discord</td><td>Private staff channels, TA scheduling, real-time mod log</td></tr>
-        <tr><td>Long-term knowledge archive</td><td>Discourse</td><td>Indexed by search engines, accessible without login, permanent record</td></tr>
+        <tr><td>Office hours / HW Night scheduling</td><td>Discord</td><td>Ticket Tool bot manages 1-on-1 booking and HW Night queue; Sesh bot handles TA availability calendars and session reminders — all within Discord without external scheduling tools</td></tr>
         <tr><td>Alumni and outreach community</td><td>Discord</td><td>Public server discovery, alumni voice, connection to outside coding world</td></tr>
       </tbody>
     </table>
@@ -241,6 +242,21 @@
         <div class="ch-row"><span class="ch-name"># resources</span><span class="badge b-all">everyone</span></div>
         <div class="ch-row"><span class="ch-name"># off-topic</span><span class="badge b-all">everyone</span></div>
         <div class="ch-row"><span class="ch-name"># feedback</span><span class="badge b-all">everyone</span></div>
+        <div class="ch-row"><span class="ch-name"># inter-track-events</span><span class="badge b-all">everyone</span></div>
+      </div>
+    </div>
+    <div class="cat-card theme-purple">
+      <div class="cat-head">🏠 Tracks</div>
+      <div class="cat-body">
+        <div class="ch-row"><span class="ch-name"># choose-your-track</span><span class="badge b-all">everyone</span></div>
+        <div class="ch-row"><span class="ch-name"># 🏆︱competitor-lounge</span><span class="badge b-cls">track role</span></div>
+        <div class="ch-row"><span class="ch-name">🔊 Competitor Voice</span><span class="badge b-cls">track role</span></div>
+        <div class="ch-row"><span class="ch-name"># 🔬︱builder-lounge</span><span class="badge b-cls">track role</span></div>
+        <div class="ch-row"><span class="ch-name">🔊 Builder Voice</span><span class="badge b-cls">track role</span></div>
+        <div class="ch-row"><span class="ch-name"># 🎨︱explorer-lounge</span><span class="badge b-cls">track role</span></div>
+        <div class="ch-row"><span class="ch-name">🔊 Explorer Voice</span><span class="badge b-cls">track role</span></div>
+        <div class="ch-row"><span class="ch-name"># 🚀︱founder-lounge</span><span class="badge b-cls">track role</span></div>
+        <div class="ch-row"><span class="ch-name">🔊 Founder Voice</span><span class="badge b-cls">track role</span></div>
       </div>
     </div>
     <div class="cat-card theme-green">
@@ -327,7 +343,102 @@
   </div>
 </div>
 
-<!-- 3. Roles -->
+<!-- 3. Tracks -->
+<div class="section" id="tracks">
+  <h2 class="section-title"><span class="num">3</span> Student tracks — community identity</h2>
+
+  <p>Inspired by the house system in Harry Potter, X-Camp students choose a <strong>track</strong> when they first join the server. Tracks are not academic levels — they reflect a student's coding identity, goals, and personality. A student in CS300 and a student in CS500 can both be Competitors, and that shared identity becomes the basis for friendship, rivalry, and community beyond the classroom.</p>
+  <p>Each student carries two roles on their Discord profile: their <strong>class role</strong> (e.g. Student-CS300) and their <strong>track role</strong> (e.g. 🏆 Competitor). Tracks are self-selected, low-stakes, and can be changed — the goal is to give students a sense of belonging and a community of like-minded peers, not to box them in.</p>
+
+  <div class="option-grid" style="grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));">
+    <div class="option-card" style="border-color:#C9A227">
+      <div class="option-title" style="color:#7A5C00">🏆 The Competitor</div>
+      <div class="option-body">Laser-focused on USACO, rankings, and algorithmic mastery. Motivated by challenge, speed, and recognition. Wants to solve hard problems and climb leaderboards.</div>
+      <div class="pro-con" style="margin-top:8px">
+        <div style="font-size:12px;color:var(--muted)">Motto: <em>"Every problem has a solution. Find it faster."</em></div>
+      </div>
+    </div>
+    <div class="option-card" style="border-color:#185FA5">
+      <div class="option-title" style="color:#185FA5">🔬 The Builder</div>
+      <div class="option-body">Pursuing CS, AI, or STEM seriously. Interested in how code connects to research, real-world applications, and a future career in technology or academia.</div>
+      <div class="pro-con" style="margin-top:8px">
+        <div style="font-size:12px;color:var(--muted)">Motto: <em>"Code is a tool. Build something that matters."</em></div>
+      </div>
+    </div>
+    <div class="option-card" style="border-color:#3B6D11">
+      <div class="option-title" style="color:#3B6D11">🎨 The Explorer</div>
+      <div class="option-body">Treats coding as a creative hobby or fun extracurricular. No pressure, just curiosity. Wants to learn, build interesting things, and enjoy the process for its own sake.</div>
+      <div class="pro-con" style="margin-top:8px">
+        <div style="font-size:12px;color:var(--muted)">Motto: <em>"Code because it's fun. That's reason enough."</em></div>
+      </div>
+    </div>
+    <div class="option-card" style="border-color:#791F1F">
+      <div class="option-title" style="color:#791F1F">🚀 The Founder</div>
+      <div class="option-body">Entrepreneurial mindset. Wants to build projects, apps, or maybe a startup someday. Interested in turning ideas into real products that other people actually use.</div>
+      <div class="pro-con" style="margin-top:8px">
+        <div style="font-size:12px;color:var(--muted)">Motto: <em>"Don't just learn to code. Build something."</em></div>
+      </div>
+    </div>
+  </div>
+
+  <h3>How it works on Discord</h3>
+  <p>When a student completes the enrollment code verification and enters the server, the bot immediately prompts them in a private welcome thread: <em>"Welcome to X-Camp! One more step — choose your track. This tells us what kind of coder you are and connects you with like-minded students."</em> Four buttons appear, one per track. The student taps once and is assigned their track role. They can change it anytime by returning to <code>#choose-your-track</code>.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Channel / space</th><th>Purpose</th><th>Who sees it</th></tr></thead>
+      <tbody>
+        <tr><td># choose-your-track</td><td>Bot prompt with 4 track buttons on first join; also accessible for track changes anytime</td><td>Everyone</td></tr>
+        <tr><td># inter-track-events</td><td>Announcements and results for cross-track challenges, competitions, and community events</td><td>Everyone</td></tr>
+        <tr><td># 🏆︱competitor-lounge</td><td>USACO strategies, contest prep, problem discussion, rating flex — Competitors only</td><td>Competitor track</td></tr>
+        <tr><td># 🔬︱builder-lounge</td><td>CS concepts, AI/ML discussion, research links, college prep — Builders only</td><td>Builder track</td></tr>
+        <tr><td># 🎨︱explorer-lounge</td><td>Fun projects, creative coding, casual help and sharing — Explorers only</td><td>Explorer track</td></tr>
+        <tr><td># 🚀︱founder-lounge</td><td>Project ideas, product feedback, startup discussion, demo sharing — Founders only</td><td>Founder track</td></tr>
+        <tr><td>🔊 Track voice rooms</td><td>One voice channel per track for informal hangouts and collaboration</td><td>Track members</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Cross-track activities and events</h3>
+  <p>Tracks are most powerful when they interact. The following events are designed to spark friendly competition, creativity, and cross-community connection:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Event</th><th>Format</th><th>Frequency</th></tr></thead>
+      <tbody>
+        <tr><td>🏅 Inter-Track Code Battle</td><td>Same problem, different scoring rubrics per track: Competitors scored on speed and efficiency; Builders on code quality and extensibility; Explorers on creativity; Founders on how they'd turn it into a product</td><td>Monthly</td></tr>
+        <tr><td>🛠️ Cross-Track Hackathon</td><td>Mixed teams of one student per track — forced to combine algorithmic thinking, engineering mindset, creativity, and product sense. Best projects voted on by the whole community</td><td>Once per quarter</td></tr>
+        <tr><td>🎤 Track AMA Series</td><td>Each track hosts a guest — Competitors invite a USACO Platinum student; Builders invite a college CS student or researcher; Explorers invite a creative coder; Founders invite an alumni who shipped a product</td><td>Once per track per quarter</td></tr>
+        <tr><td>🌀 "Explain It" Challenge</td><td>Open to all tracks — explain a CS concept (e.g. recursion, sorting) to a 5-year-old in the funniest or most creative way. Community votes on winner. No coding required</td><td>Monthly</td></tr>
+        <tr><td>🗳️ Project Showcase</td><td>Founders and Builders demo projects in a voice channel. Explorers vote on most creative. Competitors rate algorithmic complexity. Community applauds everything</td><td>End of quarter</td></tr>
+        <tr><td>🏆 Track Leaderboard</td><td>Tracks compete as teams — total XP earned by all members counts toward a track score. Leaderboard shown in #inter-track-events. Winning track gets a special server banner for the month</td><td>Ongoing / monthly reset</td></tr>
+        <tr><td>🎲 Random Collab Week</td><td>Bot randomly pairs one student from each track for a low-stakes 1-week mini project. No pressure — just a nudge to meet someone new across the community</td><td>Once per quarter</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Design principles</h3>
+  <div class="rule-grid">
+    <div class="rule-box">
+      <div class="rule-box-title">Tracks are identity, not gatekeeping</div>
+      <div class="rule-box-body">A student can change their track anytime. There are no wrong answers. The goal is to help students find their people — not to lock them into a category. Some students may feel they belong to two tracks; encourage them to pick the one that feels most like them right now.</div>
+    </div>
+    <div class="rule-box">
+      <div class="rule-box-title">Tracks cut across class levels</div>
+      <div class="rule-box-body">A CS100 Explorer and a CS500 Explorer share the same lounge. This is intentional — it creates mentorship moments, cross-level friendships, and a sense that the community is bigger than any one class. Senior students naturally become informal role models.</div>
+    </div>
+    <div class="rule-box">
+      <div class="rule-box-title">Staff engagement per track</div>
+      <div class="rule-box-body">Assign one TA or instructor as a track champion for each group — someone who checks in, seeds discussions, and runs the track-specific AMA. This prevents lounges from going quiet after the novelty wears off.</div>
+    </div>
+    <div class="rule-box">
+      <div class="rule-box-title">Use track data wisely</div>
+      <div class="rule-box-body">Track distribution data tells X-Camp something useful about its student body — how many are contest-driven vs. career-driven vs. hobbyist. This can inform curriculum design, marketing messaging, and what kinds of events to run more of.</div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. Roles -->
 <div class="section" id="roles">
   <h2 class="section-title"><span class="num">3</span> Role hierarchy &amp; permissions</h2>
   <p>Roles are assigned from highest to lowest privilege. Students receive one <code>Student-CS[level]</code> role corresponding to their enrolled level band.</p>
@@ -773,24 +884,317 @@
   </div>
 </div>
 
-<!-- 8. Engagement -->
+<!-- 8. Engagement & Gamification -->
 <div class="section" id="engagement">
   <h2 class="section-title"><span class="num">8</span> Engagement &amp; gamification</h2>
+
+  <p>Gamification works best when earning rewards feels like a natural byproduct of being a good student and community member — not a separate game layered on top. Every point, badge, and title in X-Camp's system is designed to recognize behaviors that are genuinely valuable: helping classmates, showing up consistently, improving over time, and contributing to the community.</p>
+
+  <div class="callout info">
+    <div class="callout-title">Design principle</div>
+    <p>Avoid rewarding raw activity volume (e.g. most messages sent) — this creates spam incentives. Instead reward <em>quality, consistency, helpfulness, and growth</em>. A student who answers three questions well should earn more than a student who sends thirty one-word messages.</p>
+  </div>
+
+  <h3>XP system — how points are earned</h3>
+  <p>XP is the foundation of the gamification system, tracked by MEE6 or Atlas bot. Points are awarded for meaningful actions, with diminishing returns built in to prevent farming.</p>
+
   <div class="table-wrap">
     <table>
-      <thead><tr><th>Feature</th><th>Description</th></tr></thead>
+      <thead><tr><th>Action</th><th>XP</th><th>Notes</th></tr></thead>
       <tbody>
-        <tr><td>XP system</td><td>Students earn points for helpful answers, participation, and HW Night attendance (via MEE6 or Atlas)</td></tr>
-        <tr><td>Monthly leaderboard</td><td>Top contributors listed in #leaderboard and receive a special display role</td></tr>
-        <tr><td>Problem of the Week</td><td>Weekly challenge posted by a TA — first correct solution earns an XP bonus</td></tr>
-        <tr><td>Level-up recognition</td><td>Students advancing levels receive a public congratulations post and unlocked alumni-preview access</td></tr>
-        <tr><td>Seasonal contests</td><td>End-of-quarter challenges tied to USACO preparation, with prizes or recognition</td></tr>
+        <tr><td>Answer marked ✅ solved in Q&amp;A</td><td>+50 XP</td><td>Marked by TA or teacher — highest value action</td></tr>
+        <tr><td>Helpful answer (upvoted by 3+ peers)</td><td>+30 XP</td><td>Community-validated quality</td></tr>
+        <tr><td>Attending HW Night (checked in via bot)</td><td>+20 XP</td><td>Once per session, encourages consistent attendance</td></tr>
+        <tr><td>Posting in class Q&amp;A (with substance)</td><td>+10 XP</td><td>Min 50 characters; bot filters one-word posts</td></tr>
+        <tr><td>Completing Problem of the Week</td><td>+40 XP</td><td>First correct solution earns +80 XP bonus</td></tr>
+        <tr><td>Participating in a track event</td><td>+25 XP</td><td>Per event, capped at 3 events per week</td></tr>
+        <tr><td>Winning an inter-track challenge</td><td>+100 XP</td><td>Per event winner</td></tr>
+        <tr><td>Introducing yourself in #introductions</td><td>+15 XP</td><td>One-time onboarding reward</td></tr>
+        <tr><td>Sharing a project or achievement</td><td>+20 XP</td><td>In #wins-and-progress, reviewed for quality</td></tr>
+        <tr><td>Consistent weekly activity (7-day streak)</td><td>+50 XP</td><td>Bot tracks and awards streak bonuses automatically</td></tr>
+        <tr><td>Mentoring a lower-level student (TA-verified)</td><td>+60 XP</td><td>Alumni and advanced students especially; TA confirms</td></tr>
       </tbody>
     </table>
   </div>
+
+  <h3>Rank titles — the progression ladder</h3>
+  <p>As students accumulate XP they advance through ranks. Each rank unlocks a visible Discord role title, a colored name, and new privileges. Ranks persist across quarters — they represent a student's cumulative standing in the X-Camp community, not just one class.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Rank</th><th>XP required</th><th>Role color</th><th>Unlocks</th></tr></thead>
+      <tbody>
+        <tr><td>🌱 Seedling</td><td>0</td><td>Gray</td><td>Default — all new members start here</td></tr>
+        <tr><td>⚡ Coder</td><td>200 XP</td><td>Green</td><td>Access to #coding-tips posting rights</td></tr>
+        <tr><td>🔥 Hacker</td><td>600 XP</td><td>Blue</td><td>Access to #resources posting; can nominate Problem of the Week suggestions</td></tr>
+        <tr><td>💡 Innovator</td><td>1,500 XP</td><td>Purple</td><td>Can co-host track events; gets early access to contest announcements</td></tr>
+        <tr><td>🏅 Champion</td><td>3,500 XP</td><td>Gold</td><td>Featured on the server's Hall of Fame; can suggest server improvements to admin</td></tr>
+        <tr><td>🌟 Legend</td><td>7,000 XP</td><td>Red</td><td>Permanent Legend badge even after graduation; invited to alumni mentor program</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Achievement badges</h3>
+  <p>Badges are one-time awards for specific accomplishments. Unlike XP ranks which measure cumulative effort, badges celebrate memorable moments and unique contributions. They display on a student's Discord profile and are announced publicly in #wins-and-progress.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Badge</th><th>How to earn it</th></tr></thead>
+      <tbody>
+        <tr><td>🎯 First Solve</td><td>First time a student's answer is marked as solved by a TA</td></tr>
+        <tr><td>🔥 7-Day Streak</td><td>Active on the server 7 days in a row</td></tr>
+        <tr><td>🧠 Big Brain</td><td>Answer upvoted by 10+ community members</td></tr>
+        <tr><td>🌙 Night Owl</td><td>Attended 10 HW Nights in a single quarter</td></tr>
+        <tr><td>🏆 Contest Crusher</td><td>First correct answer on 3 Problems of the Week</td></tr>
+        <tr><td>🤝 Mentor</td><td>Helped a lower-level student (TA-verified) 5 times</td></tr>
+        <tr><td>🚀 Launcher</td><td>Shared a completed project in #wins-and-progress</td></tr>
+        <tr><td>🌍 Community Builder</td><td>Referred 3 students who joined and verified on the server</td></tr>
+        <tr><td>📈 Level Up</td><td>Officially advanced to a higher X-Camp course level</td></tr>
+        <tr><td>⚔️ Track Champion</td><td>Top XP contributor for their track in a given month</td></tr>
+        <tr><td>🎤 Speaker</td><td>Hosted or co-hosted a community event or AMA</td></tr>
+        <tr><td>👾 OG</td><td>One of the first 50 students on the server — grandfathered in forever</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Leaderboards</h3>
+  <p>Multiple leaderboards keep competition fresh and ensure different types of students have a chance to shine — not just the highest XP earners.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Leaderboard</th><th>Metric</th><th>Reset</th><th>Prize / recognition</th></tr></thead>
+      <tbody>
+        <tr><td>🏅 Monthly All-Star</td><td>Total XP earned this month</td><td>Monthly</td><td>Special role + shoutout in #announcements</td></tr>
+        <tr><td>🏠 Track Battle</td><td>Combined XP of all members per track</td><td>Monthly</td><td>Winning track gets a custom server banner for the month</td></tr>
+        <tr><td>🤝 Most Helpful</td><td>Number of solved answers marked by TAs</td><td>Monthly</td><td>Special "Helper" badge + XP bonus</td></tr>
+        <tr><td>🔥 Longest Streak</td><td>Consecutive days active on the server</td><td>Ongoing</td><td>Streak count displayed on profile; top 3 get recognition</td></tr>
+        <tr><td>📅 Quarter MVP</td><td>Total XP over the full quarter</td><td>Quarterly</td><td>Featured in end-of-quarter recap; physical or digital prize from X-Camp</td></tr>
+        <tr><td>🌱 Most Improved</td><td>Biggest XP % increase vs. previous quarter</td><td>Quarterly</td><td>Recognizes growth over raw performance — great for newer students</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Seasonal events and special campaigns</h3>
+  <p>Beyond ongoing XP, seasonal events create spikes of energy and give the community something to look forward to each quarter.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Event</th><th>When</th><th>Format</th></tr></thead>
+      <tbody>
+        <tr><td>🎃 Halloween Hack</td><td>October</td><td>Spooky-themed coding challenge; most creative solution wins regardless of level</td></tr>
+        <tr><td>🏁 Quarter Kickoff Challenge</td><td>First week of each quarter</td><td>Easy, fun problem to get everyone active early; all participants earn a bonus XP boost</td></tr>
+        <tr><td>🎁 12 Days of Code</td><td>December</td><td>One small problem per day for 12 days; streaks rewarded; community solves together</td></tr>
+        <tr><td>🌸 Spring Tournament</td><td>Spring quarter</td><td>Bracket-style coding tournament, single elimination; all levels welcome with handicap scoring</td></tr>
+        <tr><td>🎓 End-of-Quarter Showcase</td><td>Last week of each quarter</td><td>Students share what they built, learned, or achieved; community votes on awards in multiple categories</td></tr>
+        <tr><td>⚡ XP Double Weekend</td><td>Random, 2x per quarter</td><td>All XP earned over a weekend is doubled — unannounced until Friday, creates excitement</td></tr>
+        <tr><td>💯 100-Problem Challenge</td><td>Each quarter</td><td>Level-appropriate USACO problem sets — students race to solve 100 problems within the quarter. Separate leaderboards per level band (CS100s through CS600s) so every student competes fairly against peers on the same material. Milestones at 25, 50, 75, and 100 problems each earn XP bonuses and badge progress. Top finishers per level earn a special role and are featured in the end-of-quarter recap</td></tr>
+        <tr><td>🎨 Art of Programming</td><td>End of quarter · CS100s–CS200s</td><td>Lower-level classes submit their best turtle drawing projects — a celebration of creative coding for newer students. Submissions shared in #wins-and-progress. Community votes on winners across categories: Most Creative, Most Complex, Most Funny, Best Beginner. Winners announced at the end-of-quarter showcase with a special Art of Programming badge. A great low-pressure way to build pride and excitement for students just starting out</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Anti-gaming safeguards</h3>
+  <p>Any XP system can be gamed. These safeguards keep the system honest:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Risk</th><th>Safeguard</th></tr></thead>
+      <tbody>
+        <tr><td>Spam posting for XP</td><td>Minimum message length enforced by bot; XP per message capped at 5 per hour</td></tr>
+        <tr><td>Fake upvoting between friends</td><td>Upvotes from accounts under 7 days old don't count; same-user upvotes on mutual posts are filtered</td></tr>
+        <tr><td>Claiming solved answers unfairly</td><td>Only TAs and teachers can mark answers as solved — students cannot self-award</td></tr>
+        <tr><td>AFK farming in voice channels</td><td>Voice XP (if enabled) requires periodic activity checks via bot; muted + deafened = no XP</td></tr>
+        <tr><td>Alt accounts / duplicate joins</td><td>Each student is issued a unique X-Camp ID at enrollment. This ID is required during the Discord verification step — the bot validates the ID against the enrollment database before assigning any role. One X-Camp ID can only be used to verify one Discord account. If a student needs to change their Discord account, they must contact a coordinator to reset the ID link</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout rec">
+    <div class="callout-title">Long-term vision</div>
+    <p>As the community matures, top-ranked students (Champion and Legend) can be invited to become community TAs, event hosts, or track champions — turning the most engaged students into community leaders. This creates a self-sustaining pipeline where recognition leads to responsibility, and the community grows from within.</p>
+  </div>
 </div>
 
-<!-- 9. Bots -->
+<!-- 9. Student User Journey -->
+<div class="section" id="userjourney">
+  <h2 class="section-title"><span class="num">9</span> Student user journey</h2>
+  <p>This section maps what a student actually experiences on the X-Camp Discord — from the moment they first join, through their weekly and quarterly rhythms, all the way to graduation and alumni life. The goal is a journey that feels progressively richer: each quarter a student is here, the community means more to them.</p>
+
+  <!-- First day -->
+  <h3>Day 1 — First join</h3>
+  <div class="steps">
+    <div class="step">
+      <div class="step-left"><div class="step-num" style="background:var(--blue-light);color:var(--blue)">1</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Student receives X-Camp ID in enrollment email</div>
+        <div class="step-desc">Along with their class schedule and welcome materials, the enrollment confirmation includes their unique X-Camp ID and a link to the Discord server with simple join instructions.</div>
+        <span class="step-tag" style="background:var(--blue-light);color:var(--blue)">before joining</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-left"><div class="step-num" style="background:var(--bg);color:var(--muted);border:1px solid var(--border)">2</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Joins server — sees Welcome only</div>
+        <div class="step-desc">Student joins via the invite link. Only #welcome and #rules are visible. They read the community guidelines and see a friendly, clearly structured server — not an overwhelming wall of channels.</div>
+        <span class="step-tag" style="background:var(--purple-light);color:var(--purple)">student</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">3</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Verifies with X-Camp ID → class role assigned</div>
+        <div class="step-desc">Student types <code>!verify [X-Camp ID]</code> in #verify-here. Bot validates the ID, assigns their <code>Student-CS[level]</code> role, and their class category instantly becomes visible. Bot sends a welcome DM with a quick-start guide.</div>
+        <span class="step-tag" style="background:var(--green-light);color:var(--green)">automated</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-left"><div class="step-num" style="background:var(--purple-light);color:var(--purple)">4</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <div class="step-title">Chooses their track</div>
+        <div class="step-desc">Bot prompts: "One more step — choose your track." Four buttons appear. Student picks 🏆 Competitor, 🔬 Builder, 🎨 Explorer, or 🚀 Founder. Their track lounge and voice room immediately unlock. +15 XP for completing onboarding.</div>
+        <span class="step-tag" style="background:var(--purple-light);color:var(--purple)">student choice</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-left"><div class="step-num" style="background:var(--teal-light);color:var(--teal)">5</div></div>
+      <div class="step-body">
+        <div class="step-title">Says hello — earns first XP</div>
+        <div class="step-desc">Student posts a brief intro in #introductions (+15 XP) and explores their class channels, track lounge, and the community channels. They are now a 🌱 Seedling with 30 XP and a visible place in the community.</div>
+        <span class="step-tag" style="background:var(--teal-light);color:var(--teal)">first impression</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Weekly rhythm -->
+  <h3>A typical week</h3>
+  <p>Once settled in, a student's weekly experience follows a natural rhythm that blends academic support with community life. Not every student does everything every week — the design lets them engage at whatever level fits their schedule.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>When</th><th>What the student does</th><th>Where</th><th>XP</th></tr></thead>
+      <tbody>
+        <tr><td>Saturday or Sunday · class day</td><td>Student attends their weekend class. Teacher posts the week's assignment and any notes in #announcements afterward. Student reviews it, asks a clarifying question in #q-and-a if needed. A TA or classmate typically replies within a few hours.</td><td>Class channels</td><td>+10 XP for substantive post</td></tr>
+        <tr><td>Sunday evening or Monday · Problem of the Week drops</td><td>New problem posted in #problem-of-the-week to kick off the week. Student attempts it and posts their solution or approach. First correct answer earns a bonus. Even partial attempts generate discussion that helps everyone.</td><td>#problem-of-the-week</td><td>+40 XP attempt · +80 XP first solve</td></tr>
+        <tr><td>Mon–Fri · 5–8 PM PT · Homework Night</td><td>Student is working on the week's assignment and gets stuck. They check into #hw-night-lobby, submit a ticket with their question and what they already tried. A TA picks it up within minutes. Most nights they walk away unblocked in under 20 minutes.</td><td>HW Night channels + voice</td><td>+20 XP per attendance</td></tr>
+        <tr><td>Weekday afternoons or evenings · Office hours</td><td>Student is stuck on a concept — not just a single problem. They open a Ticket Tool request from their class channel and book a 1-on-1 slot with an available TA. Session happens in voice with screen sharing. TA posts a brief summary afterward.</td><td>Office hours ticket + voice</td><td>No XP · unblocks deeper learning</td></tr>
+        <tr><td>Any weekday · Track lounge</td><td>Student drops into their track lounge between HW Nights. A Competitor is discussing USACO strategies; a Founder is sharing a project idea. Student reacts, replies, or just lurks. Feels connected to peers who think like them.</td><td>Track lounge channels</td><td>+10 XP for substantive replies</td></tr>
+        <tr><td>Any time · helping others</td><td>Student spots a question in #q-and-a they know the answer to — often something they were stuck on last week. They reply with a clear explanation. If a TA marks it solved, they earn the highest single-action XP reward.</td><td>Class Q&amp;A</td><td>+50 XP if marked solved</td></tr>
+        <tr><td>Weekend · sharing wins</td><td>After class, student shares something in #wins-and-progress — a problem they finally cracked, a project snippet, or a contest result. Gets reactions from classmates and feels recognized by the community.</td><td>#wins-and-progress</td><td>+20 XP</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>A quarter arc — 10 weeks</h3>
+  <p>Each quarter runs 10 weeks across one of four seasons: <strong>Winter</strong> (Jan–Mar), <strong>Spring</strong> (Apr–Jun), <strong>Summer</strong> (Jul–Sep), or <strong>Fall</strong> (Oct–Dec). Each has its own shape — a beginning with fresh energy, a middle where habits form, and an end with recognition and celebration.</p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot" style="background:var(--blue)"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-phase">Week 1 — Fresh start</div>
+        <div class="tl-title">Kickoff &amp; orientation</div>
+        <div class="tl-items">Quarter Kickoff Challenge drops on the first Monday — a fun, accessible problem that gets everyone active early regardless of level. All participants earn a XP boost just for trying. New students complete verification and choose their track. Returning students see their XP and badges carry over and feel the continuity of their community identity. Teacher posts a welcome message in the class channel on the first weekend class. TA office hours schedule for weekday afternoons/evenings and the daily HW Night roster (Mon–Fri 5–8 PM PT) are pinned in class channels.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot" style="background:var(--green)"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-phase">Weeks 2–4 — Building momentum</div>
+        <div class="tl-title">Habits form, community activates</div>
+        <div class="tl-items">Weekend classes establish the weekly rhythm: class on Saturday or Sunday, assignment posted, then weekday HW Nights for support. Problem of the Week becomes a familiar Monday ritual. 100-Problem Challenge begins accumulating — early milestones at 25 problems keep motivation visible. First track event of the quarter runs in a weekday evening voice session. Students start recognizing each other's names. Inter-track leaderboard generates friendly rivalry between the four groups.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot" style="background:var(--purple)"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-phase">Weeks 5–8 — Peak activity</div>
+        <div class="tl-title">Deep engagement</div>
+        <div class="tl-items">Students who answered enough questions see their rank climb — Seedlings become Coders, then Hackers. XP Double Weekend drops unannounced on a Friday evening announcement — a burst of energy over the weekend. Cross-track hackathon runs as a weekend event, mixing students from all tracks and levels. The most engaged students start helping others proactively in weekday HW Nights, not just asking for help. Office hours slots fill up as coursework deepens — TA availability is reviewed and expanded if needed.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot" style="background:var(--amber)"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-phase">Weeks 9–10 — Sprint to the end</div>
+        <div class="tl-title">Final push &amp; showcase prep</div>
+        <div class="tl-items">100-Problem Challenge final sprint — students push to hit the 75 or 100 milestone before the last weekend class. Lower-level students polish their Art of Programming turtle projects. Contest results from the quarter are shared in #contest-news. Students submit their end-of-quarter showcase entries during the final week. Quarter MVP leaderboard standings are visible to all — the last HW Night of the quarter often sees peak attendance as students squeeze in final XP.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot" style="background:var(--red)"></div></div>
+      <div class="tl-body">
+        <div class="tl-phase">Final weekend — Celebration</div>
+        <div class="tl-title">End-of-quarter showcase &amp; awards</div>
+        <div class="tl-items">End-of-quarter showcase event hosted in a voice channel on the final weekend, aligned with the last class session. Students share projects, contest results, and achievements. Art of Programming winners announced for lower levels. Quarter MVP, Most Helpful, Most Improved, and Track Champion awards posted in #announcements. New badges appear on profiles. Admin runs the <code>!endquarter</code> command — class roles removed, HW Night bots paused until the next quarter begins. XP, badges, and rank remain. See you next quarter.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-wrap" style="margin-top:1.5rem">
+    <table>
+      <thead><tr><th>Quarter</th><th>Dates</th><th>Seasonal event</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>❄️ Winter</td><td>January – March</td><td>12 Days of Code (Jan), Quarter Kickoff Challenge</td><td>New year energy; often largest new enrollment cohort</td></tr>
+        <tr><td>🌸 Spring</td><td>April – June</td><td>Spring Tournament (bracket-style), Art of Programming showcase</td><td>USACO March results energize Competitor track; school year winding down</td></tr>
+        <tr><td>☀️ Summer</td><td>July – September</td><td>Summer Hackathon (cross-track, weekend event), 100-Problem Challenge</td><td>Highest engagement quarter — students have more free time; great for deeper projects</td></tr>
+        <tr><td>🍂 Fall</td><td>October – December</td><td>Halloween Hack (Oct), 12 Days of Code kickoff (Dec)</td><td>USACO December contest aligns naturally with Competitor track sprint</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Full lifespan -->
+  <h3>Full student lifespan — first class to alumni</h3>
+  <p>Zoom out further and the Discord community becomes a thread that runs through a student's entire X-Camp journey — from nervous beginner to confident alumnus.</p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot" style="background:#888780"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-phase">Quarter 1 — The new student</div>
+        <div class="tl-title">Finding their footing</div>
+        <div class="tl-items">Student joins as a 🌱 Seedling. Everything is new — new classmates, new problems, new platform. They mostly ask questions, attend HW Nights when stuck, and lurk in their track lounge. By quarter end they've introduced themselves, hit their first streak, and maybe answered one or two questions for classmates. Rank: ⚡ Coder. They feel like they belong.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot" style="background:var(--green)"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-phase">Quarters 2–3 — The regular</div>
+        <div class="tl-title">Building identity and relationships</div>
+        <div class="tl-items">Student knows the rhythm. HW Nights are routine. They recognize names, have a few Discord friends, and are starting to answer questions as often as they ask them. Their track identity feels real — a Competitor is grinding USACO problems, a Founder has shared their first project. XP climbs steadily. Rank reaches 🔥 Hacker or 💡 Innovator. They start showing up to inter-track events for fun, not just XP.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot" style="background:var(--blue)"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-phase">Quarters 4–6 — The contributor</div>
+        <div class="tl-title">Giving back to the community</div>
+        <div class="tl-items">Student has advanced class levels. They are now one of the more experienced voices in the community. Newer students ask them questions. They volunteer to co-host a track AMA, suggest a problem for Problem of the Week, or help a Seedling who's exactly where they were a year ago. Rank reaches 🏅 Champion. Their profile shows a collection of badges that tells the story of their X-Camp journey. They are recognized by name.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot" style="background:var(--purple)"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-phase">Final quarter — The veteran</div>
+        <div class="tl-title">Closing the chapter</div>
+        <div class="tl-items">Student is finishing their X-Camp journey. They're in the CS600s or have completed the curriculum. Their Discord presence carries weight — newer students look up to them. They participate in their last end-of-quarter showcase, receive their final badges, and if they've reached 7,000 XP, earn the permanent 🌟 Legend rank. At quarter end, their class role is removed — but their XP, badges, and community identity stay.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot" style="background:var(--teal)"></div></div>
+      <div class="tl-body">
+        <div class="tl-phase">Post-graduation — The alumni</div>
+        <div class="tl-title">A new kind of belonging</div>
+        <div class="tl-items">Alumni role replaces their student role. They gain access to #alumni-lounge, #internships-jobs, and #college-advice. The broader class channels are no longer visible — but the community channels and their track lounge remain. Legends are invited into the alumni mentor program, where they occasionally drop into lower-level class channels (read-only) and host AMAs for current students. They become the living proof that X-Camp works — and the most powerful recruitment asset the community has.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout rec">
+    <div class="callout-title">The thread that connects it all</div>
+    <p>A student who joins X-Camp as a nervous CS100 Seedling and leaves as a Legend alumni has spent years in this community. Their XP, badges, track identity, friendships, and memories all live here. The Discord server is not just a support tool — it is the X-Camp experience itself, running alongside every class, every quarter, every milestone. That continuity is what transforms a coding school into a community.</p>
+  </div>
+</div>
+
+<!-- 10. Bots -->
 <div class="section" id="bots">
   <h2 class="section-title"><span class="num">9</span> Recommended bots</h2>
   <div class="table-wrap">
