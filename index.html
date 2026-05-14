@@ -129,9 +129,6 @@
   .pro-con { margin-top: 8px; display: flex; flex-direction: column; gap: 3px; }
   .pro { font-size: 12px; color: var(--green); }
   .con { font-size: 12px; color: var(--red); }
-  .flow-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin: 1rem 0; font-size: 14px; color: var(--muted); line-height: 2; }
-  .flow-box strong { color: var(--text); }
-  .flow-arrow { color: var(--accent); font-weight: 700; margin: 0 6px; }
   .footer { border-top: 1px solid var(--border); padding-top: 1.5rem; margin-top: 2rem; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
   @media (max-width: 600px) {
     .toc ol, .role-body, .rule-grid, .cat-grid, .option-grid { grid-template-columns: 1fr; }
@@ -164,12 +161,16 @@
     <li><a href="#architecture">Server architecture</a></li>
     <li><a href="#tracks">Student tracks</a></li>
     <li><a href="#roles">Role hierarchy &amp; permissions</a></li>
+    <li><a href="#identity">Student identity &amp; nicknames</a></li>
     <li><a href="#rolemanagement">Student role management</a></li>
     <li><a href="#hwnight">Homework night workflow</a></li>
     <li><a href="#officehours">Office hours workflow</a></li>
     <li><a href="#moderation">Moderation &amp; safety</a></li>
     <li><a href="#engagement">Engagement &amp; gamification</a></li>
     <li><a href="#userjourney">Student user journey</a></li>
+    <li><a href="#teacherjourney">Teacher's weekly journey</a></li>
+    <li><a href="#tajourney">TA's weekly journey</a></li>
+    <li><a href="#coordinatorjourney">Teaching service &amp; coordinator</a></li>
     <li><a href="#bots">Recommended bots</a></li>
     <li><a href="#timeline">Launch timeline</a></li>
     <li><a href="#questions">Open questions</a></li>
@@ -212,7 +213,7 @@
 <!-- 2. Server architecture -->
 <div class="section" id="architecture">
   <h2 class="section-title"><span class="num">2</span> Server architecture</h2>
-  <p>The server is organized into eight category groups. Each category controls visibility and access by role.</p>
+  <p>The server is organized into category groups. Each category controls visibility and access by role.</p>
   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.25rem;font-size:12px;align-items:center;">
     <span style="color:var(--muted);font-weight:600">Access:</span>
     <span class="badge b-all">everyone</span>
@@ -363,7 +364,6 @@
 <!-- 3. Tracks -->
 <div class="section" id="tracks">
   <h2 class="section-title"><span class="num">3</span> Student tracks — community identity</h2>
-
   <p>Inspired by the house system in Harry Potter, X-Camp students choose a <strong>track</strong> when they first join the server. Tracks are not academic levels — they reflect a student's coding identity, goals, and personality. A student in CS300 and a student in CS500 can both be Competitors, and that shared identity becomes the basis for friendship, rivalry, and community beyond the classroom.</p>
   <p>Each student carries two roles on their Discord profile: their <strong>class role</strong> (e.g. Student-CS300) and their <strong>track role</strong> (e.g. 🏆 Competitor). Tracks are self-selected, low-stakes, and can be changed — the goal is to give students a sense of belonging and a community of like-minded peers, not to box them in.</p>
 
@@ -371,35 +371,27 @@
     <div class="option-card" style="border-color:#C9A227">
       <div class="option-title" style="color:#7A5C00">🏆 The Competitor</div>
       <div class="option-body">Laser-focused on USACO, rankings, and algorithmic mastery. Motivated by challenge, speed, and recognition. Wants to solve hard problems and climb leaderboards.</div>
-      <div class="pro-con" style="margin-top:8px">
-        <div style="font-size:12px;color:var(--muted)">Motto: <em>"Every problem has a solution. Find it faster."</em></div>
-      </div>
+      <div class="pro-con" style="margin-top:8px"><div style="font-size:12px;color:var(--muted)">Motto: <em>"Every problem has a solution. Find it faster."</em></div></div>
     </div>
     <div class="option-card" style="border-color:#185FA5">
       <div class="option-title" style="color:#185FA5">🔬 The Builder</div>
       <div class="option-body">Pursuing CS, AI, or STEM seriously. Interested in how code connects to research, real-world applications, and a future career in technology or academia.</div>
-      <div class="pro-con" style="margin-top:8px">
-        <div style="font-size:12px;color:var(--muted)">Motto: <em>"Code is a tool. Build something that matters."</em></div>
-      </div>
+      <div class="pro-con" style="margin-top:8px"><div style="font-size:12px;color:var(--muted)">Motto: <em>"Code is a tool. Build something that matters."</em></div></div>
     </div>
     <div class="option-card" style="border-color:#3B6D11">
       <div class="option-title" style="color:#3B6D11">🎨 The Explorer</div>
       <div class="option-body">Treats coding as a creative hobby or fun extracurricular. No pressure, just curiosity. Wants to learn, build interesting things, and enjoy the process for its own sake.</div>
-      <div class="pro-con" style="margin-top:8px">
-        <div style="font-size:12px;color:var(--muted)">Motto: <em>"Code because it's fun. That's reason enough."</em></div>
-      </div>
+      <div class="pro-con" style="margin-top:8px"><div style="font-size:12px;color:var(--muted)">Motto: <em>"Code because it's fun. That's reason enough."</em></div></div>
     </div>
     <div class="option-card" style="border-color:#791F1F">
       <div class="option-title" style="color:#791F1F">🚀 The Founder</div>
       <div class="option-body">Entrepreneurial mindset. Wants to build projects, apps, or maybe a startup someday. Interested in turning ideas into real products that other people actually use.</div>
-      <div class="pro-con" style="margin-top:8px">
-        <div style="font-size:12px;color:var(--muted)">Motto: <em>"Don't just learn to code. Build something."</em></div>
-      </div>
+      <div class="pro-con" style="margin-top:8px"><div style="font-size:12px;color:var(--muted)">Motto: <em>"Don't just learn to code. Build something."</em></div></div>
     </div>
   </div>
 
   <h3>How it works on Discord</h3>
-  <p>When a student completes the enrollment code verification and enters the server, the bot immediately prompts them in a private welcome thread: <em>"Welcome to X-Camp! One more step — choose your track. This tells us what kind of coder you are and connects you with like-minded students."</em> Four buttons appear, one per track. The student taps once and is assigned their track role. They can change it anytime by returning to <code>#choose-your-track</code>.</p>
+  <p>When a student completes verification and enters the server, the bot immediately prompts them: <em>"Welcome to X-Camp! One more step — choose your track."</em> Four buttons appear. The student taps once and is assigned their track role. They can change it anytime by returning to <code>#choose-your-track</code>.</p>
 
   <div class="table-wrap">
     <table>
@@ -407,29 +399,27 @@
       <tbody>
         <tr><td># choose-your-track</td><td>Bot prompt with 4 track buttons on first join; also accessible for track changes anytime</td><td>Everyone</td></tr>
         <tr><td># inter-track-events</td><td>Announcements and results for cross-track challenges, competitions, and community events</td><td>Everyone</td></tr>
-        <tr><td># 🏆︱competitor-lounge</td><td>USACO strategies, contest prep, problem discussion, rating flex — Competitors only</td><td>Competitor track</td></tr>
+        <tr><td># 🏆︱competitor-lounge</td><td>USACO strategies, contest prep, problem discussion — Competitors only</td><td>Competitor track</td></tr>
         <tr><td># 🔬︱builder-lounge</td><td>CS concepts, AI/ML discussion, research links, college prep — Builders only</td><td>Builder track</td></tr>
         <tr><td># 🎨︱explorer-lounge</td><td>Fun projects, creative coding, casual help and sharing — Explorers only</td><td>Explorer track</td></tr>
-        <tr><td># 🚀︱founder-lounge</td><td>Project ideas, product feedback, startup discussion, demo sharing — Founders only</td><td>Founder track</td></tr>
+        <tr><td># 🚀︱founder-lounge</td><td>Project ideas, product feedback, startup discussion — Founders only</td><td>Founder track</td></tr>
         <tr><td>🔊 Track voice rooms</td><td>One voice channel per track for informal hangouts and collaboration</td><td>Track members</td></tr>
       </tbody>
     </table>
   </div>
 
   <h3>Cross-track activities and events</h3>
-  <p>Tracks are most powerful when they interact. The following events are designed to spark friendly competition, creativity, and cross-community connection:</p>
-
   <div class="table-wrap">
     <table>
       <thead><tr><th>Event</th><th>Format</th><th>Frequency</th></tr></thead>
       <tbody>
-        <tr><td>🏅 Inter-Track Code Battle</td><td>Same problem, different scoring rubrics per track: Competitors scored on speed and efficiency; Builders on code quality and extensibility; Explorers on creativity; Founders on how they'd turn it into a product</td><td>Monthly</td></tr>
-        <tr><td>🛠️ Cross-Track Hackathon</td><td>Mixed teams of one student per track — forced to combine algorithmic thinking, engineering mindset, creativity, and product sense. Best projects voted on by the whole community</td><td>Once per quarter</td></tr>
-        <tr><td>🎤 Track AMA Series</td><td>Each track hosts a guest — Competitors invite a USACO Platinum student; Builders invite a college CS student or researcher; Explorers invite a creative coder; Founders invite an alumni who shipped a product</td><td>Once per track per quarter</td></tr>
-        <tr><td>🌀 "Explain It" Challenge</td><td>Open to all tracks — explain a CS concept (e.g. recursion, sorting) to a 5-year-old in the funniest or most creative way. Community votes on winner. No coding required</td><td>Monthly</td></tr>
-        <tr><td>🗳️ Project Showcase</td><td>Founders and Builders demo projects in a voice channel. Explorers vote on most creative. Competitors rate algorithmic complexity. Community applauds everything</td><td>End of quarter</td></tr>
-        <tr><td>🏆 Track Leaderboard</td><td>Tracks compete as teams — total XP earned by all members counts toward a track score. Leaderboard shown in #inter-track-events. Winning track gets a special server banner for the month</td><td>Ongoing / monthly reset</td></tr>
-        <tr><td>🎲 Random Collab Week</td><td>Bot randomly pairs one student from each track for a low-stakes 1-week mini project. No pressure — just a nudge to meet someone new across the community</td><td>Once per quarter</td></tr>
+        <tr><td>🏅 Inter-Track Code Battle</td><td>Same problem, different scoring rubrics per track: Competitors scored on speed; Builders on code quality; Explorers on creativity; Founders on product thinking</td><td>Monthly</td></tr>
+        <tr><td>🛠️ Cross-Track Hackathon</td><td>Mixed teams of one student per track — combining algorithmic thinking, engineering mindset, creativity, and product sense. Best projects voted on by the community</td><td>Once per quarter</td></tr>
+        <tr><td>🎤 Track AMA Series</td><td>Each track hosts a guest — Competitors invite a USACO Platinum student; Builders a college CS student; Explorers a creative coder; Founders an alumni who shipped a product</td><td>Once per track per quarter</td></tr>
+        <tr><td>🌀 "Explain It" Challenge</td><td>Explain a CS concept to a 5-year-old in the funniest or most creative way. Community votes on winner. No coding required</td><td>Monthly</td></tr>
+        <tr><td>🗳️ Project Showcase</td><td>Founders and Builders demo projects in voice. Explorers vote on most creative. Competitors rate algorithmic complexity</td><td>End of quarter</td></tr>
+        <tr><td>🏆 Track Leaderboard</td><td>Tracks compete as teams — total XP from all members counts toward a track score. Winning track gets a special server banner for the month</td><td>Ongoing / monthly reset</td></tr>
+        <tr><td>🎲 Random Collab Week</td><td>Bot randomly pairs one student from each track for a low-stakes 1-week mini project</td><td>Once per quarter</td></tr>
       </tbody>
     </table>
   </div>
@@ -438,26 +428,26 @@
   <div class="rule-grid">
     <div class="rule-box">
       <div class="rule-box-title">Tracks are identity, not gatekeeping</div>
-      <div class="rule-box-body">A student can change their track anytime. There are no wrong answers. The goal is to help students find their people — not to lock them into a category. Some students may feel they belong to two tracks; encourage them to pick the one that feels most like them right now.</div>
+      <div class="rule-box-body">A student can change their track anytime. There are no wrong answers. The goal is to help students find their people — not to lock them into a category.</div>
     </div>
     <div class="rule-box">
       <div class="rule-box-title">Tracks cut across class levels</div>
-      <div class="rule-box-body">A CS100 Explorer and a CS500 Explorer share the same lounge. This is intentional — it creates mentorship moments, cross-level friendships, and a sense that the community is bigger than any one class. Senior students naturally become informal role models.</div>
+      <div class="rule-box-body">A CS100 Explorer and a CS500 Explorer share the same lounge — creating mentorship moments and cross-level friendships. Senior students naturally become informal role models.</div>
     </div>
     <div class="rule-box">
       <div class="rule-box-title">Staff engagement per track</div>
-      <div class="rule-box-body">Assign one TA or instructor as a track champion for each group — someone who checks in, seeds discussions, and runs the track-specific AMA. This prevents lounges from going quiet after the novelty wears off.</div>
+      <div class="rule-box-body">Assign one TA or instructor as a track champion for each group — someone who checks in, seeds discussions, and runs the track-specific AMA. This prevents lounges from going quiet.</div>
     </div>
     <div class="rule-box">
       <div class="rule-box-title">Use track data wisely</div>
-      <div class="rule-box-body">Track distribution data tells X-Camp something useful about its student body — how many are contest-driven vs. career-driven vs. hobbyist. This can inform curriculum design, marketing messaging, and what kinds of events to run more of.</div>
+      <div class="rule-box-body">Track distribution tells X-Camp something useful about its student body — contest-driven vs. career-driven vs. hobbyist — informing curriculum design, marketing, and event planning.</div>
     </div>
   </div>
 </div>
 
 <!-- 4. Roles -->
 <div class="section" id="roles">
-  <h2 class="section-title"><span class="num">3</span> Role hierarchy &amp; permissions</h2>
+  <h2 class="section-title"><span class="num">4</span> Role hierarchy &amp; permissions</h2>
   <p>Roles are assigned from highest to lowest privilege. Students receive one <code>Student-CS[level]</code> role corresponding to their enrolled level band.</p>
   <div class="role-list">
     <div class="role-card">
@@ -599,23 +589,65 @@
   </div>
 </div>
 
-<!-- 4. Student role management -->
-<div class="section" id="rolemanagement">
-  <h2 class="section-title"><span class="num">4</span> Student role management</h2>
+<!-- 5. Student identity -->
+<div class="section" id="identity">
+  <h2 class="section-title"><span class="num">5</span> Student identity &amp; nicknames</h2>
+  <p>Without a clear naming standard, teachers and TAs have no way to know who they're talking to in class channels. A student named "xXdark_coderXx" is unidentifiable. This section defines how X-Camp ensures every student is recognizable by name across the server.</p>
 
+  <h3>Recommended approach: enforced server nickname</h3>
+  <p>During the verification step, the bot automatically sets each student's server nickname to a standard format using their real first name and X-Camp ID:</p>
+  <div class="callout info">
+    <div class="callout-title">Nickname format</div>
+    <p><code>FirstName [XC-12345]</code> &nbsp;— e.g. <code>Sarah [XC-84921]</code></p>
+    <p style="margin-top:6px">First name only for a friendlier feel. The X-Camp ID in brackets provides traceability for staff. The student's global Discord username is unchanged — only their display name within the X-Camp server is formatted this way.</p>
+  </div>
+  <p>If a student tries to change their nickname back, the bot detects the change and resets it automatically. Full name and ID mappings are stored privately in #enrollment-ops for coordinator reference.</p>
+
+  <h3>How it works technically</h3>
+  <p>When the student runs <code>!verify [X-Camp ID]</code>, the bot calls Discord's <code>PATCH /guilds/{guild.id}/members/{user.id}</code> API to set their server nickname in the same step as role assignment. No separate action is needed by coordinators. The bot also listens for the <code>GUILD_MEMBER_UPDATE</code> event — if a student changes their nickname, the bot resets it within seconds.</p>
+
+  <h3>What staff see</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Role</th><th>What they see in chat</th><th>How to look up full details</th></tr></thead>
+      <tbody>
+        <tr><td>Teacher</td><td><code>Sarah [XC-84921]</code> in their class channel</td><td>Search #enrollment-ops by X-Camp ID for full name and class</td></tr>
+        <tr><td>TA</td><td>Same format — first name + ID visible in all channels they have access to</td><td>Ask coordinator or search #enrollment-ops</td></tr>
+        <tr><td>Coordinator</td><td>Full mapping of Discord ID → real name + X-Camp ID stored in #enrollment-ops</td><td>Direct access — no lookup needed</td></tr>
+        <tr><td>Admin</td><td>Full server audit log includes all nickname history</td><td>Audit log + enrollment-ops</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Edge cases</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Situation</th><th>Handling</th></tr></thead>
+      <tbody>
+        <tr><td>Student changes Discord account</td><td>Contact coordinator — old ID link is reset, student re-verifies with existing X-Camp ID on new account</td></tr>
+        <tr><td>Student prefers a different name</td><td>Coordinator can manually set nickname to preferred first name + ID — e.g. <code>Alex [XC-84921]</code> — on request</td></tr>
+        <tr><td>Two students with the same first name</td><td>X-Camp ID in brackets distinguishes them — no ambiguity</td></tr>
+        <tr><td>Privacy concern about real name</td><td>First name only is displayed publicly; last name is only in the private #enrollment-ops log visible to coordinators and admin</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 6. Student role management -->
+<div class="section" id="rolemanagement">
+  <h2 class="section-title"><span class="num">6</span> Student role management</h2>
   <p>Student roles need to be granted at enrollment and revoked at quarter end — across potentially hundreds of students and 17 course levels. Getting this right is critical: students who keep roles after their quarter ends can still access class channels they are no longer enrolled in, and manual management at scale is error-prone.</p>
 
   <div class="callout info">
     <div class="callout-title">Core challenge</div>
-    <p>X-Camp runs multiple classes per level, with different teachers and class times. A student enrolled in CS300 (Section A, Mon/Wed) should only see the CS300 category — not CS400, not other sections. At quarter end, their access must be cleanly revoked so the server stays accurate and secure without coordinator manually updating hundreds of roles.</p>
+    <p>X-Camp runs multiple classes per level, with different teachers and class times. A student enrolled in CS300 should only see the CS300 category. At quarter end, their access must be cleanly revoked without coordinators manually updating hundreds of roles.</p>
   </div>
 
   <h3>Option comparison</h3>
-
   <div class="option-grid">
     <div class="option-card">
       <div class="option-title">Option A — Manual by coordinator</div>
-      <div class="option-body">Coordinator manually assigns and removes roles in Discord at the start and end of each quarter based on the enrollment list.</div>
+      <div class="option-body">Coordinator manually assigns and removes roles at the start and end of each quarter based on the enrollment list.</div>
       <div class="pro-con">
         <div class="pro">✓ No technical setup required</div>
         <div class="pro">✓ Full coordinator control</div>
@@ -625,83 +657,75 @@
       </div>
     </div>
     <div class="option-card">
-      <div class="option-title">Option B — Self-serve enrollment codes</div>
-      <div class="option-body">Enrollment system generates a unique code per student per quarter. Student enters the code on joining Discord. Bot assigns the correct role automatically. Quarter-end bulk removal via a single admin command.</div>
+      <div class="option-title">Option B — X-Camp ID verification</div>
+      <div class="option-body">Each student's unique X-Camp ID serves as their verification credential. Bot validates ID, assigns role, sets nickname, and marks the ID as used. Quarter-end bulk removal via a single admin command.</div>
       <div class="pro-con">
         <div class="pro">✓ Students onboard themselves</div>
         <div class="pro">✓ No coordinator bottleneck</div>
         <div class="pro">✓ Bulk removal is one command</div>
         <div class="pro">✓ Scales to any enrollment size</div>
         <div class="con">✗ Requires enrollment system integration</div>
-        <div class="con">✗ Codes can be shared (mitigated by one-time use)</div>
       </div>
     </div>
     <div class="option-card recommended">
-      <div class="option-title">⭐ Option C — API sync with enrollment system <span class="badge" style="background:var(--green-light);color:var(--green)">Recommended</span></div>
-      <div class="option-body">A script (Google Apps Script, Zapier, or custom) reads your enrollment database and calls Discord's API to assign and remove roles automatically on a schedule or triggered by enrollment changes.</div>
+      <div class="option-title">⭐ Option C — API sync <span class="badge" style="background:var(--green-light);color:var(--green)">Recommended long-term</span></div>
+      <div class="option-body">A script reads the enrollment database and calls Discord's API to assign and remove roles automatically on a schedule or triggered by enrollment changes.</div>
       <div class="pro-con">
         <div class="pro">✓ Fully automated — zero manual work</div>
-        <div class="pro">✓ Roles update in real time when enrollment changes</div>
-        <div class="pro">✓ Quarter-end removal happens automatically</div>
-        <div class="pro">✓ Single source of truth (your enrollment system)</div>
-        <div class="con">✗ Requires developer setup (one-time)</div>
-        <div class="con">✗ Needs Discord API token and enrollment system access</div>
+        <div class="pro">✓ Roles update in real time</div>
+        <div class="pro">✓ Quarter-end removal is automatic</div>
+        <div class="pro">✓ Single source of truth</div>
+        <div class="con">✗ Requires one-time developer setup</div>
       </div>
     </div>
     <div class="option-card">
-      <div class="option-title">Option D — Carl-bot reaction roles (simplest)</div>
-      <div class="option-body">Coordinator posts a message listing all class levels. Students react with the corresponding emoji to self-assign. Quarter-end bulk removal via Carl-bot's mass-role remove command.</div>
+      <div class="option-title">Option D — Reaction roles (simplest)</div>
+      <div class="option-body">Students react with an emoji to self-assign their level role. Quarter-end bulk removal via Carl-bot's mass-role remove command.</div>
       <div class="pro-con">
         <div class="pro">✓ Easiest to set up — no coding</div>
         <div class="pro">✓ Students self-serve</div>
-        <div class="con">✗ Students can assign any level (no validation)</div>
-        <div class="con">✗ Requires coordinator spot-check against enrollment list</div>
-        <div class="con">✗ Quarter-end removal is still a manual command</div>
+        <div class="con">✗ No validation — students can assign any level</div>
+        <div class="con">✗ Requires coordinator spot-check</div>
       </div>
     </div>
   </div>
 
-  <h3>Recommended approach: enrollment code verification (Option B)</h3>
-
-  <p>For X-Camp's current scale, Option B strikes the best balance between automation and simplicity. It requires no custom development — just a bot (Carl-bot or MEE6) configured to validate codes — and it ties role assignment directly to your enrollment process.</p>
-
   <div class="callout rec">
-    <div class="callout-title">Long-term goal</div>
-    <p>As X-Camp grows, Option C (API sync) becomes the right investment. A one-time developer setup means roles are always in sync with your enrollment database with zero ongoing manual work. This is worth prioritizing in Year 2.</p>
+    <div class="callout-title">Recommended now: Option B · Long-term: Option C</div>
+    <p>Option B (X-Camp ID verification) is the right starting point — no custom development needed, ties directly to enrollment, and handles nickname assignment in the same step. Option C (API sync) becomes the right investment in Year 2 as enrollment scales.</p>
   </div>
 
-  <h3>Enrollment code workflow</h3>
-
+  <h3>Verification workflow (Option B)</h3>
   <div class="steps">
     <div class="step">
       <div class="step-left"><div class="step-num" style="background:var(--blue-light);color:var(--blue)">1</div><div class="step-line"></div></div>
       <div class="step-body">
-        <div class="step-title">Code generated at enrollment</div>
-        <div class="step-desc">When a student registers for a class (e.g. CS300), your enrollment system generates a unique one-time code tied to that student and level. Example: <code>XC-CS300-A7K2M</code>. Code is included in the enrollment confirmation email.</div>
+        <div class="step-title">X-Camp ID issued at enrollment</div>
+        <div class="step-desc">Student registers for a class. Enrollment system generates a unique X-Camp ID tied to that student. ID and Discord invite link are included in the enrollment confirmation email.</div>
         <span class="step-tag" style="background:var(--blue-light);color:var(--blue)">enrollment system</span>
       </div>
     </div>
     <div class="step">
       <div class="step-left"><div class="step-num" style="background:var(--bg);color:var(--muted);border:1px solid var(--border)">2</div><div class="step-line"></div></div>
       <div class="step-body">
-        <div class="step-title">Student joins Discord</div>
-        <div class="step-desc">Student joins the server using X-Camp's invite link. They land in the New Member state — only #welcome, #rules, and #verify-here are visible.</div>
+        <div class="step-title">Student joins server</div>
+        <div class="step-desc">Student joins via the invite link. Only #welcome, #rules, and #verify-here are visible.</div>
         <span class="step-tag" style="background:var(--purple-light);color:var(--purple)">student</span>
       </div>
     </div>
     <div class="step">
       <div class="step-left"><div class="step-num" style="background:var(--bg);color:var(--muted);border:1px solid var(--border)">3</div><div class="step-line"></div></div>
       <div class="step-body">
-        <div class="step-title">Student enters enrollment code</div>
-        <div class="step-desc">Student types their code in #verify-here e.g. <code>!verify XC-CS300-A7K2M</code>. Bot validates the code against the enrollment list.</div>
+        <div class="step-title">Student enters X-Camp ID</div>
+        <div class="step-desc">Student types <code>!verify [X-Camp ID]</code> in #verify-here. Bot validates the ID against the enrollment database.</div>
         <span class="step-tag" style="background:var(--purple-light);color:var(--purple)">student</span>
       </div>
     </div>
     <div class="step">
       <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">4</div><div class="step-line"></div></div>
       <div class="step-body">
-        <div class="step-title">Bot assigns role automatically</div>
-        <div class="step-desc">If valid, bot assigns <code>Student-CS300</code> role, marks the code as used (preventing reuse), and sends the student a welcome DM with a quick-start guide. The CS300 category immediately becomes visible to them.</div>
+        <div class="step-title">Bot assigns role + sets nickname</div>
+        <div class="step-desc">Bot assigns the correct <code>Student-CS[level]</code> role, sets server nickname to <code>FirstName [XC-ID]</code>, marks the ID as used (one account per ID), and sends a welcome DM. Class category unlocks instantly.</div>
         <span class="step-tag" style="background:var(--green-light);color:var(--green)">automated</span>
       </div>
     </div>
@@ -709,31 +733,30 @@
       <div class="step-left"><div class="step-num" style="background:var(--amber-light);color:var(--amber)">5</div><div class="step-line"></div></div>
       <div class="step-body">
         <div class="step-title">Quarter ends — bulk role removal</div>
-        <div class="step-desc">Admin runs a single command: <code>!endquarter Q3-2026</code>. Bot removes all <code>Student-CS[level]</code> roles issued for that quarter. Students retain their Discord account and community channel access but lose class channel visibility until they re-verify for the next quarter.</div>
+        <div class="step-desc">Admin runs <code>!endquarter Q3-2026</code>. Bot removes all student class roles for that quarter. Students retain community access but lose class channel visibility until re-verifying next quarter.</div>
         <span class="step-tag" style="background:var(--amber-light);color:var(--amber)">admin command</span>
       </div>
     </div>
     <div class="step">
       <div class="step-left"><div class="step-num" style="background:var(--teal-light);color:var(--teal)">6</div></div>
       <div class="step-body">
-        <div class="step-title">Re-enrollment for next quarter</div>
-        <div class="step-desc">Returning students receive a new code for their next quarter enrollment. They re-verify with the new code. This keeps roles accurate every quarter and ensures former students don't retain access indefinitely.</div>
+        <div class="step-title">Re-enrollment next quarter</div>
+        <div class="step-desc">Returning students use their same X-Camp ID to re-verify each quarter. This keeps roles accurate and ensures former students don't retain access indefinitely.</div>
         <span class="step-tag" style="background:var(--teal-light);color:var(--teal)">quarterly cycle</span>
       </div>
     </div>
   </div>
 
-  <h3>Edge cases to plan for</h3>
+  <h3>Edge cases</h3>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Situation</th><th>Recommended handling</th></tr></thead>
       <tbody>
-        <tr><td>Student enrolls mid-quarter</td><td>New code generated immediately on enrollment; student can verify and join anytime</td></tr>
-        <tr><td>Student drops a class</td><td>Coordinator manually removes role, or enrollment system triggers API call to revoke (Option C)</td></tr>
-        <tr><td>Student advances levels mid-quarter</td><td>New code issued for new level; coordinator removes old level role; policy decision — recommend doing this at quarter boundary to minimize disruption</td></tr>
-        <tr><td>Student loses or doesn't receive their code</td><td>Coordinator can re-issue via bot command <code>!reissuecode [student] [level]</code>; old code invalidated</td></tr>
-        <tr><td>Student already has a Discord account</td><td>They join the server with their existing account and verify normally — no new account needed</td></tr>
-        <tr><td>Student under 13</td><td>Parent creates and manages the Discord account; code verification process is the same; parental consent form collected separately at enrollment</td></tr>
+        <tr><td>Student enrolls mid-quarter</td><td>X-Camp ID active immediately — student can verify and join anytime</td></tr>
+        <tr><td>Student drops a class</td><td>Coordinator manually removes role, or enrollment system triggers API revoke (Option C)</td></tr>
+        <tr><td>Student advances levels mid-quarter</td><td>Recommend waiting until quarter boundary — coordinator removes old role and student re-verifies with updated enrollment</td></tr>
+        <tr><td>Student needs to change Discord account</td><td>Coordinator resets the ID link; student re-verifies on new account</td></tr>
+        <tr><td>Student under 13</td><td>Parent creates and manages the Discord account; verification process is the same; parental consent form collected separately at enrollment</td></tr>
       </tbody>
     </table>
   </div>
@@ -743,20 +766,20 @@
     <table>
       <thead><tr><th>Task</th><th>Who</th><th>When</th></tr></thead>
       <tbody>
-        <tr><td>Generate new enrollment codes for upcoming quarter</td><td>Enrollment system / coordinator</td><td>2 weeks before quarter starts</td></tr>
-        <tr><td>Include Discord codes in enrollment confirmation emails</td><td>Teaching service</td><td>At enrollment confirmation</td></tr>
-        <tr><td>Run <code>!endquarter</code> command to remove expired roles</td><td>Admin</td><td>Last day of quarter</td></tr>
-        <tr><td>Verify all class channels are empty of non-enrolled students</td><td>Coordinator</td><td>First day of new quarter</td></tr>
-        <tr><td>Post reminder in #announcements for returning students to re-verify</td><td>Coordinator</td><td>First day of new quarter</td></tr>
-        <tr><td>Confirm new TAs have been assigned correct level roles</td><td>Admin</td><td>Before quarter starts</td></tr>
+        <tr><td>Confirm X-Camp IDs are active for all enrolled students</td><td>Coordinator</td><td>2 weeks before quarter starts</td></tr>
+        <tr><td>Ensure Discord invite link and ID are in enrollment confirmation emails</td><td>Teaching service</td><td>At enrollment confirmation</td></tr>
+        <tr><td>Run <code>!endquarter</code> to remove expired roles</td><td>Admin</td><td>Last day of quarter</td></tr>
+        <tr><td>Verify class channels are clear of non-enrolled students</td><td>Coordinator</td><td>First day of new quarter</td></tr>
+        <tr><td>Post re-verification reminder in #announcements</td><td>Coordinator</td><td>First day of new quarter</td></tr>
+        <tr><td>Confirm new TAs have correct level roles assigned</td><td>Admin</td><td>Before quarter starts</td></tr>
       </tbody>
     </table>
   </div>
 </div>
 
-<!-- 5. HW Night -->
+<!-- 7. HW Night -->
 <div class="section" id="hwnight">
-  <h2 class="section-title"><span class="num">5</span> Homework night workflow</h2>
+  <h2 class="section-title"><span class="num">7</span> Homework night workflow</h2>
   <p>Runs daily during the quarter, <strong>5–8 PM PT</strong>. A bot-assisted queue ensures fair TA assignment and builds a searchable resolved-answers archive over time.</p>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:1rem">
     <div class="steps">
@@ -778,7 +801,7 @@
       </div>
       <div class="step">
         <div class="step-left"><div class="step-num" style="background:var(--amber-light);color:var(--amber)">5</div></div>
-        <div class="step-body"><div class="step-title">Bot closes HW Night</div><div class="step-desc">At 8:00 PM, bot posts nightly summary: questions answered, avg response time, students helped. Voice rooms lock. Unanswered questions flagged for teacher review.</div><span class="step-tag" style="background:var(--amber-light);color:var(--amber)">auto-summary</span></div>
+        <div class="step-body"><div class="step-title">Bot closes HW Night</div><div class="step-desc">At 8:00 PM, bot posts nightly summary: questions answered, avg response time, students helped. Voice rooms lock. Unanswered questions flagged for review.</div><span class="step-tag" style="background:var(--amber-light);color:var(--amber)">auto-summary</span></div>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px;">
@@ -794,22 +817,17 @@
   </div>
 </div>
 
-<!-- 6. Office Hours -->
+<!-- 8. Office Hours -->
 <div class="section" id="officehours">
-  <h2 class="section-title"><span class="num">6</span> Office hours workflow</h2>
-  <p>Scheduled 1-on-1 TA support sessions. Students book a private session with a TA from their level band. Office hours use <strong>Discord's Forum channel + Ticket Tool bot</strong> in combination: the Forum channel provides a structured, searchable record of each session request, while Ticket Tool manages the private thread and TA assignment.</p>
-
-  <div class="callout info">
-    <div class="callout-title">Why Forum + Ticket Tool, not just one or the other</div>
-    <p>A plain Forum channel is visible to all students in the class, which suits open Q&amp;A but not private 1-on-1 sessions. Ticket Tool creates a private thread between the student and their assigned TA — keeping session details confidential — while still logging the interaction for coordinator oversight. The combination gives you privacy, structure, and searchability.</p>
-  </div>
+  <h2 class="section-title"><span class="num">8</span> Office hours workflow</h2>
+  <p>Scheduled 1-on-1 TA support sessions using <strong>Discord's Forum channel + Ticket Tool bot</strong>. Ticket Tool creates a private thread between the student and TA — keeping session details confidential while still logging the interaction for coordinator oversight.</p>
 
   <div class="steps">
     <div class="step">
       <div class="step-left"><div class="step-num" style="background:var(--bg);color:var(--muted);border:1px solid var(--border)">1</div><div class="step-line"></div></div>
       <div class="step-body">
         <div class="step-title">Student opens a ticket</div>
-        <div class="step-desc">Student clicks the "Book Office Hours" button pinned in their class channel. Ticket Tool prompts them to select their level and briefly describe their question. A private thread is created visible only to the student, TAs for that level, and coordinators.</div>
+        <div class="step-desc">Student clicks the "Book Office Hours" button pinned in their class channel. Ticket Tool prompts them to describe their question. A private thread is created visible only to the student, TAs for that level, and coordinators.</div>
         <span class="step-tag" style="background:var(--purple-light);color:var(--purple)">student</span>
       </div>
     </div>
@@ -817,7 +835,7 @@
       <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">2</div><div class="step-line"></div></div>
       <div class="step-body">
         <div class="step-title">TA claims the session</div>
-        <div class="step-desc">An available TA for that level claims the ticket. Bot notifies the student and both parties agree on a voice time within the private thread. TA posts their available slots or uses Sesh bot to show a bookable calendar.</div>
+        <div class="step-desc">An available TA claims the ticket and agrees on a voice time within the private thread using Sesh bot to show available slots.</div>
         <span class="step-tag" style="background:var(--green-light);color:var(--green)">TA action</span>
       </div>
     </div>
@@ -833,15 +851,15 @@
       <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">4</div><div class="step-line"></div></div>
       <div class="step-body">
         <div class="step-title">Session in voice</div>
-        <div class="step-desc">Student joins the Office Hours voice room. TA can screen share, walk through code, and use the whiteboard. Default session cap is 20 minutes. TA can extend if needed.</div>
+        <div class="step-desc">Student joins the Office Hours voice room. TA screen shares, walks through code, and uses the whiteboard. Default session cap is 20 minutes.</div>
         <span class="step-tag" style="background:var(--green-light);color:var(--green)">TA + student</span>
       </div>
     </div>
     <div class="step">
-      <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">5</div><div class="step-line"></div></div>
+      <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">5</div></div>
       <div class="step-body">
         <div class="step-title">TA closes ticket with summary</div>
-        <div class="step-desc">TA types a brief session summary in the private thread and closes the ticket with <code>!close</code>. Summary is logged for coordinator review. With the student's permission, key insight can be posted to #solved-answers to benefit classmates.</div>
+        <div class="step-desc">TA posts a brief session summary and closes with <code>!close</code>. With student's permission, key insight can be posted to #solved-answers to benefit classmates.</div>
         <span class="step-tag" style="background:var(--green-light);color:var(--green)">TA closes</span><span class="step-tag" style="background:var(--amber-light);color:var(--amber);margin-left:6px">optional public post</span>
       </div>
     </div>
@@ -850,19 +868,19 @@
   <div class="rule-grid">
     <div class="rule-box">
       <div class="rule-box-title">📋 Session rules</div>
-      <div class="rule-box-body">One active office hours ticket per student at a time. Sessions capped at 20 minutes by default. Students must describe their question when opening the ticket — vague requests will be asked to clarify before a TA claims.</div>
+      <div class="rule-box-body">One active ticket per student at a time. Sessions capped at 20 minutes. Students must describe their question when opening the ticket — vague requests are asked to clarify before a TA claims.</div>
     </div>
     <div class="rule-box">
       <div class="rule-box-title">👥 TA availability</div>
-      <div class="rule-box-body">TAs post their weekly available slots in #ta-schedule at the start of each week. Coordinator ensures each level band has at least 3 available office hours slots per week. Demand is tracked via Ticket Tool analytics.</div>
+      <div class="rule-box-body">TAs post weekly available slots in #ta-schedule. Coordinator ensures each level band has at least 3 office hours slots per week. Demand is tracked via Ticket Tool analytics.</div>
     </div>
   </div>
 </div>
 
-<!-- 7. Moderation -->
+<!-- 9. Moderation -->
 <div class="section" id="moderation">
-  <h2 class="section-title"><span class="num">7</span> Moderation &amp; safety</h2>
-  <h3>7.1 Automated moderation</h3>
+  <h2 class="section-title"><span class="num">9</span> Moderation &amp; safety</h2>
+  <h3>9.1 Automated moderation</h3>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Rule</th><th>Trigger</th><th>Action</th></tr></thead>
@@ -874,19 +892,19 @@
       </tbody>
     </table>
   </div>
-  <h3>7.2 Manual moderation</h3>
+  <h3>9.2 Manual moderation</h3>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Action</th><th>Who</th><th>How</th></tr></thead>
       <tbody>
         <tr><td>Report a message</td><td>Any student</td><td>Right-click → Report → goes to #flagged-content for staff review</td></tr>
         <tr><td>Pin quality answers</td><td>Teacher</td><td>Weekly review of class Q&amp;A — pin best answers to build knowledge base</td></tr>
-        <tr><td>Review mod log</td><td>Coordinator</td><td>Daily review of #mod-log for patterns and curriculum gaps</td></tr>
+        <tr><td>Review mod log</td><td>Coordinator</td><td>Daily review of #mod-log for patterns</td></tr>
         <tr><td>Ban a member</td><td>Admin only</td><td>All bans logged with reason, reviewed within 24 hours</td></tr>
       </tbody>
     </table>
   </div>
-  <h3>7.3 Server-wide safety settings</h3>
+  <h3>9.3 Server-wide safety settings</h3>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Setting</th><th>Configuration</th></tr></thead>
@@ -894,27 +912,23 @@
         <tr><td>Direct messages</td><td>Disabled between members who do not share a role</td></tr>
         <tr><td>Explicit content filter</td><td>Maximum — scans all members including verified</td></tr>
         <tr><td>External links</td><td>TA/staff role required to post in class channels; students may share in community channels only</td></tr>
-        <tr><td>Account verification</td><td>Phone verification required to join the server</td></tr>
+        <tr><td>Account verification</td><td>X-Camp ID required to join — no anonymous access</td></tr>
         <tr><td>Staff 2FA</td><td>Required for all moderator and admin roles</td></tr>
       </tbody>
     </table>
   </div>
 </div>
 
-<!-- 8. Engagement & Gamification -->
+<!-- 10. Engagement & Gamification -->
 <div class="section" id="engagement">
-  <h2 class="section-title"><span class="num">8</span> Engagement &amp; gamification</h2>
-
-  <p>Gamification works best when earning rewards feels like a natural byproduct of being a good student and community member — not a separate game layered on top. Every point, badge, and title in X-Camp's system is designed to recognize behaviors that are genuinely valuable: helping classmates, showing up consistently, improving over time, and contributing to the community.</p>
+  <h2 class="section-title"><span class="num">10</span> Engagement &amp; gamification</h2>
 
   <div class="callout info">
     <div class="callout-title">Design principle</div>
-    <p>Avoid rewarding raw activity volume (e.g. most messages sent) — this creates spam incentives. Instead reward <em>quality, consistency, helpfulness, and growth</em>. A student who answers three questions well should earn more than a student who sends thirty one-word messages.</p>
+    <p>Avoid rewarding raw activity volume — this creates spam incentives. Instead reward <em>quality, consistency, helpfulness, and growth</em>. A student who answers three questions well should earn more than a student who sends thirty one-word messages.</p>
   </div>
 
   <h3>XP system — how points are earned</h3>
-  <p>XP is the foundation of the gamification system, tracked by MEE6 or Atlas bot. Points are awarded for meaningful actions, with diminishing returns built in to prevent farming.</p>
-
   <div class="table-wrap">
     <table>
       <thead><tr><th>Action</th><th>XP</th><th>Notes</th></tr></thead>
@@ -935,8 +949,6 @@
   </div>
 
   <h3>Rank titles — the progression ladder</h3>
-  <p>As students accumulate XP they advance through ranks. Each rank unlocks a visible Discord role title, a colored name, and new privileges. Ranks persist across quarters — they represent a student's cumulative standing in the X-Camp community, not just one class.</p>
-
   <div class="table-wrap">
     <table>
       <thead><tr><th>Rank</th><th>XP required</th><th>Role color</th><th>Unlocks</th></tr></thead>
@@ -952,8 +964,6 @@
   </div>
 
   <h3>Achievement badges</h3>
-  <p>Badges are one-time awards for specific accomplishments. Unlike XP ranks which measure cumulative effort, badges celebrate memorable moments and unique contributions. They display on a student's Discord profile and are announced publicly in #wins-and-progress.</p>
-
   <div class="table-wrap">
     <table>
       <thead><tr><th>Badge</th><th>How to earn it</th></tr></thead>
@@ -975,8 +985,6 @@
   </div>
 
   <h3>Leaderboards</h3>
-  <p>Multiple leaderboards keep competition fresh and ensure different types of students have a chance to shine — not just the highest XP earners.</p>
-
   <div class="table-wrap">
     <table>
       <thead><tr><th>Leaderboard</th><th>Metric</th><th>Reset</th><th>Prize / recognition</th></tr></thead>
@@ -991,9 +999,7 @@
     </table>
   </div>
 
-  <h3>Seasonal events and special campaigns</h3>
-  <p>Beyond ongoing XP, seasonal events create spikes of energy and give the community something to look forward to each quarter.</p>
-
+  <h3>Seasonal events</h3>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Event</th><th>When</th><th>Format</th></tr></thead>
@@ -1004,14 +1010,13 @@
         <tr><td>🌸 Spring Tournament</td><td>Spring quarter</td><td>Bracket-style coding tournament, single elimination; all levels welcome with handicap scoring</td></tr>
         <tr><td>🎓 End-of-Quarter Showcase</td><td>Last week of each quarter</td><td>Students share what they built, learned, or achieved; community votes on awards in multiple categories</td></tr>
         <tr><td>⚡ XP Double Weekend</td><td>Random, 2x per quarter</td><td>All XP earned over a weekend is doubled — unannounced until Friday, creates excitement</td></tr>
-        <tr><td>💯 100-Problem Challenge</td><td>Each quarter</td><td>Level-appropriate USACO problem sets — students race to solve 100 problems within the quarter. Separate leaderboards per level band (CS100s through CS600s) so every student competes fairly against peers on the same material. Milestones at 25, 50, 75, and 100 problems each earn XP bonuses and badge progress. Top finishers per level earn a special role and are featured in the end-of-quarter recap</td></tr>
-        <tr><td>🎨 Art of Programming</td><td>End of quarter · CS100s–CS200s</td><td>Lower-level classes submit their best turtle drawing projects — a celebration of creative coding for newer students. Submissions shared in #wins-and-progress. Community votes on winners across categories: Most Creative, Most Complex, Most Funny, Best Beginner. Winners announced at the end-of-quarter showcase with a special Art of Programming badge. A great low-pressure way to build pride and excitement for students just starting out</td></tr>
+        <tr><td>💯 100-Problem Challenge</td><td>Each quarter</td><td>Level-appropriate USACO problem sets — students race to solve 100 problems. Separate leaderboards per level band. Milestones at 25, 50, 75, and 100 each earn XP bonuses. Top finishers per level are featured in the end-of-quarter recap</td></tr>
+        <tr><td>🎨 Art of Programming</td><td>End of quarter · CS100s–CS200s</td><td>Lower-level classes submit their best turtle drawing projects. Community votes on Most Creative, Most Complex, Most Funny, and Best Beginner. Winners announced at the showcase with a special badge</td></tr>
       </tbody>
     </table>
   </div>
 
   <h3>Anti-gaming safeguards</h3>
-  <p>Any XP system can be gamed. These safeguards keep the system honest:</p>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Risk</th><th>Safeguard</th></tr></thead>
@@ -1019,143 +1024,208 @@
         <tr><td>Spam posting for XP</td><td>Minimum message length enforced by bot; XP per message capped at 5 per hour</td></tr>
         <tr><td>Fake upvoting between friends</td><td>Upvotes from accounts under 7 days old don't count; same-user upvotes on mutual posts are filtered</td></tr>
         <tr><td>Claiming solved answers unfairly</td><td>Only TAs and teachers can mark answers as solved — students cannot self-award</td></tr>
-        <tr><td>AFK farming in voice channels</td><td>Voice XP (if enabled) requires periodic activity checks via bot; muted + deafened = no XP</td></tr>
-        <tr><td>Alt accounts / duplicate joins</td><td>Each student is issued a unique X-Camp ID at enrollment. This ID is required during the Discord verification step — the bot validates the ID against the enrollment database before assigning any role. One X-Camp ID can only be used to verify one Discord account. If a student needs to change their Discord account, they must contact a coordinator to reset the ID link</td></tr>
+        <tr><td>AFK farming in voice channels</td><td>Voice XP requires periodic activity checks via bot; muted + deafened = no XP</td></tr>
+        <tr><td>Alt accounts / duplicate joins</td><td>Each student has a unique X-Camp ID validated at verification. One ID binds to one Discord account. Students needing to change accounts must contact a coordinator to reset the link</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="callout rec">
     <div class="callout-title">Long-term vision</div>
-    <p>As the community matures, top-ranked students (Champion and Legend) can be invited to become community TAs, event hosts, or track champions — turning the most engaged students into community leaders. This creates a self-sustaining pipeline where recognition leads to responsibility, and the community grows from within.</p>
+    <p>As the community matures, top-ranked students (Champion and Legend) can be invited to become community TAs, event hosts, or track champions — turning the most engaged students into community leaders. Recognition leads to responsibility, and the community grows from within.</p>
   </div>
 </div>
 
-<!-- 9. Student User Journey -->
+<!-- 11. Student User Journey -->
 <div class="section" id="userjourney">
-  <h2 class="section-title"><span class="num">9</span> Student user journey</h2>
-  <p>This section maps what a student actually experiences on the X-Camp Discord — from the moment they first join, through their weekly and quarterly rhythms, all the way to graduation and alumni life. The goal is a journey that feels progressively richer: each quarter a student is here, the community means more to them.</p>
+  <h2 class="section-title"><span class="num">11</span> Student user journey</h2>
 
-  <!-- First day -->
   <h3>Day 1 — First join</h3>
-  <div class="steps">
-    <div class="step">
-      <div class="step-left"><div class="step-num" style="background:var(--blue-light);color:var(--blue)">1</div><div class="step-line"></div></div>
-      <div class="step-body">
-        <div class="step-title">Student receives X-Camp ID in enrollment email</div>
-        <div class="step-desc">Along with their class schedule and welcome materials, the enrollment confirmation includes their unique X-Camp ID and a link to the Discord server with simple join instructions.</div>
-        <span class="step-tag" style="background:var(--blue-light);color:var(--blue)">before joining</span>
-      </div>
+  <div style="overflow-x:auto;margin-bottom:1.5rem">
+  <div style="display:flex;align-items:flex-start;gap:0;min-width:560px">
+    <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+      <div style="width:44px;height:44px;border-radius:50%;background:var(--blue-light);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">1</div>
+      <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
     </div>
-    <div class="step">
-      <div class="step-left"><div class="step-num" style="background:var(--bg);color:var(--muted);border:1px solid var(--border)">2</div><div class="step-line"></div></div>
-      <div class="step-body">
-        <div class="step-title">Joins server — sees Welcome only</div>
-        <div class="step-desc">Student joins via the invite link. Only #welcome and #rules are visible. They read the community guidelines and see a friendly, clearly structured server — not an overwhelming wall of channels.</div>
-        <span class="step-tag" style="background:var(--purple-light);color:var(--purple)">student</span>
-      </div>
+    <div style="flex:5;padding:0 0 24px 12px">
+      <div style="font-size:13px;font-weight:600;color:var(--text)">Enrollment email arrives</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">X-Camp ID + Discord invite link included with class confirmation</div>
+      <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--blue-light);color:var(--blue)">before joining</span>
     </div>
-    <div class="step">
-      <div class="step-left"><div class="step-num" style="background:var(--green-light);color:var(--green)">3</div><div class="step-line"></div></div>
-      <div class="step-body">
-        <div class="step-title">Verifies with X-Camp ID → class role assigned</div>
-        <div class="step-desc">Student types <code>!verify [X-Camp ID]</code> in #verify-here. Bot validates the ID, assigns their <code>Student-CS[level]</code> role, and their class category instantly becomes visible. Bot sends a welcome DM with a quick-start guide.</div>
-        <span class="step-tag" style="background:var(--green-light);color:var(--green)">automated</span>
-      </div>
+    <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+      <div style="width:44px;height:44px;border-radius:50%;background:var(--purple-light);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">2</div>
+      <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
     </div>
-    <div class="step">
-      <div class="step-left"><div class="step-num" style="background:var(--purple-light);color:var(--purple)">4</div><div class="step-line"></div></div>
-      <div class="step-body">
-        <div class="step-title">Chooses their track</div>
-        <div class="step-desc">Bot prompts: "One more step — choose your track." Four buttons appear. Student picks 🏆 Competitor, 🔬 Builder, 🎨 Explorer, or 🚀 Founder. Their track lounge and voice room immediately unlock. +15 XP for completing onboarding.</div>
-        <span class="step-tag" style="background:var(--purple-light);color:var(--purple)">student choice</span>
-      </div>
+    <div style="flex:5;padding:0 0 24px 12px">
+      <div style="font-size:13px;font-weight:600;color:var(--text)">Joins server</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Sees only #welcome and #rules — clean, not overwhelming</div>
+      <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--purple-light);color:var(--purple)">student</span>
     </div>
-    <div class="step">
-      <div class="step-left"><div class="step-num" style="background:var(--teal-light);color:var(--teal)">5</div></div>
-      <div class="step-body">
-        <div class="step-title">Says hello — earns first XP</div>
-        <div class="step-desc">Student posts a brief intro in #introductions (+15 XP) and explores their class channels, track lounge, and the community channels. They are now a 🌱 Seedling with 30 XP and a visible place in the community.</div>
-        <span class="step-tag" style="background:var(--teal-light);color:var(--teal)">first impression</span>
-      </div>
+    <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+      <div style="width:44px;height:44px;border-radius:50%;background:var(--green-light);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">3</div>
+      <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
+    </div>
+    <div style="flex:5;padding:0 0 24px 12px">
+      <div style="font-size:13px;font-weight:600;color:var(--text)">Verifies with X-Camp ID</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Bot assigns class role + sets nickname to <code>FirstName [XC-ID]</code>. Class channels unlock instantly</div>
+      <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--green-light);color:var(--green)">automated</span>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+      <div style="width:44px;height:44px;border-radius:50%;background:var(--purple-light);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">4</div>
+      <div style="width:2px;flex:1;background:var(--border);margin:4px 0"></div>
+    </div>
+    <div style="flex:5;padding:0 0 24px 12px">
+      <div style="font-size:13px;font-weight:600;color:var(--text)">Chooses track</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Bot shows 4 buttons — Competitor, Builder, Explorer, Founder. Track lounge unlocks. +15 XP</div>
+      <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--purple-light);color:var(--purple)">student choice</span>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+      <div style="width:44px;height:44px;border-radius:50%;background:var(--teal-light);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">5</div>
+    </div>
+    <div style="flex:5;padding:0 0 24px 12px">
+      <div style="font-size:13px;font-weight:600;color:var(--text)">Says hello</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Posts in #introductions. Now a Seedling with 30 XP and a place in the community</div>
+      <span style="display:inline-block;margin-top:5px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--teal-light);color:var(--teal)">first impression</span>
     </div>
   </div>
+  </div>
 
-  <!-- Weekly rhythm -->
   <h3>A typical week</h3>
-  <p>Once settled in, a student's weekly experience follows a natural rhythm that blends academic support with community life. Not every student does everything every week — the design lets them engage at whatever level fits their schedule.</p>
-
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>When</th><th>What the student does</th><th>Where</th><th>XP</th></tr></thead>
-      <tbody>
-        <tr><td>Saturday or Sunday · class day</td><td>Student attends their weekend class. Teacher posts the week's assignment and any notes in #announcements afterward. Student reviews it, asks a clarifying question in #q-and-a if needed. A TA or classmate typically replies within a few hours.</td><td>Class channels</td><td>+10 XP for substantive post</td></tr>
-        <tr><td>Sunday evening or Monday · Problem of the Week drops</td><td>New problem posted in #problem-of-the-week to kick off the week. Student attempts it and posts their solution or approach. First correct answer earns a bonus. Even partial attempts generate discussion that helps everyone.</td><td>#problem-of-the-week</td><td>+40 XP attempt · +80 XP first solve</td></tr>
-        <tr><td>Mon–Sun · 5–8 PM PT · Homework Night</td><td>Student is working on the week's assignment and gets stuck. They check into #hw-night-lobby, submit a ticket with their question and what they already tried. A TA picks it up within minutes. Most nights they walk away unblocked in under 20 minutes.</td><td>HW Night channels + voice</td><td>+20 XP per attendance</td></tr>
-        <tr><td>Weekday afternoons or evenings · Office hours</td><td>Student is stuck on a concept — not just a single problem. They open a Ticket Tool request from their class channel and book a 1-on-1 slot with an available TA. Session happens in voice with screen sharing. TA posts a brief summary afterward.</td><td>Office hours ticket + voice</td><td>No XP · unblocks deeper learning</td></tr>
-        <tr><td>Any weekday · Track lounge</td><td>Student drops into their track lounge between HW Nights. A Competitor is discussing USACO strategies; a Founder is sharing a project idea. Student reacts, replies, or just lurks. Feels connected to peers who think like them.</td><td>Track lounge channels</td><td>+10 XP for substantive replies</td></tr>
-        <tr><td>Any time · helping others</td><td>Student spots a question in #q-and-a they know the answer to — often something they were stuck on last week. They reply with a clear explanation. If a TA marks it solved, they earn the highest single-action XP reward.</td><td>Class Q&amp;A</td><td>+50 XP if marked solved</td></tr>
-      </tbody>
-    </table>
+  <div style="overflow-x:auto;margin-bottom:1.5rem">
+  <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
+    <thead>
+      <tr style="background:var(--bg)">
+        <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);width:22%">When</th>
+        <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border)">Activity</th>
+        <th style="padding:8px 12px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);width:18%">Where</th>
+        <th style="padding:8px 12px;text-align:right;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border);width:10%">XP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:var(--blue-light)">
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--blue);font-weight:600;font-size:12px">Sat / Sun<br><span style="font-weight:400;font-size:11px">class day</span></td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Weekend class runs — all teaching materials on the X-Camp learning site. After class, teacher posts a fun engagement question in #class-chat to spark discussion</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#class-chat</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;text-align:right;font-size:12px">+10</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-weight:600;font-size:12px">Sun eve / Mon</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Problem of the Week drops → students attempt and post solution or approach. Drives early-week activity and friendly competition</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#potw</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;text-align:right;font-size:12px">+40 / +80</td>
+      </tr>
+      <tr style="background:var(--green-light)">
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;font-size:12px">Tue &amp; Thu<br><span style="font-weight:400;font-size:11px">required check-in</span></td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Teachers log in and actively reply to students — responding to the after-class question, answering Q&amp;A threads, and giving feedback. Minimum one check-in per required day</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#class-chat · #q-and-a</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px;text-align:right">—</td>
+      </tr>
+      <tr style="background:var(--amber-light)">
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--amber);font-weight:600;font-size:12px">Daily<br><span style="font-weight:400;font-size:11px">5–8 PM PT</span></td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Homework Night — submit ticket when stuck, TA responds within minutes in voice or chat</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">HW Night + voice</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;text-align:right;font-size:12px">+20</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-weight:600;font-size:12px">Weekday<br><span style="font-weight:400;font-size:11px">afternoons/eve</span></td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Book 1-on-1 office hours via Ticket Tool for deeper concept help — screen share with TA in voice</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">Office hours voice</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px;text-align:right">—</td>
+      </tr>
+      <tr style="background:var(--purple-light)">
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--purple);font-weight:600;font-size:12px">Any weekday</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Drop into track lounge — discuss USACO strategies, share project ideas, or just read</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">Track lounge</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;text-align:right;font-size:12px">+10</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 12px;color:var(--muted);font-weight:600;font-size:12px">Any time</td>
+        <td style="padding:9px 12px;color:var(--text)">Answer a classmate's question in #q-and-a — if TA marks it solved, highest single-action reward</td>
+        <td style="padding:9px 12px;color:var(--muted);font-size:12px">Class Q&amp;A</td>
+        <td style="padding:9px 12px;color:var(--green);font-weight:600;text-align:right;font-size:12px">+50</td>
+      </tr>
+    </tbody>
+  </table>
   </div>
 
-  <!-- Full lifespan -->
   <h3>Full student lifespan — first class to alumni</h3>
-  <p>Zoom out further and the Discord community becomes a thread that runs through a student's entire X-Camp journey — from nervous beginner to confident alumnus.</p>
-
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-left"><div class="tl-dot" style="background:#888780"></div><div class="tl-line"></div></div>
-      <div class="tl-body">
-        <div class="tl-phase">Quarter 1 — The new student</div>
-        <div class="tl-title">Finding their footing</div>
-        <div class="tl-items">Student joins as a 🌱 Seedling. Everything is new — new classmates, new problems, new platform. They mostly ask questions, attend HW Nights when stuck, and lurk in their track lounge. By quarter end they've introduced themselves, hit their first streak, and maybe answered one or two questions for classmates. Rank: ⚡ Coder. They feel like they belong.</div>
+  <div style="overflow-x:auto;margin-bottom:1.5rem">
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;min-width:560px">
+    <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
+      <div style="background:var(--bg);padding:10px 12px;border-bottom:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Quarter 1</div>
+        <div style="font-size:14px;font-weight:600;color:var(--text);margin-top:2px">New student</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px">Rank: Seedling → Coder</div>
+      </div>
+      <div style="padding:10px 12px;font-size:12px;color:var(--muted);line-height:1.6">Mostly asks questions. Attends HW Nights. Lurks in track lounge. Introduces themselves. Hits first streak badge.</div>
+      <div style="padding:6px 12px 10px;display:flex;flex-wrap:wrap;gap:4px">
+        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--blue-light);color:var(--blue)">First Solve</span>
+        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--green-light);color:var(--green)">7-Day Streak</span>
       </div>
     </div>
-    <div class="tl-item">
-      <div class="tl-left"><div class="tl-dot" style="background:var(--green)"></div><div class="tl-line"></div></div>
-      <div class="tl-body">
-        <div class="tl-phase">Quarters 2–3 — The regular</div>
-        <div class="tl-title">Building identity and relationships</div>
-        <div class="tl-items">Student knows the rhythm. HW Nights are routine. They recognize names, have a few Discord friends, and are starting to answer questions as often as they ask them. Their track identity feels real — a Competitor is grinding USACO problems, a Founder has shared their first project. XP climbs steadily. Rank reaches 🔥 Hacker or 💡 Innovator. They start showing up to inter-track events for fun, not just XP.</div>
+    <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
+      <div style="background:var(--green-light);padding:10px 12px;border-bottom:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:.05em">Quarters 2–3</div>
+        <div style="font-size:14px;font-weight:600;color:var(--green);margin-top:2px">The regular</div>
+        <div style="font-size:11px;color:var(--green);margin-top:2px">Rank: Hacker → Innovator</div>
+      </div>
+      <div style="padding:10px 12px;font-size:12px;color:var(--muted);line-height:1.6">Knows the rhythm. Has Discord friends. Answers as often as asks. Track identity feels real. Joins inter-track events for fun.</div>
+      <div style="padding:6px 12px 10px;display:flex;flex-wrap:wrap;gap:4px">
+        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--green-light);color:var(--green)">Night Owl</span>
+        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--amber-light);color:var(--amber)">Launcher</span>
+        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--blue-light);color:var(--blue)">Big Brain</span>
       </div>
     </div>
-    <div class="tl-item">
-      <div class="tl-left"><div class="tl-dot" style="background:var(--blue)"></div><div class="tl-line"></div></div>
-      <div class="tl-body">
-        <div class="tl-phase">Quarters 4–6 — The contributor</div>
-        <div class="tl-title">Giving back to the community</div>
-        <div class="tl-items">Student has advanced class levels. They are now one of the more experienced voices in the community. Newer students ask them questions. They volunteer to co-host a track AMA, suggest a problem for Problem of the Week, or help a Seedling who's exactly where they were a year ago. Rank reaches 🏅 Champion. Their profile shows a collection of badges that tells the story of their X-Camp journey. They are recognized by name.</div>
+    <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
+      <div style="background:var(--blue-light);padding:10px 12px;border-bottom:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.05em">Quarters 4–6</div>
+        <div style="font-size:14px;font-weight:600;color:var(--blue);margin-top:2px">The contributor</div>
+        <div style="font-size:11px;color:var(--blue);margin-top:2px">Rank: Champion</div>
+      </div>
+      <div style="padding:10px 12px;font-size:12px;color:var(--muted);line-height:1.6">Advanced levels. Newer students ask them for help. Co-hosts AMAs. Recognized by name. Mentors Seedlings.</div>
+      <div style="padding:6px 12px 10px;display:flex;flex-wrap:wrap;gap:4px">
+        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--blue-light);color:var(--blue)">Mentor</span>
+        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--purple-light);color:var(--purple)">Speaker</span>
+        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--amber-light);color:var(--amber)">Track Champion</span>
       </div>
     </div>
-    <div class="tl-item">
-      <div class="tl-left"><div class="tl-dot" style="background:var(--purple)"></div><div class="tl-line"></div></div>
-      <div class="tl-body">
-        <div class="tl-phase">Final quarter — The veteran</div>
-        <div class="tl-title">Closing the chapter</div>
-        <div class="tl-items">Student is finishing their X-Camp journey. They're in the CS600s or have completed the curriculum. Their Discord presence carries weight — newer students look up to them. They participate in their last end-of-quarter showcase, receive their final badges, and if they've reached 7,000 XP, earn the permanent 🌟 Legend rank. At quarter end, their class role is removed — but their XP, badges, and community identity stay.</div>
+    <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
+      <div style="background:var(--purple-light);padding:10px 12px;border-bottom:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:600;color:var(--purple);text-transform:uppercase;letter-spacing:.05em">Final quarter</div>
+        <div style="font-size:14px;font-weight:600;color:var(--purple);margin-top:2px">The veteran</div>
+        <div style="font-size:11px;color:var(--purple);margin-top:2px">Rank: Legend (7,000 XP)</div>
+      </div>
+      <div style="padding:10px 12px;font-size:12px;color:var(--muted);line-height:1.6">CS600s level. Discord presence carries weight. Final showcase. Class role removed — XP and badges stay forever.</div>
+      <div style="padding:6px 12px 10px;display:flex;flex-wrap:wrap;gap:4px">
+        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--purple-light);color:var(--purple)">Contest Crusher</span>
+        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--red-light);color:var(--red)">OG</span>
       </div>
     </div>
-    <div class="tl-item">
-      <div class="tl-left"><div class="tl-dot" style="background:var(--teal)"></div></div>
-      <div class="tl-body">
-        <div class="tl-phase">Post-graduation — The alumni</div>
-        <div class="tl-title">A new kind of belonging</div>
-        <div class="tl-items">Alumni role replaces their student role. They gain access to #alumni-lounge, #internships-jobs, and #college-advice. The broader class channels are no longer visible — but the community channels and their track lounge remain. Legends are invited into the alumni mentor program, where they occasionally drop into lower-level class channels (read-only) and host AMAs for current students. They become the living proof that X-Camp works — and the most powerful recruitment asset the community has.</div>
+    <div style="border:2px solid var(--teal);border-radius:10px;overflow:hidden">
+      <div style="background:var(--teal-light);padding:10px 12px;border-bottom:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:.05em">Post-graduation</div>
+        <div style="font-size:14px;font-weight:600;color:var(--teal);margin-top:2px">Alumni</div>
+        <div style="font-size:11px;color:var(--teal);margin-top:2px">Role: Alumni + Legend</div>
+      </div>
+      <div style="padding:10px 12px;font-size:12px;color:var(--muted);line-height:1.6">Accesses alumni lounge, jobs, college advice. Track lounge stays open. Legends host AMAs and mentor current students.</div>
+      <div style="padding:6px 12px 10px;display:flex;flex-wrap:wrap;gap:4px">
+        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--teal-light);color:var(--teal)">Community Builder</span>
+        <span style="font-size:10px;padding:1px 6px;border-radius:8px;background:var(--teal-light);color:var(--teal)">Mentor program</span>
       </div>
     </div>
+  </div>
   </div>
 
   <div class="callout rec">
     <div class="callout-title">The thread that connects it all</div>
-    <p>A student who joins X-Camp as a nervous CS100 Seedling and leaves as a Legend alumni has spent years in this community. Their XP, badges, track identity, friendships, and memories all live here. The Discord server is not just a support tool — it is the X-Camp experience itself, running alongside every class, every quarter, every milestone. That continuity is what transforms a coding school into a community.</p>
+    <p>A student who joins X-Camp as a nervous CS100 Seedling and leaves as a Legend alumni has spent years in this community. Their XP, badges, track identity, friendships, and memories all live here. The Discord server is not just a support tool — it is the X-Camp experience itself.</p>
   </div>
 </div>
 
-<!-- 10. Teacher Journey -->
+<!-- 12. Teacher Journey -->
 <div class="section" id="teacherjourney">
-  <h2 class="section-title"><span class="num">10</span> Teacher's weekly journey</h2>
-  <p>Teachers own their class category on Discord. Their weekly presence is structured around two required check-in days and a weekend class, with the platform serving as the bridge between sessions — not a replacement for the learning site.</p>
+  <h2 class="section-title"><span class="num">12</span> Teacher's weekly journey</h2>
+  <p>Teachers own their class category on Discord. Their weekly presence is structured around two required check-in days and a weekend class, with Discord serving as the bridge between sessions — not a replacement for the learning site.</p>
   <div style="overflow-x:auto;margin-bottom:1.5rem">
   <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
     <thead>
@@ -1196,9 +1266,9 @@
   </div>
 </div>
 
-<!-- 11. TA Journey -->
+<!-- 13. TA Journey -->
 <div class="section" id="tajourney">
-  <h2 class="section-title"><span class="num">11</span> TA's weekly journey</h2>
+  <h2 class="section-title"><span class="num">13</span> TA's weekly journey</h2>
   <p>TAs are the frontline of daily student support. Their week is anchored by Homework Night duty and office hours slots, with light ongoing presence in class channels to keep Q&A moving between sessions.</p>
   <div style="overflow-x:auto;margin-bottom:1.5rem">
   <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
@@ -1235,10 +1305,10 @@
   </div>
 </div>
 
-<!-- 12. Teaching Service & Coordinator Journey -->
+<!-- 14. Teaching Service & Coordinator Journey -->
 <div class="section" id="coordinatorjourney">
-  <h2 class="section-title"><span class="num">12</span> Teaching service &amp; coordinator's weekly journey</h2>
-  <p>The teaching service team and class coordinators are the operational backbone of the Discord community. They do not own individual class channels — they oversee the entire server, handle everything outside the classroom, and are the first line of response for flagged content, student issues, and platform health.</p>
+  <h2 class="section-title"><span class="num">14</span> Teaching service &amp; coordinator's weekly journey</h2>
+  <p>The teaching service team and class coordinators are the operational backbone of the Discord community. They oversee the entire server, handle everything outside the classroom, and are the first line of response for flagged content, student issues, and platform health.</p>
   <div style="overflow-x:auto;margin-bottom:1.5rem">
   <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:520px">
     <thead>
@@ -1256,32 +1326,32 @@
       </tr>
       <tr style="background:var(--amber-light)">
         <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--amber);font-weight:600;font-size:12px">Daily<br><span style="font-weight:400;font-size:11px">required</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Monitor community channels for unanswered non-class questions — general, feedback, introductions, and inter-track channels. Answer or route any question that falls outside a teacher's or TA's scope. No student question in public channels should go unanswered for more than 24 hours</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#general · #feedback · #introductions · community channels</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Monitor community channels for unanswered non-class questions — #general, #feedback, #introductions, and inter-track channels. Answer or route any question outside a teacher's or TA's scope. No student question in public channels should go unanswered for more than 24 hours</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#general · #feedback · community channels</td>
       </tr>
       <tr>
         <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-weight:600;font-size:12px">Daily<br><span style="font-weight:400;font-size:11px">during HW Night</span></td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Monitor HW Night queue depth across all level bands during 5–8 PM PT. If any level's wait time exceeds 10 minutes, reassign available TAs or step in directly. Review nightly bot summary for patterns or recurring problem areas</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Monitor HW Night queue depth across all level bands during 5–8 PM PT. If any level's wait time exceeds 10 minutes, reassign available TAs or step in directly. Review nightly bot summary for patterns</td>
         <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#hw-night-lobby · #staff-general</td>
       </tr>
       <tr style="background:var(--blue-light)">
         <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--blue);font-weight:600;font-size:12px">Weekly</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Review Statbot analytics — active members, peak hours, channel engagement, XP activity. Flag any class channels that have gone quiet for 5+ days. Confirm all teachers completed their required Tue/Thu check-ins. Review TA office hours slot coverage for the coming week</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Review Statbot analytics — active members, peak hours, channel engagement, XP activity. Flag any class channels quiet for 5+ days. Confirm all teachers completed Tue/Thu check-ins. Review TA office hours coverage for the coming week</td>
         <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#analytics · #ta-schedule · #staff-general</td>
       </tr>
       <tr style="background:var(--green-light)">
         <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--green);font-weight:600;font-size:12px">Weekly</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Process new student verifications — validate X-Camp IDs submitted in #verify-here, assign correct class roles, and send onboarding DMs to new joiners who haven't received one. Confirm enrollment list matches active Discord roles</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Process new student verifications — validate X-Camp IDs in #verify-here, confirm roles and nicknames were set correctly, send onboarding DMs to new joiners who haven't received one</td>
         <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#verify-here · #enrollment-ops</td>
       </tr>
       <tr style="background:var(--purple-light)">
         <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--purple);font-weight:600;font-size:12px">Quarter boundaries</td>
-        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Generate and distribute new X-Camp ID codes to enrolling students. Run <code>!endquarter</code> on the last day to remove expired class roles. Onboard new teachers and TAs with correct role assignments. Post quarter kickoff announcement in #announcements</td>
+        <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text)">Confirm X-Camp IDs are active for all enrolling students. Run <code>!endquarter</code> on the last day. Onboard new teachers and TAs. Post quarter kickoff announcement in #announcements</td>
         <td style="padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px">#enrollment-ops · #announcements · #admin-general</td>
       </tr>
       <tr>
         <td style="padding:9px 12px;color:var(--muted);font-weight:600;font-size:12px">Any time</td>
-        <td style="padding:9px 12px;color:var(--text)">Handle student account issues (lost X-Camp ID, wrong role, account change requests). Act as the escalation point for TAs. Coordinate with admin on any ban decisions or serious policy violations</td>
+        <td style="padding:9px 12px;color:var(--text)">Handle student account issues (lost X-Camp ID, wrong role, nickname reset, account change). Act as escalation point for TAs. Coordinate with admin on ban decisions or serious policy violations</td>
         <td style="padding:9px 12px;color:var(--muted);font-size:12px">#enrollment-ops · #staff-general · #admin-general</td>
       </tr>
     </tbody>
@@ -1289,15 +1359,15 @@
   </div>
 </div>
 
-<!-- 10. Bots -->
+<!-- 15. Bots -->
 <div class="section" id="bots">
-  <h2 class="section-title"><span class="num">9</span> Recommended bots</h2>
+  <h2 class="section-title"><span class="num">15</span> Recommended bots</h2>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Bot</th><th>Primary use</th></tr></thead>
       <tbody>
-        <tr><td>MEE6 or Atlas</td><td>XP, leveling, welcome messages, reaction roles, custom commands including <code>!verify</code> and <code>!endquarter</code></td></tr>
-        <tr><td>Carl-bot</td><td>AutoMod, logging, reaction roles, enrollment code validation</td></tr>
+        <tr><td>MEE6 or Atlas</td><td>XP, leveling, welcome messages, reaction roles, custom commands including <code>!verify</code>, nickname enforcement, and <code>!endquarter</code></td></tr>
+        <tr><td>Carl-bot</td><td>AutoMod, logging, reaction roles, nickname reset listener</td></tr>
         <tr><td>Ticket Tool</td><td>HW Night question queue, office hours private thread booking, TA assignment</td></tr>
         <tr><td>Statbot</td><td>Server analytics — engagement, active members, peak hours, office hours demand</td></tr>
         <tr><td>Sesh</td><td>TA availability calendars, event scheduling with RSVP, timezone-aware reminders</td></tr>
@@ -1306,25 +1376,25 @@
   </div>
 </div>
 
-<!-- 10. Timeline -->
+<!-- 16. Timeline -->
 <div class="section" id="timeline">
-  <h2 class="section-title"><span class="num">10</span> Launch timeline</h2>
+  <h2 class="section-title"><span class="num">16</span> Launch timeline</h2>
   <div class="timeline">
     <div class="tl-item">
       <div class="tl-left"><div class="tl-dot" style="background:var(--blue)"></div><div class="tl-line"></div></div>
-      <div class="tl-body"><div class="tl-phase">Weeks 1–2</div><div class="tl-title">Foundation</div><div class="tl-items">Build server structure, all categories, channels, and roles · Configure permission matrix · Install and configure all bots · Set up enrollment code system · Write rules and welcome message · Internal staff dry run</div></div>
+      <div class="tl-body"><div class="tl-phase">Weeks 1–2</div><div class="tl-title">Foundation</div><div class="tl-items">Build server structure, all categories, channels, and roles · Configure permission matrix · Install and configure all bots · Set up X-Camp ID verification and nickname enforcement · Write rules and welcome message · Internal staff dry run</div></div>
     </div>
     <div class="tl-item">
       <div class="tl-left"><div class="tl-dot" style="background:var(--green)"></div><div class="tl-line"></div></div>
-      <div class="tl-body"><div class="tl-phase">Week 3</div><div class="tl-title">Staff onboarding</div><div class="tl-items">Onboard all teachers, TAs, and coordinators · Assign roles and class category ownership · Run mock HW Night and office hours with staff only · Test enrollment code verification flow end-to-end · Finalize moderation and escalation procedures</div></div>
+      <div class="tl-body"><div class="tl-phase">Week 3</div><div class="tl-title">Staff onboarding</div><div class="tl-items">Onboard all teachers, TAs, and coordinators · Assign roles and class category ownership · Run mock HW Night and office hours with staff only · Test X-Camp ID verification and nickname flow end-to-end · Finalize moderation and escalation procedures</div></div>
     </div>
     <div class="tl-item">
       <div class="tl-left"><div class="tl-dot" style="background:var(--amber)"></div><div class="tl-line"></div></div>
-      <div class="tl-body"><div class="tl-phase">Week 4</div><div class="tl-title">Soft launch — pilot class</div><div class="tl-items">Invite one pilot class (recommended: CS300) · Send parent communication letter and consent form · Test enrollment code flow with real students · Gather feedback on channel structure, HW Night, and office hours · Iterate before full rollout</div></div>
+      <div class="tl-body"><div class="tl-phase">Week 4</div><div class="tl-title">Soft launch — pilot class</div><div class="tl-items">Invite one pilot class (recommended: CS300) · Send parent communication letter · Test verification flow with real students · Gather feedback on channel structure, HW Night, and office hours · Iterate before full rollout</div></div>
     </div>
     <div class="tl-item">
       <div class="tl-left"><div class="tl-dot" style="background:var(--red)"></div><div class="tl-line"></div></div>
-      <div class="tl-body"><div class="tl-phase">Weeks 5–6</div><div class="tl-title">Full rollout</div><div class="tl-items">Distribute enrollment codes to all students via confirmation emails · Each teacher hosts first voice session · Launch first Problem of the Week contest · Activate XP system and leaderboard</div></div>
+      <div class="tl-body"><div class="tl-phase">Weeks 5–6</div><div class="tl-title">Full rollout</div><div class="tl-items">Distribute X-Camp IDs to all students via confirmation emails · Each teacher hosts first voice session · Launch first Problem of the Week contest · Activate XP system and leaderboard</div></div>
     </div>
     <div class="tl-item">
       <div class="tl-left"><div class="tl-dot" style="background:var(--teal)"></div></div>
@@ -1333,16 +1403,17 @@
   </div>
 </div>
 
-<!-- 11. Open questions -->
+<!-- 17. Open questions -->
 <div class="section" id="questions">
-  <h2 class="section-title"><span class="num">11</span> Open questions</h2>
+  <h2 class="section-title"><span class="num">17</span> Open questions</h2>
   <div class="questions">
-    <div class="q-item"><span class="q-num">1</span>Which enrollment code approach will be used — Option B (codes) or Option C (API sync)? Who owns the technical implementation?</div>
+    <div class="q-item"><span class="q-num">1</span>Which role management approach will be used at launch — Option B (X-Camp ID verification) or Option C (API sync)? Who owns the technical implementation?</div>
     <div class="q-item"><span class="q-num">2</span>Will a dedicated Discord coordinator role be assigned, or distributed across existing teaching service staff?</div>
     <div class="q-item"><span class="q-num">3</span>Should younger students (CS100–200 levels) require a separate parental consent step before joining?</div>
     <div class="q-item"><span class="q-num">4</span>What is the policy for students who advance levels mid-quarter — immediate role update, or at quarter boundary?</div>
     <div class="q-item"><span class="q-num">5</span>How many office hours slots per level band per week should be guaranteed at launch?</div>
     <div class="q-item"><span class="q-num">6</span>Should the alumni channel launch simultaneously with the student server, or in a later phase?</div>
+    <div class="q-item"><span class="q-num">7</span>What is the process for students who prefer not to display their real first name — is a preferred name policy needed?</div>
   </div>
 </div>
 
