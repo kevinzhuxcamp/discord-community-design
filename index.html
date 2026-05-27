@@ -165,6 +165,7 @@
     <li><a href="#rolemanagement">Student role management</a></li>
     <li><a href="#support">Homework night &amp; office hours</a></li>
     <li><a href="#moderation">Moderation &amp; safety</a></li>
+    <li><a href="#parentsafety">Parent safety guide</a></li>
     <li><a href="#engagement">Engagement &amp; gamification</a></li>
     <li><a href="#committee">Student committee</a></li>
     <li><a href="#userjourney">User journeys</a></li>
@@ -911,7 +912,84 @@
   </div>
 </div>
 
-<!-- 10. Engagement & Gamification -->
+<!-- 10. Parent safety guide -->
+<div class="section" id="parentsafety">
+  <h2 class="section-title"><span class="num">10</span> Parent safety guide</h2>
+  <p>X-Camp students span a wide age range. Discord's approach to safety differs for students under and over 13, so onboarding instructions are split into two batches based on class level.</p>
+
+  <div class="callout info">
+    <div class="callout-title">Age guideline by level</div>
+    <p><strong>CS100–200</strong> — students are typically <strong>under 13</strong> (elementary to early middle school). A parent-managed account is required.<br>
+    <strong>CS300 and above</strong> — students are typically <strong>13 or older</strong> (middle to high school). Student-owned account with Family Center setup recommended.</p>
+  </div>
+
+  <div style="display:flex;gap:8px;margin:1.25rem 0 1.5rem">
+    <button id="btab-under13" onclick="showBatch('under13')" style="padding:7px 16px;border-radius:20px;border:1px solid var(--accent);background:var(--accent);color:#fff;font-size:13px;font-weight:500;cursor:pointer">CS100–200 · Under 13</button>
+    <button id="btab-over13" onclick="showBatch('over13')" style="padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:13px;font-weight:500;cursor:pointer">CS300+ · Age 13 and above</button>
+  </div>
+
+  <div id="batch-under13">
+    <div class="callout warn">
+      <div class="callout-title">⚠️ Parent-managed account required</div>
+      <p>Discord's Terms of Service require users to be at least 13. For younger students, a parent or guardian must create and own the Discord account. The student uses it under parental supervision. X-Camp collects a signed parental consent form at enrollment before issuing a Discord invite.</p>
+    </div>
+    <h3 style="margin-top:1.25rem">Instructions for parents of CS100–200 students</h3>
+    <div class="steps">
+      <div class="step"><div class="step-left"><div class="step-num" style="background:var(--amber-light);color:var(--amber)">1</div><div class="step-line"></div></div><div class="step-body"><div class="step-title">Sign the parental consent form</div><div class="step-desc">X-Camp will include a parental consent form in the enrollment confirmation email. Sign and return this before your child joins the server.</div><span class="step-tag" style="background:var(--amber-light);color:var(--amber)">required before joining</span></div></div>
+      <div class="step"><div class="step-left"><div class="step-num" style="background:var(--amber-light);color:var(--amber)">2</div><div class="step-line"></div></div><div class="step-body"><div class="step-title">Create a Discord account as the parent</div><div class="step-desc">Go to <strong>discord.com</strong> and create a new account using your email address. Enter <strong>your own</strong> date of birth — this is a parent-owned account. Use a username that reflects this is a school account, e.g. <code>AlexParent_XCamp</code>.</div><span class="step-tag" style="background:var(--amber-light);color:var(--amber)">parent action</span></div></div>
+      <div class="step"><div class="step-left"><div class="step-num" style="background:var(--amber-light);color:var(--amber)">3</div><div class="step-line"></div></div><div class="step-body"><div class="step-title">Join the X-Camp server</div><div class="step-desc">Use the Discord invite link in the enrollment confirmation email. Read #welcome and #rules with your child before proceeding.</div><span class="step-tag" style="background:var(--amber-light);color:var(--amber)">parent + student</span></div></div>
+      <div class="step"><div class="step-left"><div class="step-num" style="background:var(--amber-light);color:var(--amber)">4</div><div class="step-line"></div></div><div class="step-body"><div class="step-title">Verify with X-Camp ID</div><div class="step-desc">In #verify-here, type <code>!verify [X-Camp ID]</code> using the ID from the enrollment email. The bot assigns the class role and sets the server nickname to <code>FirstName [XC-ID]</code>.</div><span class="step-tag" style="background:var(--green-light);color:var(--green)">automated</span></div></div>
+      <div class="step"><div class="step-left"><div class="step-num" style="background:var(--amber-light);color:var(--amber)">5</div><div class="step-line"></div></div><div class="step-body"><div class="step-title">Configure recommended safety settings</div>
+        <div style="margin-top:8px;display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:12px;color:var(--muted);display:flex;gap:6px"><span style="color:var(--green)">✓</span>Privacy &amp; Safety → Keep My Account Safe → <strong>Scan messages from all members</strong></div>
+          <div style="font-size:12px;color:var(--muted);display:flex;gap:6px"><span style="color:var(--green)">✓</span>Friend Requests → <strong>Server Members only</strong></div>
+          <div style="font-size:12px;color:var(--muted);display:flex;gap:6px"><span style="color:var(--green)">✓</span>Allow DMs from Server Members → <strong>Off</strong></div>
+          <div style="font-size:12px;color:var(--muted);display:flex;gap:6px"><span style="color:var(--green)">✓</span>Allow access to Age-Restricted Servers → <strong>Off</strong></div>
+        </div>
+        <span class="step-tag" style="background:var(--amber-light);color:var(--amber)">parent action</span>
+      </div></div>
+      <div class="step"><div class="step-left"><div class="step-num" style="background:var(--amber-light);color:var(--amber)">6</div></div><div class="step-body"><div class="step-title">Supervise and stay involved</div><div class="step-desc">Since this is a parent-owned account, you have full visibility. Check in periodically, review active channels, and remind your child of X-Camp's community rules. The server is private and invite-only.</div><span class="step-tag" style="background:var(--amber-light);color:var(--amber)">ongoing</span></div></div>
+    </div>
+  </div>
+
+  <div id="batch-over13" style="display:none">
+    <div class="callout rec">
+      <div class="callout-title">✓ Student-owned account with Family Center recommended</div>
+      <p>Students aged 13 and above can create and own their own Discord account. X-Camp strongly recommends parents set up Discord's Family Center — a built-in parental visibility tool that shows a 7-day activity summary without reading private messages.</p>
+    </div>
+    <h3 style="margin-top:1.25rem">Instructions for CS300+ students and their parents</h3>
+    <div class="steps">
+      <div class="step"><div class="step-left"><div class="step-num" style="background:var(--blue-light);color:var(--blue)">1</div><div class="step-line"></div></div><div class="step-body"><div class="step-title">Student creates a Discord account</div><div class="step-desc">Go to <strong>discord.com</strong> and sign up with your own email. Enter your real date of birth — Discord uses this to apply appropriate safety settings for teen accounts.</div><span class="step-tag" style="background:var(--blue-light);color:var(--blue)">student</span></div></div>
+      <div class="step"><div class="step-left"><div class="step-num" style="background:var(--blue-light);color:var(--blue)">2</div><div class="step-line"></div></div><div class="step-body"><div class="step-title">Join the X-Camp server</div><div class="step-desc">Use the invite link in the enrollment confirmation email. Read #welcome and #rules before proceeding.</div><span class="step-tag" style="background:var(--blue-light);color:var(--blue)">student</span></div></div>
+      <div class="step"><div class="step-left"><div class="step-num" style="background:var(--blue-light);color:var(--blue)">3</div><div class="step-line"></div></div><div class="step-body"><div class="step-title">Verify with X-Camp ID</div><div class="step-desc">In #verify-here, type <code>!verify [X-Camp ID]</code>. Bot assigns your class role, sets your server nickname, and sends a welcome DM.</div><span class="step-tag" style="background:var(--green-light);color:var(--green)">automated</span></div></div>
+      <div class="step"><div class="step-left"><div class="step-num" style="background:var(--purple-light);color:var(--purple)">4</div><div class="step-line"></div></div><div class="step-body"><div class="step-title">Parent: create your own Discord account</div><div class="step-desc">Go to <strong>discord.com</strong> and sign up. You do not need to join the X-Camp server — Family Center works separately from server membership.</div><span class="step-tag" style="background:var(--purple-light);color:var(--purple)">parent</span></div></div>
+      <div class="step"><div class="step-left"><div class="step-num" style="background:var(--purple-light);color:var(--purple)">5</div><div class="step-line"></div></div><div class="step-body"><div class="step-title">Parent: set up Family Center</div><div class="step-desc">On the Discord mobile app, go to <strong>User Settings → Family Center</strong> and enable it. Your teen goes to <strong>User Settings → Family Center → Connect with Guardian</strong> and shows you their QR code. Scan it with your app. Once your teen accepts, Family Center is active.</div><span class="step-tag" style="background:var(--purple-light);color:var(--purple)">parent + student</span></div></div>
+      <div class="step"><div class="step-left"><div class="step-num" style="background:var(--purple-light);color:var(--purple)">6</div><div class="step-line"></div></div><div class="step-body"><div class="step-title">What parents can see in Family Center</div><div class="step-desc">Parents see the last 7 days of activity: new friends added, users messaged or called, total voice/video call minutes, new and active servers. You will <strong>not</strong> see message content — only who your teen interacted with. A weekly email summary is sent automatically.</div><span class="step-tag" style="background:var(--purple-light);color:var(--purple)">parent visibility</span></div></div>
+      <div class="step"><div class="step-left"><div class="step-num" style="background:var(--purple-light);color:var(--purple)">7</div></div><div class="step-body"><div class="step-title">Parent: apply recommended safety settings via Family Center</div>
+        <div style="margin-top:8px;display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:12px;color:var(--muted);display:flex;gap:6px"><span style="color:var(--green)">✓</span>Sensitive content filters → <strong>Blur or Block</strong></div>
+          <div style="font-size:12px;color:var(--muted);display:flex;gap:6px"><span style="color:var(--green)">✓</span>Friend Requests → <strong>Server Members only</strong></div>
+          <div style="font-size:12px;color:var(--muted);display:flex;gap:6px"><span style="color:var(--green)">✓</span>Server Direct Messages → <strong>Off</strong></div>
+          <div style="font-size:12px;color:var(--muted);display:flex;gap:6px"><span style="color:var(--green)">✓</span>Message Requests → <strong>On</strong> (filters unsolicited messages into a separate folder)</div>
+        </div>
+        <span class="step-tag" style="background:var(--purple-light);color:var(--purple)">parent action</span>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function showBatch(batch) {
+  ['under13','over13'].forEach(function(b) {
+    document.getElementById('batch-' + b).style.display = b === batch ? 'block' : 'none';
+    var btn = document.getElementById('btab-' + b);
+    if (b === batch) { btn.style.background='var(--accent)';btn.style.color='#fff';btn.style.borderColor='var(--accent)'; }
+    else { btn.style.background='transparent';btn.style.color='var(--muted)';btn.style.borderColor='var(--border)'; }
+  });
+}
+</script>
+
+<!-- 11. Engagement -->
 <div class="section" id="engagement">
   <h2 class="section-title"><span class="num">10</span> Engagement &amp; gamification</h2>
 
